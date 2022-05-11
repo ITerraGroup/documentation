@@ -3,16 +3,16 @@
 :hide-page-toc:
 :show-toc:
 
-========================
-Accounting and Invoicing
-========================
+================================
+Бухгалтерия и выставление счетов
+================================
+**Odoo Инвойсирование** - это отдельное приложение для создания счетов-фактур,
+отправки их клиентам и управления платежами.
 
-**Odoo Invoicing** is a standalone invoicing app to create invoices, send them to your customers,
-and manage payments.
 
-**Odoo Accounting** is a full featured accounting app. Accountant productivity is at the core of its
-development with features such as AI-powered invoice recognition, synchronization with your bank
-accounts, smart matching suggestions, etc.
+**Odoo Бухгалтерия** - это полнофункциональное бухгалтерское приложение. Производительность бухгалтера
+зависит от наличия таких функций, как распознавание счетов на основе искусственного
+интеллекта, синхронизация с вашими банковскими счетами, умные подсказки и т.д.
 
 .. seealso::
    - `Odoo Tutorials: Invoicing <https://www.odoo.com/slides/invoicing-18>`_

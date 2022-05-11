@@ -1,234 +1,187 @@
 :show-content:
 
-========
-Expenses
-========
+=======
+Расходы
+=======
 
-**Odoo Expenses** streamlines the management of expenses. Employees can submit their expenses;
-managers can approve them; accountants can record them and process the payments.
+**Odoo Расходы** оптимизирует управление расходами. Сотрудники имеют возможность предоставлять
+отчет по затратам; администраторы могут их утверждать; бухгалтеры регистрируют и обрабатывают
+платежи.
 
-.. seealso::
-   - `Odoo Expenses: product page <https://www.odoo.com/app/expenses>`_
 
-How to set expense types
-========================
+Как устанавливать подотчетные расходы
+=====================================
 
-The first step to track expenses is to configure the expense types (managed as products in Odoo)
-that your company allows, from the *Configuration* menu. 
-When a specific expense is reimbursed at a fixed price, set a cost on the product.
-Otherwise keep the cost at 0.0 and employees will report the real cost per expense.
+Для отслеживания подотчетных расходов, необходимо установить номенклатуру расходов, разрешенных
+в вашей компании в меню *Настройки* (в Odoo *расходы* представлены в виде *номенклатуры расходов*).
+Если определенный расход производится по фиксированной цене, установите его стоимость в номенклатуре расходов.
+В противном случае оставьте стоимость в размере 0.0, и сотрудники будут сообщать
+стоимость по факту расходов.
 
-.. image:: expenses/product.png
-   :align: center
+Вот несколько примеров:
 
-Here are some examples:
+* Ресторан:
 
-* Restaurant:
+  * Стоимость: 0.00 (цена за счет будет учитываться по факту оплаты)
+* Путешествие на личном автомобиле:
 
-  * Cost: 0.00 (the cost of the ticket will be recorded on every expense)
-* Travel with Personal Car:
+  * Стоимость: 0.40 (цена за километр, возмещаемая компанией, является фиксированной)
+* Отель:
 
-  * Cost: 0.30 (the price per mile reimbursed by the company is fixed)
-* Hotel:
+  * Стоимость: 0.00 (стоимость оказанных услуг будет внесена по факту оплаты)
 
-  * Cost: 0.00 (the cost of the ticket will be recorded on every expense)
+* Другое:
 
-* Others:
+  * Стоимость 0.0
 
-  * Cost: 0.0
-
-Don't forget to set an expense tax on each expense type 
-(and an account if you use Odoo Accounting). 
-It's usually a good practice to use a tax that is configured 
-with :ref:`Tax Included in Price <taxes/included-in-price>`.
-That way, employees report expenses with 
-prices including taxes, which is usually the expected behaviour.
+Не забудьте установить налоги в номенклатуре расходов
+(и счета, если вы используете Odoo Бухгалтерию).
+Хорошей практикой является использование налога, который установлен с помощью
+:ref:`Tax Included in Price <taxes/included-in-price>`.
+Таким образом, сотрудники имеют возможность
+предоставлять сведения о стоимости расходов, включая налог.
 
 .. tip:: 
-    The *Sales* app allows you to specify units of measure for your 
-    expense types (units, miles, nights, etc.). 
-    Go to :menuselection:`Sales --> Configuration --> Settings` and check
-    *Some products may be sold/purchased in different units of measure (advanced)*.
+    Приложение *Продажи* позволяет указать единицы измерения для расходов (единицы, километры, ночи, и т.д.).
 
 
-How to record expenses
-======================
 
-Manually
---------
+Как вести учет расходов
+=======================
 
-As an employee (Employee in user access rights), you can record 
-expenses from :menuselection:`My Expenses --> Expenses to Submit`.
+Вручную
+-------
 
-.. image:: expenses/submit_01.png
-   :align: center
+Как сотрудник (пользователь с правами доступа), вы можете
+фиксировать расходы в меню: **Мои Расходы > Расходы на рассмотрение**.
 
-1. Select the related product and enter either the total amount 
-   you paid (with Quantity = 1) or the unit price if Quantity is 
-   countable (e.g. number of hotel nights).
-2. Enter the expense date.
-3. Choose if you paid the bill on your own (and expect to be reimbursed) 
-   or if the company paid directly (e.g. if you used a company's credit card).
-4. Set the bill reference, add some notes if requested and attach a 
-   photo/scan of the receipt from the discussion thread. 
-   That will help the manager and the accountant validate it.
+1.  Выберите необходимый продукт и внесите либо общую сумму,
+    которую вы заплатили (Количество = 1), либо цену за единицу,
+    если количество можно посчитать (например, количество ночей в отеле).
+2. Укажите дату расходов.
+3.  Выберите, каким образом были оплачены расходы: за ваш счет или за счет
+    компании (например, если вы воспользовались кредитной картой компании).
+4.  Если необходимо, укажите ссылку на счет, добавьте примечания и приложите
+    фотографию/скан квитанции об оплате.
+    Это поможет администратору и бухгалтеру проверить данные.
 
-.. image:: expenses/submit_02.png
-   :align: center
+В один клик из электронной почты
+--------------------------------
 
-In one click from emails
-------------------------
+Позвольте вашим сотрудникам вести учет расходов с помощью простого
+электронного письма.
+Сфотографируйте квитанцию и отправьте ее по почте или просто перешлите счет!
 
-Let your employees record their expenses from a simple email. 
-Make a snapshot of the receipt and send it by email, or simply forward a bill!
-
-The only thing to do is setting up an email alias in 
-:menuselection:`Expenses --> Configuration --> Settings` (e.g. *expenses* @mycompany.odoo.com). 
-For security purposes, only authenticated employee emails 
-(cfr. *Work Email* in employee detail form) are accepted.
+Единственное, что нужно сделать, это настроить электронную почту в меню:
+:menuselection:`Expenses --> Configuration --> Settings` (например, *расходы* @mycompany.odoo.com).
+В целях безопасности допустимы только аутентифицированные электронные письма сотрудников
+(см. *Рабочий адрес электроной почты* в личной карточки сотрудника).
 
 .. tip::
-    The expense product is set automatically if the mail subject contains 
-    the product's internal reference in first position.
-    Type the expense amount in the mail subject to set it on the expense too (e.g. Ref001 Food 100€).
+    Вид расхода устанавливается автоматически, если в теме письма на первом месте указана внутренняя ссылка на продукт. Внесите сумму платежа в теме письма, чтобы автоматически зафиксировать сумму расходов (Например, Ref001 Обед 200 руб.).
 
-How to submit expenses to managers
-==================================
 
-When you are ready to submit your expenses to your manager 
-(e.g. at the end of a business trip, or once a month), 
-go to the menu :menuselection:`My Expenses --> Expenses to Submit`. Select all expenses 
-from the list view and click on :menuselection:`Action --> Submit to Manager`.
-Save the newly created expense report (i.e. set of expenses), 
-and wait for your manager to approve it.
+Как отправить расходы администратору
+====================================
 
-.. image:: expenses/submit_03.png
-   :align: center
+Когда вы готовы предоставить отчет о расходах своему руководителю
+(например, в конце командировки или раз в месяц), откройте меню:
+:menuselection:`My Expenses --> Expenses to Submit`. Выберите все расходы из списка и нажмите  :menuselection:`Action --> Submit to Manager`.
+Сохраните только что созданный отчет о расходах  и подождите пока ваш менеджер его одобрит.
+Вы также можете отправлять расходы по одному с помощью кнопки *Отправить менеджеру*, расположенной
+на карточке расхода.
 
-You can also submit expenses one by one from the *Submit to Manager* 
-button on the form view of an expense.
-
-All your submitted expense reports can be found in 
+Все ваши отправленные отчеты о расходах можно найти в меню:
 :menuselection:`Expenses --> My Expenses --> Expense Reports`.
 
 
-How to approve expenses
-=======================
+Как утвердить расходы
+=====================
 
-HR and team managers get an overview of all expense reports to 
-validate from the top menu :menuselection:`To Approve --> Expense Reports to Approve`. 
-Such users must have at least *Officers* access rights for *Expenses*.
+Менеджерам по персоналу и руководителям доступен обзор всех отчетов по затратам, которые
+необходимо утвердить в верхнем меню: **To Approve > Expense Reports to Approve**.
+Такие пользователи должны иметь как минимум право доступа для *Сотрудников*.
 
-.. image:: expenses/approval_01.png
-   :align: center
+Они могут проверять отчеты о расходах, утверждать или отклонять их, а также предоставлять
+обратную связь за счет встроенного средства коммуникации.
 
-They can review expense reports, approve or reject them, as well as providing 
-feedback thanks to the integrated communication tool.
+Как руководитель отдела вы можете легко находить отчеты всех членов вашей команды.
+Для этого необходимо, чтобы вы были указаны как руководитель в личных карточках сотрудников.
 
-.. image:: expenses/approval_02.png
-   :align: center
-
-As a team manager you can easily find the expense reports of your team members. 
-You need to be set as manager in the detail form of those employees.
-
-.. image:: expenses/approval_03.png
-   :align: center
-
-
-How to post expenses in accounting
+Как провести расходы в бухгалтерии
 ==================================
 
-Once expense reports approved by managers, the accounting department 
-goes to :menuselection:`Expenses --> Accountant --> Expense Reports To Post` to check 
-accounts, products and taxes. They can click *Post Journal Entries* 
-to post related journal entries into your books. 
-To do so, the user must have following access rights:
+После того, как отчеты о расходах утверждены руководителями, бухгалтерия использует меню:
+:menuselection:`Expenses --> Accountant --> Expense Reports To Post` для проверки счетов,
+продуктов и налогов. Они могут нажать *Отправить Запись в Журнал* для проводки соответствующей
+записи в книге учета.
 
-* Accounting: Accountant or Adviser
-* Expenses: Manager
+* Бухгалтерия: Бухгалтер или Консультант
+* Расходы: Менеджер
 
 .. note::
-    To post an expense, a *Home Address* must be set on the employee. 
-    If you get a related blocking message when posting, click the employee, 
-    go to *Personal Information* tab and select/create the contact of your employee 
-    in the address book. 
-    A contact has been automatically created if this person is using Odoo.
+    Для проводки расходов у сотрудников должен быть установлен *Домашний адрес*.
+Если во время проводки вы получаете сообщение о блокировке, выберите сотрудника, перейдите
+на страницу *Личная Информация* и выберите/создайте контакт вашего сотрудника в
+адресной книге.
+Контакт создается автоматически, если этот сотрудник является пользователем Odoo.
 
-How to reimburse employees
-==========================
+Как возмещать расходы сотрудникам
+=================================
 
-You can now see all the expense reports to reimburse in 
+Вы можете найти все отчеты о расходах в меню:
 :menuselection:`Expenses --> Accountant --> Expense Reports To Pay`. 
-To record the payment or pay by check, click *Register a Payment*.
+Чтобы зарегистрировать платеж или оплатить его квитанцией, нажмите *Зарегистрировать Платеж*.
 
-See how you can easily manage the payment process in Odoo:
+Взгляните, каким образом вы можете легко управлять процессом оплаты в Odoo:
 
 * :doc:`accounting/payables/pay/check`
 * :doc:`accounting/payables/pay/sepa`
 
 
-How to re-invoice expenses to your customers
-============================================
+Как повторно выставить счет-фактуру на расходы своим клиентам
+=============================================================
 
-If you track expenses on customer projects, you can charge them back to
-your customers automatically.
+Если вы отслеживаете расходы по проектам клиентов, вы можете выставлять счета клиентам
+автоматически.
 
-Setup
------
+Настройки
+---------
 
--  Enable **Customer Billing** in the Expenses settings
+-  Включите **Выставление счетов клиентам** в настройках Расходов.
 
--  Go to the product configuration menu and set the invoicing method on
-   all your Expense types:
+-  Откройте меню настройки продукта и установите способ выставления счетов на все виды расходов:
 
-   -  Ordered quantities: it will invoice expenses based on the ordered
-      quantity
+   -  Заказанный объем: счет выставляется на основе заказанного объема
 
-   -  Delivered quantities: it will invoice expenses based on the
-      expenses quantity
+   -  Поставленный объем: счет выставляется на основе поставленного объема
+   -  По себестоимости: счет-фактура выставляется по себестоимости.
 
-   -  At cost: will invoice expenses at their real cost.
+   -  По торговой цене: счет выставляется на основании фиксированной цены продажи, указанной в заказе.
 
-   -  At sales price: will invoice based on a fixed sales price set on
-      the sale order.
 
-.. image:: expenses/invoicing_01.png
-  :align: center
+Как создать заказ
+-----------------
 
-Create an order
----------------
+-  Как продавец создайте и подтвердите заказ на продажу услуг, оказанных вашему клиенту.
+Если вы не включаете в заказ какие-либо расходы, они будут добавлены автоматически,
+как только бухгалтер сделает проводку.
 
--  As a salesman, create and confirm a Sales Order for the services
-   delivered to your customer. If you don't put any expense in the
-   order, it will be added automatically once posted by the
-   accountant.
+- Свяжите расходы с заказом.
 
--  Link the expense to the Sale Order.
+Отправка, проверка и проводка расходов
+--------------------------------------
 
-.. image:: expenses/invoicing_02.png
-  :align: center
+-  Как менеджер, убедитесь, что аналитический счет установлен в каждой строке расходов во время утверждения отчетов по расходам.
 
-Submit, validate and post expenses
-----------------------------------
+-  Как бухгалтер сделайте проводку в журнале учета.
 
--  As a manager, make sure the analytic account is set on every expense
-   line on approving expenses reports. Click the line to add one if
-   missing. Employees are already able to set one when submitting.
+Выставление счета-фактуры на расходы
+------------------------------------
 
-.. image:: expenses/invoicing_03.png
-  :align: center
-
--  As an accountant, post journal entries.
-
-Invoice expenses
-----------------
-
-Now you can invoice the order. It shows up in 
+Теперь вы можете выставить счет-фактуру на заказ. Он отображается
+для выставления счета-фактуры в меню:
 :menuselection:`Sales --> Invoicing --> Sales`
-to Invoice. The expenses have been added automatically in the order
-lines. Such items show up in blue (i.e. to invoice).
+Расходы автоматически добавлены в заказ. Расходы выделены синим цветом (для выставления
+счета).
 
-.. image:: expenses/invoicing_04.png
-  :align: center
-
-e (i.e. to invoice). 

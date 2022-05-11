@@ -2,13 +2,14 @@
 :hide-page-toc:
 :show-toc:
 
-=================
-Users & Companies
-=================
+=======================
+Пользователи и компании
+=======================
 
-Odoo defines a *user* as someone who has access to a database to perform daily tasks. You can add as
-many users as you need and, in order to restrict the type of information each user can access, rules
-can be applied. Users and access rights can be added and changed at any point.
+В Odoo *пользователь* - это человек, который имеет доступ к базе данных для выполнения повседневных задач.
+Вы можете добавить любое количество пользователей. Чтобы ограничить доступ к определенным данным,
+можно установить права доступа для каждого пользователя.
+Пользователи и права доступа могут быть добавлены и изменены в любой момент.
 
 .. toctree::
    :titlesonly:

@@ -1,67 +1,44 @@
 =============
-Access Rights
+Права доступа
 =============
 
-Activate the :ref:`developer mode <developer-mode>`, then go to :menuselection:`Settings --> Users &
+Активируйте :ref:`режим разработчика <developer-mode>`, затем откройте меню :menuselection:`Settings --> Users &
 Companies --> Groups`.
 
-Groups
+Группы
 ======
 
-| When choosing the groups the user can have access under
-  :ref:`Access Rights <users/add-individual>`, details of the rules and inheritances of that group
-  are not shown, so this is when the menu *Groups* comes along. *Groups* are created to define rules
-  to models within an application.
-| Under *Users*, have a list of the current ones. The ones with administrative rights are shown
-  in black.
+| При выборе групп, к которым пользователь может иметь доступ в настройках
+  :ref:`Права доступа <users/add-individual>`, не отображается перечень правил и наследование для каждой группы.
+В меню *Группы* вы можете увидеть более подробную информацию.
+*Группы* нужны для определения прав доступа к моделям и различным компонентам системы.
 
-.. image:: access_rights/groups-users.png
-   :align: center
-   :alt: View of a group’s form emphasizing the tab users in Odoo
+| Во вкладке *Пользователи*, представлен список действующих пользователей для конкретной группы. Пользователи с правами администратора выделены
+  черным цветом.
 
-*Inherited* means that users added to this application group are automatically added to the
-following ones. In the example below, users who have access to the group *Administrator* of *Sales*
-also have access to *Website/Restricted Editor* and *Sales/User: All Documents*.
-
-.. image:: access_rights/groups-inherited.png
-   :align: center
-   :height: 330
-   :alt: View of a group’s form emphasizing the tab inherited in Odoo
+*Наследуемые* означает, что пользователи, добавленные к группе, автоматически наследуют права доступа к дочерним
+элементам системы. Например, пользователи, которые имеют доступ к группе *Администратор* в *Продажах* также имеет доступ к
+*Website/Restricted Editor* и *Sales/User: All Documents*.
 
 .. important::
-   Remember to always test the settings being changed in order to ensure that they are being applied
-   to the needed and right users.
+   Не забывайте всегда проверять настройки, которые вы меняете. Это позволяет убедиться в том, что права группы доступны необходимым пользователям.
 
-The *Menus* tab is where you define which menus (models) the user can have access to.
+Вкладка *Меню* позволяет определить к каким моделям (компонентам системы) пользователь имеет доступ.
 
-.. image:: access_rights/groups-menus.png
-   :align: center
-   :height: 330
-   :alt: View of a group’s form emphasizing the tab menus in Odoo
+*Права доступа* - это первый уровень прав. В столбце *Название* указано имя объекта - техническое имя, присвоенное модели.
+Для каждой модели, выберите нужное значение:
 
-*Access Rights* rules are the first level of rights. The field is composed of the object name, which
-is the technical name given to a model. For each model, enable the following options as appropriate:
+- *Доступ на чтение*: данные этого объекта могут быть видны только пользователю.
+- *Доступ на запись*: данные этого объекта могут быть отредактированы пользователем.
+- *Доступ на создание*: данные этого объекта могут быть созданы пользователем.
+- *Доступ на удаление*: данные этого объекта могут быть удалены пользователем.
 
-- *Read*: the values of that object can be only seen by the user.
-- *Write*: the values of that object can be edited by the user.
-- *Create*: values for that object can be created by the user.
-- *Delete*: the values of that object can be deleted by the user.
-
-.. image:: access_rights/groups-access-rights.png
-   :align: center
-   :alt: View of a group’s form emphasizing the tab access rights in Odoo
-
-| As a second layer of editing and visibility rules, *Record Rules* can be formed. They overwrite,
-  or refine, the *Access Rights*.
-| A record rule is written using a *Domain*. Domains are conditions used to filter or searching
-  data. Therefore, a domain expression is a list of conditions. For each rule, choose among the
-  following options: *Read*, *Write*, *Create* and *Delete* values.
-
-.. image:: access_rights/groups-record-rules.png
-   :align: center
-   :alt: View of a group’s form emphasizing the tab record rules in Odoo
+| В качестве второго уровня для правил редактирования и видимости, используются *Правила записи*.
+  Они перезаписывают или уточняют *Права доступа*.
+| Правило записи создается с помощью *Домена*. Домены - это условия, используемые для фильтрации или поиска
+  данных. Таким образом, выражение домена представляет собой список условий. Для каждого правила выберите один из
+  следующих вариантов: *Чтение*, *Запись*, *Создание* и *Удаление*.
 
 .. important::
-   Making changes in access rights can have a big impact on the database. For this reason, we
-   recommend you to contact your Odoo Business Analyst or our Support Team, unless you have
-   knowledge about Domains in Odoo.
+   Внесение изменений в права доступа может оказать большое влияние на базу данных. По этой причине мы
+   рекомендуем обратиться к бизнес-аналитику Odoo или в службу поддержки.

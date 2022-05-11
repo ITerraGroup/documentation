@@ -75,7 +75,7 @@
 {%- block content %}
     <div id="wrap">
         {%- set main_classes = [] %}
-        {%- if pagename == master_doc %}  {# The current page is the homepage #}
+        {%- if pagename == master_doc + 'xxx' %}  {# The current page is the homepage #}
             {%- set main_classes = main_classes + ['o_index'] %}
         {%- endif %}
 
@@ -96,7 +96,7 @@
         {%- endif %}
 
         <main class="container-fluid {{ ' '.join(main_classes) }}">
-            {%- if pagename == master_doc %}
+            {%- if pagename == master_doc + 'xxx' %}
                 {# Custom landing page on the root of the documentation #}
                 {%- include "layout_templates/homepage.html" %}
             {%- else %}

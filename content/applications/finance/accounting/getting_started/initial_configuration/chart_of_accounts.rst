@@ -1,171 +1,160 @@
-=================
-Chart of Accounts
-=================
+================================
+План счетов бухгалтерского учета
+================================
 
-The **Chart of Accounts (COA)** is the list of all the accounts used to record financial
-transactions in the general ledger of an organization.
+**План счетов** это систематизированный перечень всех счетов, используемых для бухгалтерского учета
+финансовой-хозяйственной деятельности организации.
 
-The accounts are usually listed in the order of appearance in the financial reports. Most of the
-time, they are listed as follows :
+Счета обычно соответствуют порядку в финансовых отчетах. В большинстве случаев
+они перечислены следующим образом:
 
-- Balance Sheet accounts
+- Балансовые счета
 
-  * Assets
-  * Liabilities
-  * Equity
+  * Активы
+  * Обязательства
+  * Капитал
 
-- Profit & Loss
+- Прибыли и убытки
 
-  * Income
-  * Expense
+  * Доходы
+  * Расходы
 
-When browsing your Chart of Accounts, you can filter the accounts by number, in the left column, and
-also group them by Account Type.
+При просмотре плана счетов вы можете отфильтровать счета по номеру в левой колонке, а
+также группировать по типу счета.
 
-.. image:: media/chart_of_accounts01.png
-   :align: center
-   :alt: Group the accounts by type in Odoo Accounting
+Настройка плана счетов
+======================
 
-Configuration of an Account
-===========================
-
-The country you select at the creation of your database (or additional company on your database)
-determines which **Fiscal Localization Package** is installed by default. This package includes a
-standard Chart of Accounts already configured according to the country's regulations. You can use
-it directly or set it according to your company's needs.
+Страна, которую вы выбрали при создании базы данных (или дополнительная компания в вашей базе данных)
+определяет, какой **Пакет фискальной локализации** установлен по умолчанию. Этот пакет включает в себя
+стандартный план счетов, настроенный в соответствии с законодательством страны. Вы можете использовать
+план счетов по умолчанию или настроить его в соответствии с потребностями вашей компании.
 
 .. warning::
-   It is not possible to modify the **Fiscal Localization** of a company once a Journal Entry has
-   been posted.
+   Невозможно изменить **Фискальную локализацию** компании после того, как уже сделана проводка в бухгалтерском учете.
 
-To create a new account, go to :menuselection:`Accounting --> Configuration --> Chart of Accounts`,
-click on *Create*, and fill out the form.
+Чтобы создать новый счет, перейдите в меню: :menuselection:`Accounting --> Configuration --> Chart of Accounts`,
+нажмите *Создать* и заполните форму.
 
-Code and Name
--------------
+Код и Имя
+---------
 
-Each account is identified by its **Code** and **Name**, which also indicates the account's purpose.
+Каждый счет идентифицируется **Кодом** и **Именем**, которые также указывают на назначение счета.
 
-Type
-----
+Виды счетов бухгалтерского учета
+--------------------------------
 
-Configuring correctly the **Account Type** is critical as it serves multiple purposes:
+Правильная настройка **Типа счета** крайне важна, так как это решает множество задач:
 
-- Information on the account's purpose and behavior
-- Generate country-specific legal and financial reports
-- Set the rules to close a fiscal year
-- Generate opening entries
+- Информирует о назначении и использовании счета
+- Создает юридические и финансовые отчеты для конкретной страны
+- Устанавливает правила для закрытия финансового года
+- Создает проводки на начало периода
 
-To configure an account type, open the **Type** field's drop-down selector and select the right
-type among the following list:
+Чтобы настроить тип счета, из раскрывающегося списка *Тип* выберите нужный вариант:
 
-+---------------+--------------+-------------------------+
-| Report        | Category     | Account Types           |
++------------------+--------------+---------------------------+
+| Отчет            | Категория    | Типы счетов               |
 +===============+==============+=========================+
-| Balance Sheet | Assets       | Receivable              |
-|               |              +-------------------------+
-|               |              | Bank and Cash           |
-|               |              +-------------------------+
-|               |              | Current Assets          |
-|               |              +-------------------------+
-|               |              | Non-current Assets      |
-|               |              +-------------------------+
-|               |              | Prepayments             |
-|               |              +-------------------------+
-|               |              | Fixed Assets            |
-|               +--------------+-------------------------+
-|               | Liabilities  | Payable                 |
-|               |              +-------------------------+
-|               |              | Credit Card             |
-|               |              +-------------------------+
-|               |              | Current Liabilities     |
-|               |              +-------------------------+
-|               |              | Non-current Liabilities |
-|               +--------------+-------------------------+
-|               | Equity       | Equity                  |
-|               |              +-------------------------+
-|               |              | Current Year Earnings   |
-+---------------+--------------+-------------------------+
-| Profit & Loss | Income       | Income                  |
-|               |              +-------------------------+
-|               |              | Other Income            |
-|               +--------------+-------------------------+
-|               | Expense      | Expense                 |
-|               |              +-------------------------+
-|               |              | Depreciation            |
-|               |              +-------------------------+
-|               |              | Cost of Revenue         |
-+---------------+--------------+-------------------------+
-|Other          | Other        | Off-Balance Sheet       |
-+---------------+--------------+-------------------------+
+| Балансовый отчет | Активы       | Дебиторская задолженность |
+|                  |              +---------------------------+
+|                  |              | Банк и касса              |
+|                  |              +---------------------------+
+|                  |              | Текущие активы            |
+|                  |              +---------------------------+
+|                  |              | Внеоборотные активы       |
+|                  |              +---------------------------+
+|                  |              | Предоплаты                |
+|                  |              +---------------------------+
+|                  |              | Основные средства         |
+|                  +--------------+---------------------------+
+|                  | Обязательства| Кредиторская задолженность|
+|                  |              +---------------------------+
+|                  |              | Кредитная карта           |
+|                  |              +---------------------------+
+|                  |              | Текущие обязательства     |
+|                  |              +---------------------------+
+|                  |              | Долгосрочные обязательства|
+|                  +--------------+---------------------------+
+|                  | Капитал      | Капитал                   |
+|                  |              +---------------------------+
+|                  |              | Выручка текущего года     |
++---------------+--------------+------------------------------+
+| Прибыли и убытки | Доходы       | Доходы                    |
+|                  |              +---------------------------+
+|                  |              | Прочие доходы             |
+|                  +--------------+---------------------------+
+|                  | Расходы      | Расходы                   |
+|                  |              +---------------------------+
+|                  |              | Амортизация               |
+|                  |              +---------------------------+
+|                  |              | Стоимость выручки         |
++------------------+--------------+---------------------------+
+|Прочее            | Прочее       | Забаланс                  |
++------------------+--------------+---------------------------+
 
-Assets, Deferred Expenses, and Deferred Revenues Automation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Автоматизация активов, отложенных расходов, и доходов будущих периодов
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Some Account Types display a new field **to automate** the creation of :ref:`Assets
-<assets-automation>` entries, :ref:`Deferred Expenses <deferred-expenses-automation>` entries,
-and :ref:`Deferred Revenues <deferred-revenues-automation>` entries.
+Некоторые типы счетов отображают новое поле *автоматизировать* создание проводки: :ref:`Активов
+<assets-automation>`, :ref:`Отложенных расходов <deferred-expenses-automation>`,
+и :ref:`Доходов будущих периодов <deferred-revenues-automation>`.
 
-You have three choices for the **Automation** field:
+В поле **Автоматизация** представлены три опции:
 
-#. **No:** this is the default value. Nothing happens.
-#. **Create in draft:** whenever a transaction is posted on the account, a draft entry is created,
-   but not validated. You must first fill out the corresponding form.
-#. **Create and validate:** you must also select a Model. Whenever a transaction is posted on the
-   account, an entry is created and immediately validated.
-
+#. **Нет:** значение по умолчанию.
+#. **Создать черновик:** каждый раз, когда операция проводится по счету, создается неподтвержденная черновая запись. Для этого необходимо заполнить соответствующую форму.
+#. **Создать и подтвердить:** необходимо также выбрать Модель. Каждый раз, когда операция проводится по
+   счету, создается и сразу же подтверждается запись.
 .. note::
-   Please refer to the related documentation for more information.
+   Для получения дополнительной информации обратитесь к соответствующей документации.
 
-Default Taxes
--------------
+Налоги по умолчанию
+-------------------
 
-Select a **default tax** that will be applied when this account is chosen for a product sale or
-purchase.
+**Налог по умолчанию** может быть выбран при создании счета для продажи или покупки товара.
 
-Tags
+Теги
 ----
 
-Some accounting reports require **tags** to be set on the relevant accounts. By default, you can
-choose among the tags that are used by the *Cash Flow Statement*.
+Некоторые бухгалтерские отчеты требуют использование **тегов** в соответствующих счетах. По умолчанию вы можете
+выбрать один из тегов, которые используются в *Отчете о движении денежных средств*.
 
-Account Groups
---------------
+Группы счетов
+-------------
 
-**Account Groups** are useful to list multiple accounts as *sub-accounts* of a bigger account and
-thus consolidate reports such as the **Trial Balance**.
+**Группы счетов** необходимы для объединения нескольких счетов в качестве *субсчетов*, подчиненных
+счету первого порядка. Это позволяет консолидировать отчеты, такие как **Пробный баланс**.
 
-To create a new Account Group, open the account you want to configure as sub-account, click on the
-*Group* drop-down selector, select *Create and Edit...*, fill out the form, and save. Next,
-set all the sub-accounts with the right Account Group.
+Чтобы создать новую группу счетов, откройте счет, который вы хотите настроить как субсчет.
+Из выпадающего списка *Группа*, выберите  *Создать и редактировать...*, заполните и сохраните форму.
+После этого, для всех субсчетов установите правильную группу счетов.
 
-To display your **Trial Balance** report with your Account Groups, go to :menuselection:`Accounting
---> Reporting --> Trial Balance`, then open the *Options* menu and select **Hierarchy and
-Subtotals**.
+Чтобы отобразить отчет **Пробный баланс** в группе счетов, перейдите в меню: :menuselection:`Accounting
+--> Reporting --> Trial Balance`, затем откройте меню *Опции* и выберите **Иерархия и
+Промежуточные итоги**.
 
-.. image:: media/chart_of_accounts02.png
-   :align: center
-   :alt: Account Groups in the Trial Balance in Odoo Accounting
 
-Allow Reconciliation
---------------------
+Разрешить сверку
+----------------
 
-Some accounts, such as accounts made to record the transactions of a payment method, can be used for
-the reconciliation of journal entries.
+Некоторые счета, например, счета, созданные для учета операций по способу платежа,
+могут быть использованы для выверки бухгалтерских записей в журнале.
 
-For example, an invoice paid with a credit card can be *marked as paid* if reconciled with the
-payment. Therefore, the account used to record credit card payments needs to be configured as
-*allowing reconciliation*.
+Например, счет, оплаченный кредитной картой, может быть *отмечен как оплаченный*, если он сверен с
+платежом. Поэтому счет, используемый для учета платежей по кредитной карте, должен быть настроен как
+*разрешающим сверку*.
 
-To do so, check the **Allow Reconciliation** box and save.
+Для этого установите флажок в поле **Разрешить сверку**.
 
-Deprecated
-----------
 
-It is not possible to delete an account once a transaction has been recorded on it. You can make
-them unusable by using the **Deprecated** feature.
+Утратившие силу
+---------------
 
-To do so, check the **Deprecated** box and save.
+Невозможно удалить счет после того, как по нему была проведена транзакция. Вы можете сделать
+их непригодными для использования с помощью функции **Устарело**.
+
+Для этого установите флажок в поле **Устарело**.
 
 .. seealso::
    * :doc:`../../payables/supplier_bills/assets`

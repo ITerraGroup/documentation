@@ -1,56 +1,47 @@
-======================
-Manage a cash register
-======================
+=================
+Управление кассой
+=================
 
-The cash register is a journal to register receivings and payments transactions.
-It calculates the total money in and out, computing the total balance.
+Кассовая книга - это журнал регистрации приходных и расходных кассовых операций.
+Она подсчитывает поступление и расход денежных средств, вычисляя общий баланс.
 
-Configuration
-=============
+Настройки
+=========
 
-.. image:: ./media/journal.png
-   :align: center
-
-1. Configure the Cash journal in :menuselection:`Accounting --> Configuration --> 
+1. Настройте кассовый журнал в меню: :menuselection:`Accounting --> Configuration -->
    Journals`.
 
-2. In the tab Journal Entries, the Default Debit and Credit Account can be
-   configured as well as the currency of the journal
+2. На вкладке Записи Журнала, можно настроить дебетовый и кредитный счета по умолчанию, а также валюту журнала.
 
-Usage
-=====
+Использование
+=============
 
-How to register cash payments?
-------------------------------
+Как зарегистрировать наличные платежи?
+--------------------------------------
 
-To register a cash payment specific to another customer, you should follow
-these steps:
+Чтобы зарегистрировать денежный платеж, предназначенный для другого клиента, необходимо выполнить следующие действия:
 
-1. Go to :menuselection:`Accounting --> Dashboard --> Cash --> Register
+1. Перейдите в меню: :menuselection:`Accounting --> Dashboard --> Cash --> Register
    Transactions`
 
-2. Fill in the start and ending balance
+2. Укажите начальный и конечный баланс.
 
-3. Register the transactions, specifying the customers linked to the transaction
+3. Зарегистрируйте транзакцию, указав клиентов, связанных с транзакцией.
 
-Put money in
-------------
+Внесение денежных средств
+-------------------------
 
-Put money in is used to placed your cash manually before starting your
-transactions. From the Register Transactions window, go to :menuselection:`More
+Функция внесения наличных в кассу используется перед началом транзакций.
+В окне Регистрация Транзакций перейдите в меню: :menuselection:`More
 --> Put money in`
 
-.. image:: ./media/put-money-in.png
-   :align: center
+Снятие денежных средств
+-----------------------
 
-Take money out
---------------
-
-Take money out is used to collect/get yor your cash manually after
-ending all your transactions. From the Register Transaction windows, go to :menuselection:`More
+Функция снятия денежных средств используется для изъятия наличных из кассы после
+завершения всех транзакций.
+В окне Регистрация Транзакций перейдите в меню: :menuselection:`More
 --> Take money out`
 
-.. image:: ./media/put-money-out.png
-   :align: center
+Транзакции будут добавлены к текущей регистрации наличных платежей.
 
-The transactions will be added to the current cash payment registration.

@@ -1,29 +1,21 @@
-===================================================
-Initial setup of Odoo Accounting and Odoo Invoicing
-===================================================
+=======================================================
+Первоначальная настройка Odoo бухгалтерии и актирования
+=======================================================
 
-When you first open your Odoo Accounting app, the *Accounting Overview* page welcomes you with a
-step-by-step onboarding banner, a wizard that helps you get started. This onboarding banner is
-displayed until you choose to close it.
-
-The settings visible in the onboarding banner can still be modified later by going to
+Когда вы впервые откроете приложение Odoo Бухгалтерия, на странице *Бухгалтерия: Обзор* вас будет
+приветствует пошаговый баннер, который поможет начать работу. Баннер с подсказками отображается
+до тех пор, пока вы не решите закрыть его. Эти инструкции можно изменить, перейдя в раздел
 :menuselection:`Accounting --> Configuration --> Settings`.
 
 .. note::
-   Odoo Accounting automatically installs the appropriate **Fiscal Localization Package** for your
-   company, according to the country selected at the creation of the database. This way, the right
-   accounts, reports, and taxes are ready-to-go. :doc:`Click here
-   <../../fiscal_localizations/overview/fiscal_localization_packages>` for more information about
-   Fiscal Localization Packages.
+   Odoo Бухгалтерия автоматически устанавливает **Пакет фискальной локализации** для вашей компании в соответствии со страной, выбранной при создании базы данных. Поэтому в вашем распоряжении будут предусмотренные для конкретной страны счета, отчеты и налоговые обязательства. :doc:`Нажмите здесь
+   <../../fiscal_localizations/overview/fiscal_localization_packages>` для получения дополнительной информации о пакетах фискальной локализации.
 
-Accounting onboarding banner
-============================
+Бухгалтерский помощник
+======================
 
-The step-by-step Accounting onboarding banner is composed of four steps:
+Баннер с пошаговыми инструкциями по установке бухгалтерского учета состоит из четырех этапов:
 
-.. image:: media/setup_accounting_onboarding.png
-   :align: center
-   :alt: Step-by-step onboarding banner in Odoo Accounting
 
 #. :ref:`accounting-setup-company`
 #. :ref:`accounting-setup-bank`
@@ -32,102 +24,85 @@ The step-by-step Accounting onboarding banner is composed of four steps:
 
 .. _accounting-setup-company:
 
-Company Data
-------------
+Данные компании
+---------------
 
-This menu allows you to add your company’s details such as the name, address, logo, website, phone
-number, email address, and Tax ID, or VAT number. These details are then displayed on your documents,
-such as on invoices.
-
-.. image:: media/setup_company.png
-   :align: center
-   :alt: Add your company's details in Odoo Accounting and Odoo Invoicing
+Это меню позволяет добавить данные о вашей компании, такие как: название, адрес, логотип, веб-сайт,
+телефон, адрес электронной почты, а также ИНН и ОГРН.
+Эти данные будут отображаться в ваших документах,
+например, в счетах-фактурах.
 
 .. note::
-   You can also change these settings by going to :menuselection:`Settings --> General Settings -->
-   Settings --> Companies` and clicking on **Update Info**.
+   Вы можете изменить эти настройки, перейдя в меню: :menuselection:`Settings --> General Settings -->
+   Settings --> Companies`, и нажав **Обновить**.
 
 .. _accounting-setup-bank:
 
-Bank Account
-------------
+Банковский счет
+---------------
 
-Connect your bank account to your database and have your bank statements synced automatically. To do
-so, find your bank in the list, click on *Connect*, and follow the instructions on-screen.
-
-.. note::
-   :doc:`Click here <../../bank/feeds/bank_synchronization>` for more information about this feature.
-
-If your Bank Institution can’t be synchronized automatically, or if you prefer not to sync it with
-your database, you may also configure your bank account manually by clicking on *Create it*, and
-filling out the form.
-
-- **Name**: the bank account's name, as displayed on Odoo.
-- **Account Number**: your bank account number (IBAN in Europe).
-- **Bank**: click on *Create and Edit* to configure the bank's details. Add the bank institution's
-  name and its Identifier Code (BIC or SWIFT).
-- **Code**: this code is your Journal's *Short Code*, as displayed on Odoo. By default, Odoo creates
-  a new Journal with this Short Code.
-- **Journal**: This field is displayed if you have an existing Bank Journal that is not linked yet
-  to a bank account. If so, then select the *Journal* you want to use to record the financial
-  transactions linked to this bank account or create a new one by clicking on *Create and Edit*.
+Подключите свой банковский счет к базе данных, чтобы обеспечить автоматическую синхронизацию банковских выписок. Для этого
+из предложенного списка выберите нужный банк, нажмите *Подключить* и следуйте инструкциям на экране.
 
 .. note::
-   - You can add as many bank accounts as needed with this tool by going to :menuselection:`Accounting
-     --> Configuration`, and clicking on *Add a Bank Account*.
-   - :doc:`Click here <../../bank/setup/bank_accounts>` for more information about Bank
-     Accounts.
+   :doc:`Нажмите здесь <../../bank/feeds/bank_synchronization>` для получения дополнительной информации об этой функции.
+
+Если ваше банковское учреждение не может быть синхронизировано автоматически, или если вы предпочитаете не синхронизировать его с
+базой данных, вы можете настроить банковский счет вручную. Для этого нажмите *Создать* и
+заполните открывшуюся форму.
+
+- **Название**: название банковского счета, который отображается на Odoo.
+- **Номер счета**: номер вашего банковского счета (IBAN в Европе).
+- **Банк**: название банка.
+- **БИК**: банковский идентификационный код.
+- **Код**: это *Короткий код* вашего журнала, который отображается на Odoo. По умолчанию Odoo создает
+  новый журнал с этим кодом.
+- **Журнал**: это поле отображается, если у вас есть существующий банковский журнал, который еще не связан с
+  банковским счетом. Выберите *Журнал*, который вы хотите использовать для записи финансовых операций, связанных с этим банковским счетом или создайте новый, нажав на кнопку *Создать и Отредактировать*.
+
+.. note::
+   - Вы можете добавить столько банковских счетов, сколько необходимо с помощью этого инструмента. Перейдите в меню: :menuselection:`Accounting
+     --> Configuration` и нажмите *Добавить счет*.
+   - :doc:`Нажмите здесь <../../bank/setup/bank_accounts>` для получения дополнительной информации о банковских счетах.
 
 .. _accounting-setup-periods:
 
-Accounting Periods
-------------------
+Отчетные периоды
+----------------
 
-Define here your **Fiscal Years**’ opening and closing dates, which are used to generate reports
-automatically, and your **Tax Return Periodicity**, along with a reminder to never miss a tax return
-deadline.
+Определите даты начала и завершения **финансовых годов**, которые используются для автоматического
+создания отчетов. Также установите **Сроки подачи налоговой декларации** и напоминание,
+чтобы не пропустить крайний срок.
 
-By default, the opening date is set on the 1st of January and the closing date on the 31st of
-December, as this is the most common use.
+По умолчанию финансовый год начинается 1 января и завершается 31 декабря.
 
 .. note::
-   You can also change these settings by going to :menuselection:`Accounting --> Configuration -->
-   Settings --> Fiscal Periods` and updating the values.
+   Вы можете изменить эти настройки, перейдя в меню: :menuselection:`Accounting --> Configuration -->
+   Settings --> Fiscal Periods`.
 
 .. _accounting-setup-chart:
 
-Chart of Accounts
------------------
+План счетов
+-----------
 
-With this menu, you can add accounts to your **Chart of Accounts** and indicate their initial
-opening balances.
+С помощью этого меню вы можете добавить счета в **План счетов** и указать сальдо на начало периода.
 
-Basic settings are displayed on this page to help you review your Chart of Accounts. To access all
-the settings of an account, click on the *double arrow button* at the end of the line.
+На этой странице отображаются основные настройки, необходимые для просмотра плана счетов. Чтобы получить доступ к расширенным
+настройкам счета, нажмите *Настройки* в конце каждой строки.
 
-.. image:: media/setup_chart_of_accounts.png
-   :align: center
-   :alt: Setup of the Chart of Accounts and their opening balances in Odoo Accounting
 
 .. note::
-   :doc:`Click here <chart_of_accounts>` for more information on how to configure your Chart of
-   Accounts.
+   :doc:`Click here <chart_of_accounts>` для получения дополнительной информации о настройках плана счетов.
 
-Invoicing onboarding banner
-===========================
+Акты
+====
 
-There is another step-by-step onboarding banner that helps you take advantage of your Odoo Invoicing
-and Accounting apps. The *Invoicing onboarding banner* is the one that welcomes you if you use the
-Invoicing app rather than the Accounting app.
+Еще один пошаговый баннер, который поможет вам воспользоваться преимуществами приложения Odoo Актирование.
 
-If you have Odoo Accounting installed on your database, you can reach it by going to
+Если у вас установлено приложение Odoo Бухгалтерия, вы можете попасть на страницу **Акты**, перейдя по ссылке:
 :menuselection:`Accounting --> Customers --> Invoices`.
 
-The Invoicing onboarding banner is composed of four main steps:
-
-.. image:: media/setup_invoicing_onboarding.png
-   :align: center
-   :alt: Step-by-step onboarding banner in Odoo Invoicing
+Баннер Акты состоит из четырех основых шагов:
 
 #. :ref:`invoicing-setup-company`
 #. :ref:`invoicing-setup-layout`
@@ -136,55 +111,44 @@ The Invoicing onboarding banner is composed of four main steps:
 
 .. _invoicing-setup-company:
 
-Company Data
-------------
+Данные компании
+---------------
 
-This form is the same as :ref:`the one presented in the Accounting onboarding banner
+Это форма аналогична: :ref:`the one presented in the Accounting onboarding banner
 <accounting-setup-company>`.
 
 .. _invoicing-setup-layout:
 
-Invoice Layout
---------------
+Макет акта
+----------
 
-With this tool, you can design the appearance of your documents by selecting which layout template,
-paper format, colors, font, and logo you want to use.
+С помощью этого инструмента вы можете создавать внешний вид документов, выбрав подходящий шаблон макета,
+формат бумаги, цвет, шрифт и логотип.
 
-You can also add your *Company Tagline* and the content of the documents’ *footer*. Note that Odoo
-automatically adds the company's phone number, email, website URL, and Tax ID (or VAT number) to the
-footer, according to the values you previously configured in the :ref:`Company Data
+Вы также можете добавить *слоган компании* и содержание *футера* документов. Обратите внимание, что Odoo
+автоматически добавляет телефон компании, электронную почту, URL веб-сайта и ИНН в нижний колонтитул, в соответствии со значениями, которые вы указали. :ref:`Данные компании
 <accounting-setup-company>`.
 
-.. image:: media/setup_document_layout.png
-   :align: center
-   :alt: Document layout configuration in Odoo Invoicing
-
-.. tip::
-   Add your **bank account number** and a link to your **General Terms & Condition** in the footer.
-   This way, your contacts can find the full content of your GT&C online without having to print
-   them on the invoices you issue.
-
 .. note::
-   These settings can also be modified by going to :menuselection:`Settings --> General Settings`,
-   under the *Business Documents* section.
+   Эти настройки также можно изменить, перейдя в меню: :menuselection:`Settings --> General Settings`, раздел *Документы*.
+
 
 .. _invoicing-setup-payment:
 
-Payment Method
---------------
+Способы платежа
+---------------
 
-This menu helps you configure the payment methods with which your customers can pay you.
+Это меню позволит настроить способы оплаты для ваших клиентов.
 
 .. important::
-   Configuring a *Payment Acquirer* with this tool also activates the *Invoice Online Payment*
-   option automatically. With this, users can directly pay online, from their Customer Portal.
+   Настройка *Эквайринга* автоматически активирует опцию *Оплатить счет онлайн*. С помощью этой опции пользователи могут напрямую оплачивать счета онлайн.
 
 .. _invoicing-setup-sample:
 
-Sample Invoice
---------------
+Образец акта
+------------
 
-Send yourself a sample invoice by email to make sure everything is correctly configured.
+Вы можете отправить образец счета-фактуры по электронной почте, чтобы проверить правильность настроек.
 
 .. seealso::
    * :doc:`../../bank/setup/bank_accounts`

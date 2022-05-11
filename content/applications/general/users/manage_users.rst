@@ -1,10 +1,11 @@
-============
-Manage users
-============
+=========================
+Управление пользователями
+=========================
 
-Odoo defines a **user** as someone who has access to a database to perform daily tasks. You can add
-as many users as you need and, in order to restrict the type of information each user can access,
-rules can be applied. Users and access rights can be added and changed at any point.
+В Odoo *пользователь* - это человек, который имеет доступ к базе данных для выполнения повседневных задач.
+Вы можете добавить любое количество пользователей. Чтобы ограничить доступ к определенным данным,
+можно установить права доступа для каждого пользователя.
+Пользователи и права доступа могут быть добавлены и изменены в любой момент.
 
 .. seealso::
    - :doc:`language`
@@ -12,141 +13,98 @@ rules can be applied. Users and access rights can be added and changed at any po
 
 .. _users/add-individual:
 
-Add individual users
-====================
+Добавление пользователей
+========================
 
-Go to :menuselection:`Settings --> Manage Users` and click on *Create*.
+Перейдите в меню: :menuselection:`Settings --> Manage Users` и нажмите на кнопку *Создать*.
 
-.. image:: manage_users/manage-users.png
-   :align: center
-   :height: 280
-   :alt: View of the settings page emphasizing the manage users field in Odoo
+| Заполните форму, указав информацию о пользователе. Во вкладке
+  :doc:`Права доступа <access_rights>` выберите группу для каждого приложения Odoo, к которым пользователь будет иметь доступ.
+| Список приложений включает все приложения, которые установлены в базе данных.
 
-| Fill in the form with the needed information. Under the tab
-  :doc:`Access Rights <access_rights>` choose the group within each application the user can
-  have access to.
-| The list of applications shown is based on the applications installed on the database.
-
-.. image:: manage_users/new_user.png
-   :align: center
-   :alt: View of a user’s form emphasizing the access rights tab in Odoo
-
-When you are done editing the page and have *Saved* it, an invitation email is automatically sent to
-the user. The user must click on it to accept the invitation and create a login.
-
-.. image:: manage_users/invitation-email.png
-   :align: center
-   :alt: View of a user’s form with a notification that the invitation email has been sent in Odoo
+Когда вы завершите редактирование страницы и сохраните форму, письмо с приглашением будет автоматически
+отправлено по электронной почте пользователю. Пользователю необходимо нажать на ссылку в приглашении и создать логин/пароль.
 
 .. note::
-   Remember that subscription prices follow the number of users. Refer to our
-   `pricing page <https://www.odoo.com/pricing>`_
-   for more information.
+   Обратите внимание, что стоимость подписки зависит от количества пользователей. Подробную информацию о ценах вы можете посмотреть на странице
+   `<https://www.odoo.com/pricing>`_
 
-With the :ref:`developer mode <developer-mode>` activated, *User Types* can be selected.
 
-.. image:: manage_users/user-type.png
-   :align: center
-   :height: 300
-   :alt: View of a user’s form in developer mode emphasizing the user type field in Odoo
+Если активирован :ref:`режим разработчика <developer-mode>`, вы также можете указать *Тип пользователя*.
 
-The *Portal* and *Public* options do not allow you to choose access rights. Members have specific
-ones (such as record rules and restricted menus) and usually do not belong to the usual Odoo
-groups.
+Опции *Портал* и *Публичный* не позволяют выбирать права доступа. Пользователи будут иметь ограниченный
+доступ к компонентам системы и обычно не принадлежат к Odoo группам.
 
 .. _users/deactivate:
 
-Deactivate users
-================
+Деактивация пользователей
+=========================
 
-Go to :menuselection:`Settings --> Users & Companies --> Users`, open the user you want to
-deactivate, click on *Action*, and then on *Archive*.
+Перейдите в меню: :menuselection:`Settings --> Users & Companies --> Users`, откройте пользователя, которого
+вы хотите деактивировать, в меню *Действие* выберите опцию *Архивировать*.
 
 .. danger::
-   **Never** deactivate the main user (*admin*).
+   **Никогда** не деактивируйте главного пользователя (*админа*).
 
 .. _users/passwords-management:
 
-Passwords management
-====================
+Управление паролями
+===================
 
 .. _users/reset-password:
 
-Reset passwords
----------------
+Как сбросить пароль
+-------------------
 
 .. _users/reset-password-login:
 
-Enable password resets from login page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Сброс пароля со страницы входа в систему
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is possible to enable password resets directly from the login page.
+Можно включить сброс пароля прямо со страницы входа в систему.
 
-To do so, go to :menuselection:`Settings --> Permissions`, activate **Password Reset** and *Save*.
-
-.. image:: manage_users/password-reset-login.png
-   :align: center
-   :alt: Enabling Password Reset in Odoo Settings
+Для этого перейдите в меню :menuselection:`Settings --> Permissions`, активируйте **Сброс Пароля** и нажмите *Сохранить*.
 
 .. _users/reset-password-email:
 
-Send reset instructions to users
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Отправка инструкций по сбросу пароля
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Go to :menuselection:`Settings --> Users & Companies --> Users`, select the user out of the list and
-click on *Send Password Reset Instructions* on its user form. An email is automatically sent to
-them.
+Перейдите в меню: :menuselection:`Settings --> Users & Companies --> Users`, выберите пользователя из списка и
+нажмите *Отправить инструкции по сбросу пароля* в меню *Действие*. Письмо с инструкциями будет отправлено пользователю по электронной почте.
 
 .. note::
-   The *Send Password Reset Instructions* button only appears if the Odoo invitation email has
-   already been confirmed by the user.
+   Опция *Отправить инструкции по сбросу пароля* появляется только в том случае, если электронное письмо с приглашением Odoo
+   уже подтверждено пользователем.
 
-This email contains all the instructions needed to reset the password, along with a link redirecting
-the user to an Odoo login page.
-
-.. image:: manage_users/password-email.png
-   :align: center
-   :alt: Example of an email with a password reset link for an Odoo account
+Это письмо содержит все инструкции, необходимые для сброса пароля, а также ссылку на страницу входа в Odoo.
 
 .. _users/change-password:
 
-Change users’ passwords
------------------------
+Изменение пароля
+----------------
 
-Go to :menuselection:`Settings --> Users  & Companies --> Users` and select a user to access its
-form. Click on the *Action* button and select *Change Password*.
+Перейдите в меню: :menuselection:`Settings --> Users  & Companies --> Users`, выберите пользователя из списка и
+нажмите *Изменить пароль* в меню *Действие*.
 
-.. image:: manage_users/change-password.png
-   :align: center
-   :alt: Change another user's password on Odoo
-
-Enter a new password and confirm by clicking on *Change Password*.
+Введите новый пароль и нажмите *Изменить пароль*, чтобы подтвердить пароль.
 
 .. note::
-   This operation only modifies the password of the users locally and does not affect their odoo.com
-   account. If you want to change the odoo.com password, you can :ref:`send the password reset
-   instructions <users/reset-password-email>`.
+   Эта функция изменяет пароль пользователя локально и не влияет на его odoo.ru учетную запись. Если вы хотите изменить пароль odoo.ru, вы можете :ref:`отправить инструкцию по сбросу пароля <users/reset-password-email>`.
 
-Click on *Change Password* one more time. You are then redirected to an Odoo login page where you
-can reaccess your database using your new password.
+Нажмите *Изменить пароль* еще раз. Вы будуте перенаправлены на страницу входа, где вы сможете перезайти
+в ваш аккаунт, используя новый пароль.
 
 .. _users/multi-companies:
 
-Multi Companies
-===============
+Мультикомпании
+==============
 
-The *Multi Companies* field allows you to set to which of the multiple companies database you hold
-the user can have access.
+Поле *Мультикомпании* позволяет вам установить, к какой из имеющихся в базе данных компаний пользователь может иметь доступ.
 
 .. note::
-   Note that if not handled correctly, it may be the source of a lot of inconsistent multi-company
-   behaviors. Therefore, a good knowledge of Odoo is required. For technical explanations refer
-   to :doc:`this </developer/howtos/company>` documentation.
+   Обратите внимание, что при неправильном использовании этой функции, могут возникнуть ошибки в системе. Поэтому требуется хорошее знание Odoo. Для подробной информации обратитесь к технической документации :doc:`this </developer/howtos/company>`.
 
-.. image:: manage_users/multi-companies.png
-   :align: center
-   :height: 300
-   :alt: View of a user’s form emphasizing the multi companies field in Odoo
 
 .. seealso::
    - :doc:`companies`

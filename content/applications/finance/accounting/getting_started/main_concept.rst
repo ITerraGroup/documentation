@@ -1,138 +1,142 @@
-========================
-Main accounting concepts
-========================
+============================
+Основные понятия бухгалтерии
+============================
 
-Double-entry bookkeeping
-========================
+Бухгалтерский учет на основе двойной записи
+===========================================
 
-Odoo automatically creates all the behind-the-scenes journal entries
-for each of your accounting transactions: customer invoices, point of
-sale order, expenses, inventory moves, etc.
+Odoo автоматически создает запись всех событий в журнале
+для каждой бухгалтерской операции: счета от клиентов, заказы на продажу,
+расходы, перемещение запасов и т.д.
 
-Odoo uses the rules of double-entry bookkeeping system: all journal
-entries are automatically balanced (sum of debits = sum of credits).
+Odoo использует следующие правила двойной бухгалтерии:
+все записи в журнале автоматически балансируются (сумма дебетов = сумме кредитов).
 
 .. seealso::
    - :doc:`Understand Odoo's accounting transactions per document
      <memento>`
 
-Accrual and Cash Basis Methods
-==============================
+Метод начисления и кассовый метод
+=================================
 
-Odoo supports both accrual and cash basis reporting. This allows you to
-report income / expense at the time transactions occur (i.e., accrual basis), or when
-payment is made or received (i.e., cash basis).
+Odoo поддерживает отчетность как по методу начисления,
+так и по кассовому методу. Это позволяет
+учитывать доходы/расходы в момент совершения операций
+(т.е. по методу начисления), или когда фактическая оплата получена или произведена
+(т.е. кассовый метод).
 
-Multi-companies
-===============
 
-Odoo allows one to manage several companies within the same database. Each
-company has its own chart of accounts and rules. You can get
-consolidation reports following your consolidation rules.
+Мультикомпании
+==============
 
-Users can access several companies but always work in one company at a
-time.
+Odoo позволяет управлять несколькими компаниями в одной базе данных.
+Каждая компания имеет свой собственный план счетов и правила составления отчетноси.
+Вы можете составлять
+консолидированные отчеты в соответствии с вашими правилами консолидации.
 
-Multi-currencies
+Пользователи могут иметь доступ к нескольким компаниям,
+но одновременно разрешено работать только с одной компанией.
+
+Мультивалютность
 ================
+Каждая транзакция записывается в валюте, используемой по умолчанию в данной
+компании. Для транзакций, происходящих в другой валюте, Odoo хранит
+как значение в валюте компании, так и значение в
+валюте транзакции. Odoo может генерировать прибыль/убыток от курсовой разницы
+после корректирующей проводки.
 
-Every transaction is recorded in the default currency of the
-company. For transactions occurring in another currency, Odoo stores
-both the value in the currency of the company and the value in the
-currency of the transaction. Odoo can generate currencies gains and
-losses after the reconciliation of the journal items.
+Курсы валют автоматически обновляются с помощью онлайн сервиса yandex.ru.
 
-Currency rates are updated once a day using a yahoo.com online
-web-service.
-
-International Standards
+Международные стандарты
 =======================
 
-Odoo accounting supports more than 50 countries. The Odoo core
-accounting implements accounting standards that are common to all
-countries. Specific modules exist per country for the
-specificities of the country like the chart of accounts, taxes, or
-bank interfaces.
+Бухгалтерия Odoo поддерживает более 50 стран. Odoo
+использует стандарты бухгалтерского учета, которые являются общими для всех стран.
+Существуют специальные модули, учитывая особенности той или иной страны,
+например: план счетов, налогообложение или
+банковские интерфейсы.
 
-In particular, Odoo's core accounting engine supports:
+В частности, основной механизм бухгалтерского учета Odoo поддерживает:
 
-* Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
-  countries including Ireland, Canada, Australia, and New Zealand)
-  where costs of good sold are reported when products are
-  sold/delivered.
-* European accounting where expenses are accounted at the supplier
-  bill.
+*   Англо-саксонский бухгалтерский учет (США, Великобритания и другие
+    англоязычные страны, включая Ирландию, Канаду, Австралию и Новую Зеландию),
+    при котором стоимость реализованных товаров отражается в отчетности, когда продукция
+    продана/поставлена.
+*   Европейский бухгалтерский учет, при котором расходы учитываются при выставлении
+    счета на оплату поставщиком.
+*   Российский план счетов бухгалтерского учета.
 
-Odoo has modules to comply with IFRS rules.
+В Odoo есть модули, которые соответствуют стандартам МСФО.
 
-Accounts Receivable and Payable
-===============================
+Дебиторская и кредиторская задолженность
+========================================
 
-By default, Odoo uses a single account for all account
-receivable entries and one for all accounts payable entries. You can
-create separate accounts per customers/suppliers, but you don't need
-to.
+По умолчанию Odoo использует один счет для всех проводок при учете
+дебиторской задолженности и один счет при учете кредиторской задолженности. Вы также можете
+создать отдельные счета для клиентов/поставщиков, но это не обязательно.
 
-As transactions are associated to customers or suppliers, you get
-reports to perform analysis per customer/supplier such as the customer
-statement, revenues per customers, aged receivable/payables, ...
+Поскольку транзакции связаны с клиентами или поставщиками, вы получаете
+отчеты для проведения анализа по каждому клиенту/поставщику, такие как:
+выписка по счету клиента, выручка от клиента, дебиторская/кредиторская задолженность и другие.
 
-Wide range of financial reports
-===============================
+Широкий спектр финансовых отчетов
+=================================
 
-In Odoo, you can generate financial reports in real time. Odoo's
-reports range from basic accounting reports to advanced management
-reports. Odoo's reports include:
+В Odoo вы можете генерировать финансовые отчеты в режиме реального времени. Odoo
+позволяет создавать разные виды отчетов -
+от базовых бухгалтерских до продвинутых управленческих
+отчетов. Отчеты Odoo включают:
 
-* Performance reports (such as Profit and Loss, Budget Variance)
-* Position reports (such as Balance Sheet, Aged Payables, Aged
-  Receivables)
-* Cash reports (such as Bank Summary)
-* Detail reports (such as Trial Balance and General Ledger)
-* Management reports (such as Budgets, Executive Summary)
+* Отчеты о результатах деятельности (например, отчет о прибылях и убытках, отчет о расхождении бюджетных средств)
+* Отчеты по позициям (например, бюджет балансового листа, кредиторская задолженность, дебиторская задолженность)
+* Денежные отчеты (например, сводка банка)
+* Детальные отчеты (например, пробный баланс и главная книга)
+* Управленческие отчеты (такие как бюджеты, резюме).
 
-Odoo's report engine allows you to customize your own report based on
-your own formulae.
+Механизм отчетов Odoo позволяет создавать отчеты, используя
+собственные формулы.
 
-Import bank feeds automatically
-===============================
+Автоматический импорт банковской информации
+===========================================
 
-Bank reconciliation is a process that matches your bank statement
-lines, as supplied by the bank, to your accounting transactions in the
-general ledger. Odoo makes bank reconciliation easy by frequently
-importing bank statement lines from your bank directly into your Odoo
-account. This means you can have a daily view of your cashflow without
-having to log into your online banking or wait for your paper bank
-statements.
+Выверка банковских счетов - это процесс, который позволяет сверить строки банковской выписки
+с вашими бухгалтерскими операциями в главной бухгалтерской книге.
+Odoo упрощает процесс банковской выверки за счет регулярного импорта строк
+банковской выписки непосредственно
+в ваш аккаунт.
+Это означает, что вы можете ежедневно просматривать движение денежных средств без
+необходимости входа в интернет-банк или ожидания бумажных банковских выписок.
 
-Odoo speeds up bank reconciliation by matching most of your imported
-bank statement lines to your accounting transactions. Odoo also
-remembers how you've treated other bank statement lines and provides
-suggested general ledger transactions.
+Odoo ускоряет выверку банковских счетов, сопоставляя большинство импортированных
+банковских выписок с вашими бухгалтерскими операциями. Odoo также
+запоминает способ обработки других строк банковской выписки и
+предлагает похожие транзакции из главной книги.
 
-Calculate the tax you owe your tax authority
-============================================
 
-Odoo totals all your accounting transactions for your tax period and
-uses these totals to calculate your tax obligation. You can then check
-your sales tax by running Odoo's Tax Report.
+Рассчитайте налог в налоговый орган
+===================================
 
-Inventory Valuation
-===================
+Odoo суммирует все бухгалтерские операции за налоговый период и
+использует эти данные для расчета налоговых обязательств. Вы можете проверить
+свой налог с продаж, запустив налоговый отчет в Odoo.
 
-Odoo support both periodic (manual) and perpetual (automated)
-inventory valuations. The available methods are standard price,
-average price, LIFO (for countries allowing it) and FIFO.
+Оценка товарных запасов
+=======================
+
+Odoo поддерживает как периодическую (ручную), так и текущую (автоматизированную)
+оценку товарных запасов. Доступны следующие методы: себестоимость,
+средняя цена, ЛИФО (для стран, где это разрешено) и ФИФО.
 
 .. seealso::
    - :doc:`View impact of the valuation method on your transactions
      </applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config>`
 
-Easy retained earnings
-======================
+Простая нераспределенная прибыль
+================================
 
-Retained earnings are the portion of income retained by your
-business. Odoo automatically calculates your current year earnings in
-real time so no year-end journal or rollover is required.  This is
-calculated by reporting the profit and loss balance to your balance
-sheet report automatically.
+Нераспределенная прибыль - это часть дохода, остающаяся в распоряжении организации.
+Odoo автоматически рассчитывает вашу прибыль за текущий год в
+в режиме реального времени, поэтому не требуется никакого бухгалтерского учета на конец года
+или текущий период. Нераспределенная прибыль
+рассчитывается автоматически путем отражения баланса прибылей и убытков в бюджете балансового
+листа.

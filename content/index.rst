@@ -1,13 +1,24 @@
 :nosearch:
+:show-content:
+:hide-page-toc:
+:show-toc:
 
-==================
-Odoo Documentation
-==================
+
+=========
+User Docs
+=========
+
+Discover our user guides and configuration tutorials per application.
 
 
 .. toctree::
+    :maxdepth: 2
 
-    applications
-    administration
-    developer
-    contributing
+    applications/finance
+    applications/sales
+    applications/websites
+    applications/inventory_and_mrp
+    applications/marketing
+    applications/services
+    applications/productivity
+    applications/general

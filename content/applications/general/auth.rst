@@ -1,8 +1,8 @@
 :nosearch:
 
-==============
-Authentication
-==============
+===========
+Авторизация
+===========
 
 .. toctree::
    :titlesonly:

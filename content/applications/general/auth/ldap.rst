@@ -1,44 +1,23 @@
-=================
-Sign in with LDAP
-=================
+=============================
+Вход в систему с помощью LDAP
+=============================
 
-- Install the LDAP module in General Settings.
+- В меню *Общие настройки > Интеграции*, поставьте галочку в строке *LDAP Авторизация*. Сохраните, чтобы активизировать эту функцию.
 
-- Click on **Create** in Setup your LDAP Server.
+- Кликните на активную ссылку *Сервер LDAP* и в открывшихся настройках нажмите кнопку **Создать**.
 
-.. image:: media/ldap01.png
-    :align: center
+- Выберите компанию, которая будет использовать LDAP-протокол.
 
-.. image:: media/ldap02.png
-    :align: center
+- В **Сведениях о сервере** введите IP-адрес вашего сервера и порт.
 
-- Choose the company about to use the LDAP.
+- Установите галочку в строке **Использовать TLS**, если ваш сервер совместим c протоколом TLS.
 
-.. image:: media/ldap03.png
-    :align: center
+- В разделе **Информация входа** укажите ID и пароль учетной записи, используемый при запросах к серверу. Если оставить этот раздел пустым, запросы к серверу будут выполняться анонимно.
 
-- In **Server Information**, enter the IP address of your server and the port it listens to.
+- В **Параметрах подключения > LDAP-база** укажите имя домена LDAP-сервера, иcпользуя терминологию LDAP (например, ``dc=example,dc=com``).
 
-- Tick **User TLS** if your server is compatible.
+- В поле **Фильтр LDAP** введите ``uid=%s``.
 
-.. image:: media/ldap04.png
-    :align: center
+- В **Сведениях о пользователе** отметьте *Создать пользователя*, если вы хотите, чтобы Odoo создал профиль пользователя при первом входе в систему с помощью LDAP.
 
-- In **Login Information**, enter ID and password of the account used to query the server. If left empty, the server will be queried anonymously.
-
-.. image:: media/ldap05.png
-    :align: center
-
-- In **Process Parameter**, enter the domain name of your LDAP server in LDAP nomenclature (e.g. ``dc=example,dc=com``).
-
-- In **LDAP filter**, enter ``uid=%s``
-
-.. image:: media/ldap06.png
-    :align: center
-
-- In **User Information**, tick *Create User* if you want Odoo to create a User profile the first time someone log in with LDAP.
-
-- In **Template User**, indicate a template for the new profiles created. If left blanked, the admin profile will be used as template.
-
-.. image:: media/ldap07.png
-    :align: center
+- В поле **Шаблон пользователя** укажите шаблон для новых профилей. Если оставить это поле пустым, в качестве шаблона будет использоваться профиль администратора.

@@ -1,95 +1,78 @@
-=============
-Bank Accounts
-=============
+================
+Банковские счета
+================
 
-You can manage as many **Bank Accounts** as needed on your database. Configuring them well allows
-you to make sure that all your banking data is up to date and ready for the reconciliation with your
-*Journal Entries*.
+Вы можете управлять любым количеством **Банковских счетов** в своей базе данных.
+Правильная настройка банковских счетов позволяет убедиться, что все ваши банковские
+данные актуальны и готовы к сверке с *Бухгалтерскими Записями*.
 
-In Odoo Accounting, each Bank Account is configured to have a dedicated *Journal* which is
-configured to post all entries in a dedicated *Account*.
+В бухгалтерии Odoo каждый банковский счет имеет
+отдельный *Журнал*, который настроен на проводку по отдельному *Счету*.
 
-.. note:: Whenever you add a Bank Account, a dedicated journal and a dedicated account are
-   automatically created and configured.
+.. note:: Всякий раз, когда вы добавляете банковский счет, автоматически создается и настраивается специальный журнал и счет.
 
-Every **Bank Journal** is displayed by default on the **Accounting Overview** in the form of a
-convenient card. It includes action buttons that are displayed when appropriate.
+Каждый **Банковский Журнал** по умолчанию представлен в **Обзоре Бухгалтерии**
+в виде удобной карточки. Она включает активные кнопки, которые отображаются при
+необходимости.
 
-.. image:: media/bank_accounts_card.png
-   :align: center
-   :alt: Bank Journals Cards are displayed on the Accounting Overview in Odoo Accounting
 
 .. _bank_accounts_add:
 
-Add a new Bank Account
-======================
+Добавление нового банковского счета
+===================================
 
-You can either connect your bank account to your Odoo database, or configure your bank account
-manually and :doc:`upload the bank statements manually <../feeds/bank_statements>`.
+Вы можете подключить ваш банковский счет к базе данных Odoo или
+настроить его вручную.
 
-Bank Synchronization
---------------------
+Синхронизация с банком
+----------------------
+Подключите банковский счет к своей базе данных и
+ваши банковские выписки синхронизируются автоматически.
 
-Connect your bank account to your database and have your bank statements synced automatically.
+Чтобы синхронизировать новый банковский счет, в меню **Банковский счет**
+нажмите кнопку *Добавить банковский счет*. Выберите ваш банк из списка, нажмите *Подключиться*
+и следуйте инструкциям на экране.
 
-To synchronize a new bank account, go to :menuselection:`Accounting --> Configuration`, click on
-*Add a Bank Account*, then find your bank in the list, click on *Connect*, and follow the
-instructions on-screen.
 
-.. note::
-   :doc:`Click here <../../bank/feeds/bank_synchronization>` for more information about this bank
-   synchronization.
+Ручная настройка банка
+----------------------
 
-.. image:: media/bank_accounts_connect.png
-   :align: center
-   :alt: Select a bank institution in the list and connect it to Odoo Accounting
+Если ваше банковское учреждение не может быть синхронизировано автоматически,
+или если вы предпочитаете не синхронизировать его с вашей базой данных,
+вы также можете настроить банковский счет вручную.
 
-Manual configuration
---------------------
+Чтобы создать новый банковский счет вручную, в меню **Банковский счет**
+нажмите кнопку *Добавить банковский счет*, затем нажмите *Создать*
+и заполните форму.
 
-If your Bank Institution can’t be synchronized automatically, or if you prefer not to sync it with
-your database, you may also configure your bank account manually.
+- **Номер счета**: номер вашего банковского счета.
+- **Банк**: название банка.
+- **БИК**: банковский идентификационный код.
+- **Код**: это *Короткий код* вашего журнала, который отображается на Odoo.
+По умолчанию Odoo создает новый журнал с этим кодом.
+- **Журнал**: это поле отображается, если у вас есть
+существующий банковский журнал,
+который не связан с банковским счетом. Выберите *Журнал*,
+который вы хотите использовать для записи финансовых операций, связанных
+с этим банковским счетом или создайте новый, нажав на кнопку *Создать и Отредактировать*.
 
-To add a new bank account manually, go to :menuselection:`Accounting --> Configuration`, click on
-*Add a Bank Account*, then on *Create it*, and fill out the form.
-
-- **Name**: the bank account's name, as displayed on Odoo.
-- **Account Number**: your bank account number (IBAN in Europe).
-- **Bank**: click on *Create and Edit* to configure the bank's details. Add the bank institution's
-  name and its Identifier Code (BIC or SWIFT).
-- **Code**: this code is your Journal's *Short Code*, as displayed on Odoo. By default, Odoo creates
-  a new Journal with this Short Code.
-- **Journal**: This field is displayed if you have an existing Bank Journal that is not linked yet
-  to a bank account. If so, then select the *Journal* you want to use to record the financial
-  transactions linked to this bank account or create a new one by clicking on *Create and Edit*.
 
 .. note::
-   Odoo detects the bank account type (e.g., IBAN) and enables some features accordingly.
+   Odoo распознает типы банковских счетов и активирует необходимые функции.
 
-.. image:: media/bank_accounts_manual.png
-   :align: center
-   :alt: Add manually a new bank account in Odoo Accounting
-.. _bank_accounts_configuration:
 
-Advanced configuration
-======================
+Расширенная Конфигурация
+========================
 
-To edit an existing bank account, go to :menuselection:`Accounting --> Configuration --> Bank
-Accounts`, and open the bank account you want to modify.
+Чтобы отредактировать существующий банковский счет, перейдите в меню
+Бухгалтерия > Настройка > Банковские Счета
+и откройте банковский счет, который вы хотите изменить.
 
-If you need to edit the bank account details, go to the *Bank Account* field and click on the
-*External Link* button next to the list arrow. There, you can edit the bank account's number,
-Account Holder, Account Holder Name, and your Bank Institution's details by clicking on the
-*External Link* next to the *Bank* field. These details are used to register some payments.
+Если вам нужно отредактировать детали банковского счета, в поле *Банковский счет*
+нажмите на кнопку *Внешняя ссылка*. Вы можете отредактировать номер банковского счета,
+владельца карты, имя владельца карты и реквизиты вашего банковского учреждения,
+нажав на внешнюю ссылку рядом с полем *Банк*.
 
-You can configure which types of payments are enabled in the **Payment Method Types** section and
-how the bank statements are recorded and posted in the **Bank Statements** section.
+Вы можете выбрать виды платежей в разделе **Методы Платежей**. В разделе *Банковские Выписки*
+настройте способ регистрации и порядок разнесения банковских выписок.
 
-.. image:: media/bank_accounts_configuration.png
-   :align: center
-   :alt: Advanced configuration of a bank account in Odoo Accounting
-
-.. seealso::
-   * :doc:`../../bank/feeds/bank_synchronization`
-   * :doc:`../feeds/bank_statements`
-   * `Odoo Tutorials: Accounting Basics <https://www.odoo.com/r/lsZ>`_
