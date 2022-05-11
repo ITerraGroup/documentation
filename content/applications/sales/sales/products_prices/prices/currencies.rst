@@ -1,34 +1,37 @@
-=================================
-How to sell in foreign currencies
-=================================
+==================================
+Как продавать в иностранной валюте
+==================================
 
-Pricelists can also be used to manage prices in foreign currencies.
+Прайс-листы могут содержать список цен на товары и услуги в иностранных валютах.
 
-* Check *Allow multi currencies* in :menuselection:`Invoicing/Accounting --> Settings`.
-  As admin, you need *Adviser* access rights on Invoicing/Accounting apps.
+* Для того, чтобы ваша компания могла работать с несколькими валютами, необходимо
+  включить мультивалютный режим. Для этого убедитесь, что установлен флажок
+  **Разрешить мультивалютность** в меню: :menuselection:`Invoicing/Accounting --> Settings`.
+  Как администратору, вам необходимы права доступа *Adviser* в приложении Invoicing/Accounting.
 
-* Create one pricelist per currency. A new *Currency* field shows up in pricelist setup form.
+* Создайте один прайс-лист для каждой валюты. В форме настройки прайс-листа появляется новое поле *Валюта*.
 
 .. tip::
-    To activate a new currency, go to :menuselection:`Accounting --> Configuration --> Currencies`,
-    select it in the list and press *Activate* in the top-right corner. Now it will show up in
-    currencies drop-down lists.
+    Чтобы настроить новую валюту, перейдите в меню:
+    :menuselection:``Актирование --> Настройки --> Валюты``,
+    выберите нужную валюту в списке и нажмите на ползунок в столбце *Активно*.
+    Теперь эта валюта будет отображаться в выпадающих списках валют.
 
-Prices in foreign currencies can be defined in two fashions.
+Цены в иностранных валютах могут быть определены двумя способами.
 
-Automatic conversion from public price
+Автоматическая конвертация из публичной цены
 ======================================
 
-The public price is in your company's main currency (see
-:menuselection:`Accounting --> Settings`) and is set in product detail form.
+Публичная цена указывается в основной валюте вашей компании (см.
+:menuselection:`Актирование --> Настройки`) и задается в форме детализации товара.
 
 .. image:: ./media/public_price.png
    :align: center
 
-The conversion rates can be found in
-:menuselection:`Accounting --> Configuration --> Currencies`. They can be updated
-from Yahoo or the European Central Bank at your convenience: manually, daily, weekly,
-etc. See :menuselection:`Accounting --> Settings`.
+Коэффициенты конверсии можно найти в разделе
+:menuselection:``Актирование --> Настройки --> Валюты``. Они могут быть обновлены
+из сервисов Yandex или Российского центрального банка в удобное для вас время: вручную, ежедневно, еженедельно,
+и т.д. См. :menuselection:`Актирование --> Настройки`.
 
 .. image:: ./media/currency_rate.png
    :align: center
@@ -36,10 +39,10 @@ etc. See :menuselection:`Accounting --> Settings`.
 .. image:: ./media/prices_conversion.png
    :align: center
 
-Set your own prices
-===================
+Установите свои цены
+====================
 
-This is advised if you don't want your pricing to change along with currency rates.
+Это рекомендуется делать в том случае, если вы не хотите, чтобы ваши цены менялись в зависимости от курса валют.
 
 .. image:: ./media/pricing_currency.png
    :align: center

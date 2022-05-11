@@ -1,20 +1,19 @@
-========================================
-Generate leads/opportunities from emails
-========================================
+================================
+Генерируйте лиды/сделки из писем
+================================
 
-Automating the lead/opportunity generation will considerably improve
-your efficiency. By default, any email sent to
-*sales@database\_domain.ext* will create an opportunity in the
-pipeline of the default sales channel.
+Автоматизация лидогенерации несомненно повысит эффективность продаж.
+По умолчанию, любое письмо, отправленное по адресу
+*sales@database\_domain.ext*, будет создавать сделку в канале продаж.
 
-Configure email aliases
-=======================
+Настройка псевдонимов электронной почты
+=======================================
 
-Each sales teams can have its own email alias, to generate
-leads/opportunities automatically assigned to it. It is useful if you
-manage several sales teams with specific business processes. You will
-find the configuration of sales teams under
-:menuselection:`Configuration --> Sales Teams`.
+Каждая команда продаж может иметь свой собственный псевдоним электронной почты
+для автоматической генерации лидов/сделок.
+Это полезная функция, если вы управляете несколькими командами продаж с определенными
+бизнес-процессами. Настройки команды продаж можно найти в меню:
+:menuselection:`Настройки --> Команды продаж`.
 
 .. image:: media/generate_from_email01.png
     :align: center

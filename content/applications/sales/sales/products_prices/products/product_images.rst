@@ -1,48 +1,54 @@
-===================================================
-Automatically get product images with Google Images
-===================================================
+===============================================
+Использование Google Images для ваших продуктов
+===============================================
 
-The product images are very useful in Odoo, for example, to quickly find a product or check if you 
-scanned the right one, but it can be a bit painful to set up especially if you have a lot of 
-products. **Google Custom Search** allows finding images automatically for your product, based on 
-their barcode, keeping your focus on what matters in your business.
+Целесообразно использование изображений продуктов в системе Odoo,
+например, чтобы быстро найти продукт или проверить,
+отсканировали ли вы нужный товар. Но подбирать изображения для каждого продукта
+вручную может быть довольно затруднительно. Поисковая технология **Google Custom Search** позволяет
+автоматически находить изображение
+продукта на основе
+штрих-кода, экономя много времени и ресурсов.
 
 .. _product_images/configuration:
 
-Configuration
-=============
+Настройки
+=========
 
-This functionnality requires configuration both on Google and on Odoo.
+Эта функция требует настройки как в Google, так и в Odoo.
 
-With a free Google account, you can get up to 100 free images per day. If you need a higher rate, 
-you'll have to upgrade to a billing account.
+Имея бесплатный аккаунт Google, вы можете получать до 100 бесплатных изображений в день.
+Если вам нужен более высокий показатель,
+то потребуется перейти на платный аккаунт.
 
 .. _product_images/google-api-dashboard:
 
-Google API dashboard
---------------------
+Панель инструментов API Google
+------------------------------
 
-#. Go to the `Google Cloud Platform API & Services <https://console.developers.google.com/>`_ page
-   to generate Google Custom Search API credentials. Log in with your Google account.
+#. Перейдите на страницу `Google Cloud Platform API & Services <https://console.developers.google.com/>`_,
+   чтобы сгенерировать учетные данные Google Custom Search API.
+   Войдите в систему под своей учетной записью Google.
 
-#. Select or create an API project to store the credentials. Give it an explicit name 
-   (e.g. Odoo Images).
+#. Выберите или создайте проект API для хранения учетных данных. Придумайте характерное название
+   проекта (например, Odoo Изображения).
 
-#. In the credentials section, click on **Create Credentials** and select **API Keys**.
+#. В разделе учетных данных нажмите на **Создать учетные данные** и выберите **Ключи API**.
 
    .. image:: product_images/gcp-api-services.png
       :align: center
       :alt: API & Services page on Google Cloud Platform
 
-#. Save your **API Key**. You'll need it for the next step in Odoo!
+#. Сохраните свой **API ключ**. Он понадобится вам для следующего шага в системе Odoo!
 
-#. Use the search bar to look for **Google Custom Search API** and select it.
+#. В строке поиска найдите **Google Custom Search API**.
+
 
    .. image:: product_images/gcp-search.png
       :align: center
       :alt: Search bar containing "Custom Search API" on Google Cloud Platform
 
-#. Enable the API.
+#. Включите API.
 
    .. image:: product_images/gcp-custom-search-api.png
       :align: center
@@ -50,81 +56,87 @@ Google API dashboard
 
 .. _product_images/google-pse-dashboard:
 
-Google Programmable Search dashboard
-------------------------------------
+Панель инструментов программируемой поисковой системы Google
+------------------------------------------------------------
 
-#. Go to `Google Programmable Search Engine <https://programmablesearchengine.google.com/>`_ and
-   click on **Get Started**. Log in with your Google account.
+#. Перейдите на страницу `Google Programmable Search Engine <https://programmablesearchengine.google.com/>`_ и
+   нажмите на кнопку **Начать**. Войдите в систему под своей учетной записью Google.
 
    .. image:: product_images/google-pse.png
       :align: center
       :alt: Google Programmable Search Engine page with the **Get Started** button on the up-right
             of the page
 
-#. Fill the language and the name of the search engine. Give it an explicit name
-   (e.g. Odoo Images).
+#. Выберите язык и введите название поисковой системы. Используйте точное название
+   (например, Odoo Изображения).
 
    .. note::
-      Google doesn't allow to create a search engine without having entered at least one specific
-      site to search on. You can put any website (e.g. www.google.com) for this step, we will
-      remove it later.
+      Google не позволяет создать поисковую систему без ввода хотя бы одного конкретного
+      сайта для поиска. Для этого шага вы можете указать любой сайт (например, www.google.com)
+      и удалить его позже.
 
-#. Validate the form by clicking on **Create**. Then, go to the edition mode of the search engine
-   that you created (either by clicking on **Control Panel** on the confirmation page or by
-   clicking on the name of your Search Engine on the Home page).
+#. Утвердите форму, нажав на **Create**. Затем перейдите в режим
+   редактирования поисковой системы,
+   которую вы создали (для этого нажмите на **Control Panel** на странице подтверждения
+   или кликните по названию вашей поисковой системы на главной странице).
 
-#. In the **basics** tab, make sure to enable **Image search**, **SafeSearch** and 
+#. На вкладке **Basics** включите параметры **Image Search**, **SafeSearch** и
    **Search the entire web**.
 
    .. note::
-      Once **Search the entire web** is enabled, you can safely delete the site that you put at the 
-      previous step.
+      После включения **Search the entire web** вы можете безопасно удалить сайт,
+      который вы указали в предыдущем шаге.
 
-#. Save your **Search Engine Id**. You’ll need it for the next step in Odoo!
+
+#. Сохраните свой **Search Engine Id**. Он понадобится вам для следующего шага в системе Odoo!
 
 .. _product_images/setup-in-odoo:
 
 Odoo
 ----
 
-#. Go to :menuselection:`Settings --> General Settings --> Integrations`,
-   activate **Google Images** and save.
+#. Перейдите в меню: :menuselection:`Настройки --> Общие настройки --> Интеграции` и
+   активируйте функцию **Google Images**.
 
-#. Go back to :menuselection:`Settings --> General Settings--> Integrations`, enter your **API Key**
-   and **Search Engine ID** in **Google Images** settings and save again.
+#. Вернитесь в :menuselection:`Настройки --> Общие настройки --> Интеграции`, введите свой
+   **API Ключ**
+   и **Search Engine ID** в настройках **Google Images**.
 
 .. _product_images/get-product-images:
 
-Automatically get your product images in Odoo
-=============================================
+Автоматический поиск изображений продуктов
+==========================================
 
-The action to automatically get your product images in Odoo appears in any Products or Product
-Variants list view. Here is a step-by-step guide from the Inventory app.
+Автоматический поиск изображений продуктов доступен
+на любой странице со списком продуктов или вариатов продуктов.
+Ниже приводится пошагавая инструкция для приложения *Склад*.
 
-#. Go to the Products menu (:menuselection:`Products --> Products` or :menuselection:`Products --> 
-   Product Variants`) from any application that uses products like Inventory or Sales.
+#. Перейдите в меню Продукты (:menuselection:`Продукты --> Продукты`
+   или :menuselection:`Продукты -->
+   Варианты продукта`) из любого приложения, использующего продукты, например Склад или Продажи.
 
-#. On the list view, select the products that needs an image.
+#. Из списка выберите продукты, для которых необходимо подобрать изображение.
 
    .. important::
-      Only the 10,000 first selected products or product variants will be processed.
+      Будут обработаны только 10 000 первых выбранных продуктов или вариантов продуктов.
 
    .. note::
-      - Only the products or product variants with a barcode and without an image will be processed.
-      - If you select a product that has one or more variants from the Products view, each variant
-        matching the previous criteria will be processed.
+      - Система использует только продукты или варианты продуктов со штрихкодом и без изображения.
+      - Если выбрать продукт, у которого есть один или несколько вариантов из списка продуктов,
+        будет обработан каждый вариант, соответствующий предыдущим критериям.
 
-#. In the action menu, select **Get Pictures from Google Images** and validate by clicking on 
-   **Get picture**.
+#. В меню действий выберите **Get Pictures from Google Images** и подтвердите выбор, нажав на кнопку
+   **Получить изображение**.
 
-#. You should see your images appearing incrementally.
+#. Изображения начнут постепенно появляться.
 
    .. note::
-      - Only the 10 first images are fetched immediatly. If you selected more than 10, the rest will
-        be fetched as a background job.
-      - The background job process about 100 images in a minute. If you reach the quota authorized
-        by Google (either with a free or a paid plan), the background job will put itself on hold
-        for 24 hours and continue where it stopped the day before. 
+     - Только 10 первых изображений будут сразу загружены. Если вы выбрали более 10, остальные будут
+       подгрузятся в фоновом режиме.
+      - Система обрабатывает около 100 изображений в минуту. По достижению определенного лимита
+        в платной или бесплатной версии Google, загрузка изображений будет приостановлена
+        на 24 часа. После этого загрузка будет возобновлена с того места,
+        где ранее была приостановлена.
 
 .. seealso::
    - `Create, modify, or close your Google Cloud Billing account

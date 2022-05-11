@@ -1,95 +1,74 @@
-=========================
-Create Bills of Materials
-=========================
+=====================
+Создание Спецификаций
+=====================
 
-A *Bill of Materials* is a document defining the quantity of each
-component required to make or deliver a finished product. Additionally, it 
-can also include various operations and individual step guidelines
-needed to complete a production process. 
+*Спецификация* - документ, определяющий  состав какого-либо изделия. Может включать описание
+работ (операции) и инструкции, необходимые для производственного процесса.
 
-With Odoo's MRP solution, multiple BOMs can also be linked to each product,
-so that even product variants can have their *own* tailored BOM.
+С помощью MRP-решения (планирование потребности в материалах) в Odoo, к каждому изделию можно
+привязать несколько спецификаций. Поэтому даже варианты одного изделия могут иметь
+свою собственную спецификацию.
 
-This will help you to optimize your manufacturing process and save time 
-as a result. 
+Настройка спецификации
+======================
 
-Setting up a BoM
-================
-The simplest BoM set up is one without operations or instructions. 
-In this case, you will manage your production using Manufacturing Orders
-only.
+Самая простая спецификация - это документ, не включающий описание работ и каких-либо инструкций.
+В этом случае  вы будете управлять производством, используя только
+Производственные заказы.
+Чтобы создать спецификацию из модуля *Производство*, перейдите в меню:
+:menuselection:`Продукты --> Спецификации`.
+Если вы нажмете на кнопку **Создать**, первое, что вам необходимо сделать, это указать
+готовый продукт.
+Для существующего продукта выберите его из списка.
+Обратите внимание, что если вы используете карточку товара для создания
+спецификации, продукт уже задан.
 
-To create a BoM from the Manufacturing module, go to :menuselection:`Products --> Bills of Materials`. 
-If you click **Create**, the first thing you'll have to do is to specify the final product. 
-For an existing product, simply select it from the list, or create a new one on the spot. Note 
-that if you go through the product form to create your BOM, the product will already be set for you.
+Для стандартной спецификации, используемой по умолчанию, сохраните тип спецификации
+- *Изготовление*.
+Далее, укажите различные компоненты, из которых будет изготовлен конечный продукт, и их количество.
+Вы можете создать компоненты по ходу работы в спецификации или создать продукты заранее,
+перейдя в меню: :menuselection:`Продукты --> Продукты --> Создать`, и добавить их позже.
 
-For a standard Bill of Material, keep the default *BoM* type, which is *Manufacture this Product*. 
-Now specify the various components that make up the production of your final product and their 
-respective quantities. You can create components as you go, on the BOM, or create products beforehand,
-by going to the :menuselection:`Top Menu --> Products --> Create`, and add them later on. 
+Использование одной спецификации для вариантов продукта
+-------------------------------------------------------
 
+Как уже говорилось ранее, *спецификации* могут быть также использованы для *вариантов продукта*.
 
-.. image:: media/bom_1.png
-    :align: center
+Существуют два способа создания спецификации для соответствующих вариантов продукта.
 
-.. warning::
-   The destination location should **not** be a scrap location. A scrap location is where you put
-   products that you don't need.
-
-Using the same BoM to describe Variants
----------------------------------------
-
-As suggested above, you can use *BOMs* for specific *Product Variants*. 
-Once the various attributes have been configured on the product form, there 
-are two ways to configure the appropriate BoM for the respective product combination. 
-
-Either create one BoM per variant, by specifying the Product Variant
-in the dedicated field below the product name. Or use one BOM, that contains
-all of the components and for each component, indicate which variant it applies to, 
-using the *Apply on Variants* column, as shown below. 
+Вы можете создать спецификацию для каждого варианта, указав вариант продукта
+в специальном поле под названием продукта. Или использовать одну спецификацию, которая содержит
+все компоненты. В таком случае, для каждого компонента укажите, к какому варианту он относится,
+используя колонку *Применить к вариантам*, как показано ниже.
 
 .. image:: media/bom_2.png
     :align: center
 
 
-Adding Operations
-=================
+Добавление операций
+===================
 
-You can also add operations to your *BoM*, if you want workers to follow instructions
-or register time spent. To use this feature, enable the *Work Orders* feature in the 
-*Manufacturing* app settings, as shown below.
-
-.. image:: media/bom_3.png
-    :align: center
+Вы также можете добавлять операции в *спецификацию*, если вы хотите,
+чтобы работники выполняли определенные инструкции или для фиксации затраченного времени.
+Чтобы использовать эту функцию, перейдите в меню: **Настройки --> Настройки**
+и поставьте галочку в поле *Производственные задания*.
 
 .. note::
-         Each operation is unique as it is always linked to only one BOM. This being said, 
-         Operations Operations can be re-used when configuring a new BOM, with the *Copy Existing 
-         Operations* feature.
+         Каждая операция уникальна, так как она всегда связана с одной спецификацией. При этом,
+         операции могут быть повторно использованы при создании новой спецификации с помощью функции *Копировать существующие операции*.
 
-.. image:: media/bom_4.png
-    :align: center
+Как и для компонентов изделия, операции могут быть уникальны для вариантов продукта.
 
-Finally, just like for components, operations can also be variant specific only, as shown below.
+Добавление побочных продуктов
+=============================
 
-.. image:: media/bom_5.png
-    :align: center
+*Побочный продукт* - это продукт, который производится дополнительно к основному продукту в *спецификации*.
+В отличие от основной продукции, в одной спецификации могут быть несколько побочных продуктов.
 
+Чтобы добавить *побочные продукты* в *спецификацию*, вам необходимо активировать эту функцию
+в настройках производства, поставив галочку в поле *Побочные продукты*.
 
-
-Adding By-Products
-==================
-
-A *by-product* is a product that is produced on top of the main product 
-of a *BoM*. As opposed to the primary product, there can be more than one on a BOM. 
-
-To add *by-products* to a *BoM*, you will first need to enable the by-product
-feature from the *Manufacturing* app settings.
-
-.. image:: media/bom_6.png
-    :align: center
-
-Once the feature is enabled, you can add *by-products* to your
-*BoMs*. Note that if you have Operations, you'll need to specify 
-in which operation the by-product is produced. 
+Как только эта функция будет включена,
+вы сможете добавлять побочные продукты в спецификацию.
+Обратите внимание, что если в спецификации имеются операции, вам необходимо указать
+к какой операции относится побочный продукт.

@@ -1,47 +1,48 @@
-===========================
-Track your prospects visits
-===========================
+==========================================
+Отслеживайте визиты потенциальных клиентов
+==========================================
 
-Tracking your website pages will give you much more information about
-the interests of your website visitors.
+Отслеживание страниц сайта предоставит гораздо больше информации о
+предпочтениях ваших посетителей.
 
-Every tracked page they visit will be recorded on your lead/opportunity
-if they use the contact form on your website.
+Каждая отслеживаемая страница, которую они посетят, будет конвертирована в лид/сделку
+при использовании контактной формы на сайте.
 
-Configuration
-=============
+Настройки
+=========
 
-To use this feature, install the free module *Lead Scoring* under your
-*Apps* page (only available in Odoo Enterprise).
+Чтобы добавить эту функцию, установите бесплатный модуль *Лид Скоринг*
+(доступен только в Odoo Enterprise).
 
 .. image:: media/prospect_visits01.png
    :align: center
 
-Track a webpage
-===============
+Отслеживание веб-страницы
+=========================
 
-Go to any static page you want to track on your website and under the
-*Promote* tab you will find *Optimize SEO*
+Перейдите на любую статическую страницу, которую вы хотите отслеживать на сайте, и во вкладке
+*Продвижение*, выберите *Оптимизировать SEO*.
 
 .. image:: media/prospect_visits02.png
    :align: center
 
-There you will see a *Track Page* checkbox to track this page.
+Отметьте галочкой флажок *Отслеживать страницу* для отслеживания этой страницы.
 
 .. image:: media/prospect_visits03.png
    :align: center
 
-See visited pages in your leads/opportunities
-=============================================
+Просмотр посещенных страниц в лидах/сделках
+===========================================
 
-Now each time a lead is created from the contact form it will keep track
-of the pages visited by that visitor. You have two ways to see those
-pages, on the top right corner of your lead/opportunity you can see a
-*Page Views* button but also further down you will see them in the
-chatter.
+Теперь каждый раз, когда из контактной формы создается лид, будут отслеживаться
+страницы, которые посетил этот клиент.
 
-Both will update if the viewers comes back to your website and visits
-more pages.
+Используйте два способа, чтобы увидеть эти страницы.
+В правом верхнем углу лида/сделки доступна кнопка *Просмотры страниц*.
+Просмотры страниц также автоматически отображаются в чаттере.
+
+Эта информация будет обновлена, если клиент вернется на ваш сайт и посетит
+больше страниц.
 
 .. image:: media/prospect_visits04.png
    :align: center
@@ -49,7 +50,7 @@ more pages.
 .. image:: media/prospect_visits05.png
    :align: center
 
-The feature will not repeat multiple viewings of the same pages in the
-chatter.
+Многократные просмотры одних и тех же страниц не отображаются в
+чаттере.
 
-Your customers will no longer be able to keep any secrets from you!
+Ваши клиенты больше не смогут хранить от вас секреты!

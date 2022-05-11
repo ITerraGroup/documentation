@@ -1,96 +1,86 @@
-============================================
-Don’t run out of stock with reordering rules
-============================================
+================
+Правила дозаказа
+================
 
-To make sure you never run out of stock, you can define *Reordering Rules* on products. Thanks to
-them, Odoo can help you replenish your stock automatically when it reaches set quantities or
-whenever a sales order is created.
+Чтобы быть уверенным, что у вас никогда не закончится товар, вы можете установить
+*Правила дозаказа*.
+Благодаря этим правилам Odoo автоматизирует пополнение запасов,
+когда они достигают установленного количества или
+при создании заказа на продажу.
 
-.. important:: You need to install the *Inventory app* to use reordering rules.
+.. important:: Вам необходимо установить приложение *Склад*, чтобы использовать функцию дозаказа.
 
-Configure your storable product
-===============================
+Настройка продукта на складе
+============================
 
-Open or create a product with its *Product Type* set to *Storable Product*.
+Откройте или создайте продукт с указанием *Типа продукта*: *Складируемый*.
 
-.. image:: media/reordering-storable-product.png
-   :align: center
-   :alt: Set the product type in Odoo
+Поскольку вы покупаете этот продукт у поставщика, перейдите на вкладку *Закупки* и добавьте поставщика,
+нажав *Добавить строку* в таблице. Вы можете добавить несколько поставщиков, но убедитесь,
+что они перечислены в правильном порядке, поскольку правила дозаказа
+всегда используют первого поставщика в списке. Вы можете добавить цену, но это
+не влияет на правила дозаказа.
+Кроме того, вы можете добавить минимальное количество товара для заказа, чтобы извлечь выгоду
+из цены.
 
-As you are purchasing this product from a vendor, go to the product's *Purchase tab* and add a
-vendor by clicking on *Add a line*. You can add multiple vendors, but make sure to order them
-correctly, since reordering rules always use the first vendor in a list. You can add a price, but it
-isn't necessary for the reordering rule to work. In addition, you can add a minimum quantity you
-must order to benefit from that price.
 
 .. note::
-   If the quantity Odoo has to reorder doesn't match the minimum quantity specified, Odoo selects
-   the next vendor on your list. If you don't have another vendor on your list, the reordering rule
-   won't work. For that purpose, you can add the same vendor multiple times with different prices
-   for different quantities.
+   Если количество, которое необходимо дозаказать, не совпадает с указанным минимальным количеством, Odoo выбирает следующего поставщика в списке. Если у вас нет другого поставщика в списке, правило дозаказа
+   не будет работать. Поэтому вы можете добавить одного и того же поставщика несколько раз с разной ценой
+   для разных количеств.
 
-.. image:: media/reordering-product-vendor.png
-   :align: center
-   :alt: Add vendor to a product in Odoo
 
 .. tip::
-   By default, a draft purchase order is created. However, if you have enabled *Purchase
-   Agreements*, you can *Propose a call for tenders* instead as shown in the image above. For more
-   information, see :doc:`../manage_deals/agreements`
+   По умолчанию создается черновик заказа на поставку. Однако, если вы включили функцию *Purchase
+   Agreements*, вы можете *Propose a call for tenders*. Для получения дополнительной
+   информации смотрите :doc:`.../manage_deals/agreements`.
 
-Next, make sure the correct route is selected under the Inventory tab of your product. If you
-created your product within the Purchase app, the *Buy* route is selected by default. If you are
-looking to dropship your product, select *Dropship*.
+Далее, убедитесь, что на вкладке *Склад* в форме продукта выбран правильный маршрут. Если вы
+создали продукт в приложении "Закупки", то по умолчанию будет выбран маршрут *Покупка*. Если вы
+хотите переправить свой продукт, выберите маршрут *Дропшип*.
 
-.. image:: media/reordering-product-routes.png
-   :align: center
-   :alt: Choose product routes in Odoo
+Настройка правил дозаказа
+=========================
 
-Set up your reordering rule
-===========================
-
-Open your product and click on the *Reordering Rules* button.
-
-.. image:: media/reordering-button.png
-   :align: center
-   :alt: Reordering rules button on a product in Odoo
-
-Once you are on the product's reordering rules page, click on *Create*.
+Откройте необходимый продукт и нажмите на кнопку *Правила дозаказа*.
+На странице правил дозаказа продукта, нажмите на кнопку *Создать*.
 
 .. tip::
-   You can access and create reordering rules from :menuselection:`Inventory --> Configuration -->
-   Reordering Rules` and from :menuselection:`Inventory --> Operations --> Replenishment`. By
-   default, the replenishment view presents a summary of all the products that you might need to
-   purchase to fulfill your sales orders. From there, you can ask Odoo with a single click to order
-   a product once or automate all orders for that product, future orders included.
+   Вы также можете создавать правила дозаказа в меню: :menuselection:`Склад --> Настройки -->
+   Правила дозаказа" и в меню: :menuselection:`Склад --> Операции --> Пополнение`. По
+   умолчанию, страница *Пополнение* представляет собой сводку всех продуктов, которые вам возможно необходимо
+   закупить для выполнения заказов на продажу. С этой страницы вы можете заказать
+   продукт или автоматизировать все заказы на этот продукт, включая будущие заказы.
 
-Define quantities
------------------
+Определите количества
+---------------------
 
-You can set a **minimum quantity** your stock should always have. Once set, if your stock goes below
-the minimum quantity, and if you selected the Buy route, a request for quotation is automatically
-generated to reach that minimum quantity, plus any additional quantity needed to fill in a sales
-order for example.
+Вы можете устанавливать **минимальное количество**, которое всегда должно быть на складе.
+После установки этого параметра, если количество товара на складе опустится ниже
+минимального количества, и если вы выбрали маршрут "Покупка",
+автоматически формируется заказ
+для достижения установленного минимального количества.
+Помимо этого учитывается любое дополнительное количество, необходимое для выполнения заказов на продажу, например.
 
-If you set a **maximum quantity**, every time the product has to be replenished, enough products are
-reordered to reach the maximum quantity.
+Если вы установите **максимальное количество**, то каждый раз, когда товар должен быть пополнен,
+будет перезаказано достаточное количество товара, чтобы достичь максимального количества.
 
-If you want to order only the exact quantity needed to fill in a sales order for example, set both
-both the minimum and maximum quantity to **zero**. The quantity mentioned in the sales order is then
-used by the reordering rule.
+Если вы хотите заказывать только определенное количество, необходимое, например, для продажи,
+установите минимальное и максимальное значение **ноль**. В таком случае правило дозаказа будет
+использовать только то количество, которое указанно в заказе на продажу.
 
-You can also add a **quantity multiple** to only order products in batches of a certain quantity.
-Click on the optional columns drop-down menu, and select *Multiple Quantity* to show the column.
-Bear in mind that you might go over the maximum quantity you set if your rule includes a quantity
-multiple, as Odoo orders enough products to reach the maximum quantity and respect the set quantity
-multiple.
+Вы также можете добавить **кратное количество**, чтобы заказывать товары партиями
+определенного количества.
+В таблице нажмите на выпадающее меню дополнительных столбцов и выберите *Множитель на количество*,
+чтобы отобразить столбец. Обратите внимание, что вы можете превысить максимальное количество,
+если установите кратное количество, так как Odoo будет формировать заказ таким образом,
+чтобы достичь максимальное количества и соблюсти установленное кратное значение.
 
 .. image:: media/reordering-create-rule.png
    :align: center
    :alt: Create a reordering rule in Odoo
 
-.. note:: If you selected multiple routes for the same product under its Inventory tab, make sure to
-   select your *Preferred Route* on your reordering rule by clicking on the optional columns
-   drop-down menu, adding the *Preferred Route* column, and selecting the right route.
+.. note:: Если продукт имеет несколько маршрутов на вкладке "Склад"в форме продукта, выберите
+   *Предпочтительный маршрут* в правиле дозаказа, добавив столбец *Предпочтительный маршрут* в таблице.
 
 .. Add link when inventory doc on replenishment is updated for v14. .. seealso:: - :doc:`../../..inventory/xxx/xxx`

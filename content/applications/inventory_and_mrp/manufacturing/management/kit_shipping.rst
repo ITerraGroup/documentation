@@ -1,87 +1,81 @@
-=====
-Kits
-=====
+=========
+Комплекты
+=========
 
-A *kit* is a set of components that are not pre-assembled or mixed. This is useful for
-selling but also for creating cleaner and more effective *BOMs*. To use kits, you need 
-both the Manufacturing and Inventory apps to be installed. 
+*Комплект* - это набор компонентов, имеющих
+определенное назначение и в совокупности составляющих единое целое.
+Использование комплектов целесообразно не только в продажах, но и для создания
+более точных и эффективных спецификаций. Для использования комплектов, необходима установка
+двух приложений: *Производство* и *Склад*.
 
-Manage Stock of Component Products
+Управление запасами комплектующих изделий
+=========================================
+
+Если вы хотите формировать комплекты по мере поступления заказов, и при этом управляете запасами только
+комплектующих, вам необходимо использовать тип спецификации *Комплект* без
+каких-либо производственных операций.
+
+Продукт, использующий тип спецификации *Комплект* будет отображаться в одной строке в заявках
+и заказах на продажу, но при этом в заказе на доставку каждая комплектующая будет
+иметь отдельную строку.
+
+Настройка
+=========
+
+В приложении *Производство* или *Склад*, в меню: **Продукты --> Продукты**
+создайте каждый компонент продукта (как и любой другой продукт), затем создайте основной продукт
+или комплект. Поскольку вы не можете отследить запасы комплектов, в поле *Тип продукта*
+выберите *Потребляемый*.
+
+Если вы используете англосаксонский бухгалтерский учет и хотите, чтобы при
+выставлении счетов-фактур отражалась себестоимость реализованной продукции
+(и только по этой причине), выберите тип продукта *Складируемый*.
+Поскольку продукт из комплекта не может быть куплен, необходимо снять галочку в поле
+*Можно продавать*. Маршрут
+на вкладке *Склад* не имеет значения, так как при пополнении запасов учитывается только маршрут
+компонентов.
+
+Все остальные параметры продуктов комплекта могут быть изменены в соответствии с вашими предпочтениями.
+Компоненты продукта не требуют особой настройки.
+
+Как только продукты настроены, создайте *спецификацию* для комплекта. Добавьте каждый компонент
+и его количество. Укажите тип спецификации *Комплект*. Все остальные параметры можно оставить
+со значениями по умолчанию.
+
+Управление запасами
+===================
+
+Если вы хотите управлять запасами *комплекта основного продукта*, используйте тип спецификации *Изготовление*
+или *Субподряд*. В этом случае вы либо купите готовый продукт у своего субподрядчика, либо сделаете это
+самостоятельно через заявку на производство. Поэтому тип продукта должен быть *Складируемый*, а тип
+спецификации *Изготовление* или *Субподряд*.
+
+
+Создание более точной спецификации
 ==================================
 
-If you want to assemble kits as they are ordered, managing stock of the kit components only, 
-you will use a *Kit BoM* Type without any manufacturing operations. 
+Как говорилось выше, спецификация комплекта может также использоваться для
+создания более сложной спецификации.
 
-A product using a *Kit BoM* will appear as a single line item on a quotation and a sales order,
-but will generate a delivery order with one line item for each of the components of the kit. In 
-the examples below, the first image shows a sales order for the kit *Custom Computer Kit*,
-while the second image shows the corresponding delivery order.
-
-.. image:: media/kit-so-line.png
-    :align: center
-
-.. image:: media/kit-do-picking.png
-    :align: center
-
-Configuration
-=============
-
-From the *Products menu* in either the *Inventory* or *Manufacturing* app, create each component 
-product (as you would with any other product), then create the top-level, or kit product. Because
-you cannot track the stock of kit products, the *Product Type* should be set to *Consumable*. 
-However, if you are using Anglo-Saxon accounting, and you would like COGS to be posted when 
-invoicing your kits (and only for this reason), the storable product type should selected instead. 
-Because a kit product cannot be purchased, *Can be Purchased* should be unchecked. The route of the
-kit product in the *Inventory* Tab does not really matter, as, for replenishment, only the route of 
-the components that will be taken into account only. 
-
-All other parameters on the kit product may be modified according to your preference. The component 
-products require no particular configuration.
-
-Once the products are configured, create a *bill of materials* for the kit product. Add each component
-and its quantity. Select the *BoM Type* Kit. All other options may be left with their default values.
-
-.. image:: media/kit-bom.png
-    :align: center
-
-Manage Stock of Kit Product and Component Products
-==================================================
-
-If you want to manage the stock of the *top-level kit product*, you will use a standard *BoM Type* 
-manufacture or subcontracting instead. In this case you will either buy the final product from your
-subcontractor, or make it yourself through a manufacturing order. 
-
-In that case the product type will be storable, and the BOM type either 'Manufacture this product' 
-or 'Subcontracting' as shown below.
-
-.. image:: media/kit-storable.png
-    :align: center
-
-
-Build a cleaner BOM
-==================== 
-
-As suggested above, a kit BOM can also simply be used to manage a more complex BOM. 
-
-Imagine the Custom Computer parts above were part of another final product. It would be much 
-clearer and simpler if the BOMs were added together (as shown below) instead of adding all 
-the individual parts one by one.
+Представьте, что детали персонального компьютера
+являются частью другого конечного продукта. Было бы намного
+яснее и проще, если бы все спецификации к комплекту были объединены
+(как показано ниже) вместо добавления спецификаций для каждого компонента по отдельности.
 
 .. image:: media/kit-bom4.png
     :align: center
 
-This is even better illustrated when looking at the BOM Structure Report, where it is 
-easy to expand and hide specific kit level or sub-assembly type BOMs. 
+Более наглядно это представлено в отчете "Структура спецификации", где можно
+легко развернуть и скрыть конкретные спецификации на уровне комплекта или сборки.
+
 
 .. image:: media/kit-bom5.png
     :align: center
 
-On the creation of the manufacturing order, the BOM will automatically expand to show all
-top level and kit level components. You can go back to the BOM at any point though as it 
-remains  available on the form view of your manufacturing order. 
+При создании заявок на производство спецификация автоматически разворачивается для
+отображения всех компонентов верхнего уровня и уровня комплекта.
+Вы можете вернуться к спецификации в любой момент, поскольку она
+остается доступной в форме заявки на производство.
 
-.. image:: media/kit-bom6.png
-    :align: center
-
-Finally, note that if there were any Operations in the Kit BOM, these would also simply be added 
-in to the work order list of the main component. 
+Наконец, обратите внимание, что если в спецификации комплекта есть какие-либо операции,
+они также будут добавлены в список заказов на разработку основного компонента.

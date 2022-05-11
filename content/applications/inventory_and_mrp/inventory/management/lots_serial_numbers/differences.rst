@@ -1,46 +1,45 @@
-======================================================
-What's the difference between lots and serial numbers?
-======================================================
+============================================================
+В чем разница между товарными партиями и серийными номерами?
+============================================================
 
-Introduction
-============
+Введение
+========
 
-In Odoo, lots and serial numbers have similarities in their functional
-system but are different in their behavior. They are both managed within
-the **Inventory**, **Purchases** and **Sales** app.
+В Odoo, товарные партии и серийные номера хоть и схожи, но имеют свои функциональные особенности.
+**Склад**, **Закупки** и **Продажи** - это приложения, которые позволяют управлять товаром.
 
-**Lots** correspond to a certain number of products you received and store
-altogether in one single pack.
+**Партии** соответствуют определенному количеству товара, который вы получили и храните
+в одной упаковке.
 
-**Serial numbers** are identification numbers given to one product in
-particular, to allow to track the history of the item from reception to
-delivery and after-sales.
+**Серийные номера** - это идентификационные номера, присваиваемые каждому товару по отдельности c целью
+отслеживания истории с момента получения товара до момента
+доставки покупателю и послепродажное обслуживание.
 
-When to use
------------
+Когда использовать
+------------------
 
-**Lots** are interesting for products you receive in great quantity and for
-which a lot number can help in reportings, quality controls, or any
-other info. Lots will help identify a number of pieces having for
-instance a production fault. It can be useful for a batch production of
-clothes or food.
+**Товарные партии** используются для продукции, которую вы получаете в большом количестве.
+Для этих товаров номер партии может помочь в составлении отчетов, контроле качества или выявлении любой
+другой информации. Партии помогут идентифицировать ряд изделий, имеющих, например, производственный брак.
+Это может быть полезно при серийном производстве
+одежды или продуктов питания.
 
-**Serial numbers** are interesting for items that could require after-sales
-service, such as smartphones, laptops, fridges, and any electronic
-devices. You could use the manufacturer's serial number or your own,
-depending on the way you manage these products
+**Серийные номера** используются для товаров, которые могут потребовать послепродажное обслуживание, например,
+смартфоны, ноутбуки, холодильники и любые электронные устройства.
+Вы можете использовать серийный номер производителя или свой собственный,
+в зависимости от того, как вы будете управлять этим товаром.
 
-When not to use
----------------
+Когда не использовать
+---------------------
 
-Storing consumable products such as kitchen roll, toilet paper, pens and
-paper blocks in lots would make no sense at all, as there are very few
-chances that you can return them for production fault.
+Хранение расходных материалов в партиях, таких как: кухонные рулоны, туалетная бумага, ручки и
+бумажные блоки, не имеет смысла, так как вероятность того,
+что вы сможете вернуть их обратно из-за производственного брака, очень мала.
 
-On the other hand, giving a serial number to every product is a
-time-consuming task that will have a purpose only in the case of items
-that have a warranty and/or after-sales services. Putting a serial
-number on bread, for instance, makes no sense at all.
+С другой стороны, присвоение серийного номера каждому изделию - это очень
+трудоемкая задача. Серийные номера целесообразно использовать с товарами,
+которые имеют гарантию и/или послепродажное обслуживание. Нанесение серийного
+на хлеб, например, не имеет никакого смысла.
 
 .. seealso::
     * :doc:`serial_numbers`

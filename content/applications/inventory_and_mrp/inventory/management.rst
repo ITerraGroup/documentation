@@ -1,8 +1,8 @@
 :nosearch:
 
-====================
-Warehouse Management
-====================
+=====
+Склад
+=====
 
 .. toctree::
    :titlesonly:

@@ -1,107 +1,64 @@
-==============================
-Use Different Units of Measure
-==============================
+=====================================
+Использование разных единиц измерения
+=====================================
 
-In some cases, handling products in different units of measure is
-necessary. For example, if you buy products in a country where the
-metric system is of application and sell in a country where the imperial
-system is used, you will need to convert the units. Another common use
-case is buying products in bigger packs to your supplier and selling
-them in units to your customers.
+В некоторых случаях необходимо работать с продуктами в разных единицах измерения.
+Например, если вы покупаете товары в стране, где применяется
+метрическая система, а продаете в стране, где используется имперская система,
+вам необходимо конвертировать единицы измерения.
+Еще один распространенный случай использования разных единиц измерения
+- это закупка продуктов в больших упаковках у поставщика и расфасовка товара на продажу.
 
-You can set up Odoo to work with different units of measure for one
-product.
+Вы можете настроить Odoo таким образом, чтобы один продукт имел разные единицы измерения.
 
-Configuration
-=============
+Настройки
+=========
 
-In the *Inventory* application, go to :menuselection:`Configuration --> Settings`. In
-the *Products* section, activate *Units of Measure*, then *Save*.
+В приложении *Склад* перейдите в меню: :menuselection:`Настройки --> Настройки`. В
+разделе *Продукты*, поставьте галочку в поле *Единицы измерения* и нажмите *Сохранить*.
 
-.. image:: media/uom_01.png
-    :align: center
 
-Create New Units of Measure
-===========================
+Создание новых единиц измерения
+===============================
 
-In the *Inventory* application go to :menuselection:`Configuration --> UoM`. There,
-hit *Create*. As an example, we will create a Box of 6 units that we
-will use for the Egg product.
+В приложении *Склад* перейдите в меню :menuselection:`Настройки --> Единицы измерения`.
+Нажмите *Сохранить*.
 
-.. image:: media/uom_02.png
-    :align: center
+Поле *Категория* необходимо для преобразования единиц измерения. Вы сможете
+перевести продукты из одной единицы измерения в другую только в том случае,
+если эти единицы принадлежат к одной и той же категории.
 
-The category is important for unit conversion, you will be able to
-convert products from one unit to another only if those units belong to
-the same category. The box of 6 is 6 times bigger than the reference
-unit of measure for the category which is “Units” here.
+Указывайте единицы измерения на ваших продуктах
+===============================================
 
-.. image:: media/uom_03.png
-    :align: center
+В меню: :menuselection:`Продукты --> Продукты`, откройте продукт,
+в котором вы хотите изменить единицы измерения и нажмите на кнопку *Редактировать*.
 
-Specify Units of Measure on your Products
-=========================================
+На вкладке *Общая информация* выберите *Единицу измерения* в которой продукт
+будет продаваться и будут осуществляться внутренние перемещения.
+Вы также можете выбрать единицу измерения для закупки товара.
 
-In the :menuselection:`Inventory application --> Master Data --> Products`, open the
-product which you would like to change the purchase/sale unit of
-measure, and click on *Edit*.
 
-In the *General Information* tab, you can select the *Unit of
-Measure* in which the product will be sold, which is also the unit in
-which internal transfers will take place. You can also select the
-*Purchase Unit of Measure*, which is the unit in which you purchase
-the product.
+Перевод из одной единицы измерения в другую
+===========================================
 
-.. image:: media/uom_04.png
-    :align: center
+Покупка по закупочной единице измерения
+---------------------------------------
 
-Transfer from One Unit to Another
-=================================
+В приложении *Закупки* *создайте* новый запрос на поставку,
+в котором укажите продукт с различными *Единицами измерения*
+и *Подтвердите* заказ.
 
-Buy in the Purchase UoM
------------------------
 
-In the *Purchase* application, *Create* a new request for quotation
-in which you include the product with the different *Units of Measure*
-and *Confirm* it.
-
-.. image:: media/uom_05.png
-    :align: center
-
-On the automatically generated purchase orders, the UoM used is the Box
-of 6, meaning the Purchase UoM. You have of course the possibility to
-manually modify the UoM if necessary. When you enter the *Receipt*
-which is linked to the purchase order, you can observe that the 10 boxes
-of 6 units have been converted in 60 units. Indeed, the stock is managed
-in units.
-
-.. image:: media/uom_06.png
-    :align: center
-
-Replenishment
--------------
-
-When doing a replenishment via the *Replenish* button on the product
-form, you have the possibility to use a different unit of measure.
-
-.. image:: media/uom_07.png
-    :align: center
-
-.. image:: media/uom_08.png
-    :align: center
-
-Sell in bigger UoM
+Пополнение запасов
 ------------------
 
-You can choose the unit of measure on the sale order document and decide
-to sell the eggs by the dozen. When doing so, the price is automatically
-computed from Units UoM to adapt to the selected *UoM*.
+При пополнении запасов с помощью кнопки *Пополнить* на форме продукта,
+у вас есть возможность использовать другую единицу измерения.
 
-.. image:: media/uom_09.png
-    :align: center
+Продажа в крупных единицах измерения
+------------------------------------
 
-In the delivery order, the *UoM* used in the sale order is converted
-to the *UoM* used for stock management, in our use case, the Units.
+Вы можете выбрать единицу измерения в накладной и
+продавать товар, например, десятками. При этом цена будет автоматически пересчитана.
 
-.. image:: media/uom_10.png
-    :align: center

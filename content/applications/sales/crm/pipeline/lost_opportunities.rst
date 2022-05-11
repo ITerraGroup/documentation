@@ -1,75 +1,61 @@
-=========================
-Manage lost opportunities
-=========================
+============================
+Аналитика проигранных сделок
+============================
 
-While working with your opportunities, you might lose some of them. You
-will want to keep track of the reasons you lost them and also which ways
-Odoo can help you recover them in the future.
+Работая со сделками, вы можете проиграть некоторые из них. Odoo позволяет
+распознать причины проигрыша сделок и эффективно устранить их, а также, при необходимости,
+восстановить их в системе.
 
-Mark a lead as lost
-===================
 
-While in your pipeline, select any opportunity you want and you will see
-a *Mark Lost* button.
+Отметьте сделку как проигранную
+===============================
 
-You can then select an existing *Lost Reason* or create a new one
-right there.
+Перейдите в меню: **Продажи --> Моя воронка** и выберите любую сделку. В форме сделки нажмите
+кнопку *Проиграно*.
 
-.. image:: media/lost_opportunities01.png
-   :align: center
+В новом окне выберите из списка *Причину отказа* или укажите свою причину.
 
-Manage & create lost reasons
-----------------------------
+Создание и редактирование причины отказа
+----------------------------------------
 
-You will find your *Lost Reasons* under :menuselection:`Configuration --> Lost Reasons`.
+*Причины отказа* находятся в меню: :menuselection:`Настройки --> Причины отказа`.
 
-You can select & rename any of them as well as create a new one from
-there.
+Вы можете выбрать и переименовать любую из них или создать новую причину.
 
-Retrieve lost opportunities
-===========================
+Поиск проигранных сделок
+========================
 
-To retrieve lost opportunities and do actions on them (send an email,
-make a feedback call, etc.), select the *Lost* filter in the search
-bar.
+Чтобы открыть проигранные сделки и выполнить определенные действия с ними (отправить письмо,
+сделать звонок для обратной связи и т.д.), выберите фильтр *Проиграно* в строке поиска.
 
 .. image:: media/lost_opportunities02.png
    :align: center
 
-You will then see all your lost opportunities.
+Результаты поиска отобразят все проигранные сделки.
 
-If you want to refine them further, you can add a filter on the *Lost
-Reason*.
+Вы также можете уточнить результаты поиска, используя фильтр *Причина отказа*,
+например, указав: *Слишком дорого*.
 
-For Example, *Too Expensive*.
 
-.. image:: media/lost_opportunities03.png
-   :align: center
+Восстановление проигранных сделок
+=================================
 
-Restore lost opportunities
-==========================
+Используя быстрые фильтры на Канбан-доске, вы можете выбрать любую сделку и работать с ней
+в обычном режиме. Вы также можете восстановить сделку, нажав на кнопку *Архивировано*.
 
-From the Kanban view with the filter(s) in place, you can select any
-opportunity you wish and work on it as usual. You can also restore it by
-clicking on *Archived*.
-
-.. image:: media/lost_opportunities04.png
-   :align: center
-
-You can also restore items in batch from the Kanban view when they
-belong to the same stage. Select *Restore Records* in the column
-options. You can also archive the same way.
+Для того, чтобы восстановить или поместить в архив группу сделок, которые находятся на одном
+и том же этапе, перейдите в настройки соответствующего столбца.
 
 .. image:: media/lost_opportunities05.png
    :align: center
 
-To select specific opportunities, you should switch to the list view.
+Чтобы выбрать несколько сделок, отобразите их в виде списка.
 
 .. image:: media/lost_opportunities06.png
    :align: center
 
-Then you can select as many or all opportunities and select the actions
-you want to take.
+Теперь вы можете выбрать из списка только определенные сделки или все сделки сразу и произвести
+любые действия с ними.
 
 .. image:: media/lost_opportunities07.png
    :align: center

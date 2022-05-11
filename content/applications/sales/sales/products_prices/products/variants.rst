@@ -1,223 +1,200 @@
-======================
-Using product variants
-======================
+=================
+Варианты Продукта
+=================
 
-Product variants are used to manage products having different
-variations, like size, color, etc. It allows managing the product at the
-template level (for all variations) and at the variant level (specific
-attributes).
+Варианты продукта используются для создания различных версий продукта,
+таких как: размер, цвет и т.д. Это позволяет управлять продуктом на
+уровне шаблона (для всех версий) и на уровне варианта (конкретные
+атрибуты).
 
-As an example, a company selling t-shirts may have the following
-product:
+Пример вариантов продукта - одна и та же футболка, но разного цвета и размеров.
 
-- B&C T-shirt
+- Футболка B&C
 
-  - Sizes: S, M, L, XL, XXL
-  - Colors: Blue, Red, White, Black
+  - Размеры: S, M, L, XL, XXL
+  - Цвета: Синий, красный, белый, черный
 
-In this example, **B&C T-Shirt** is called the product template and
-**B&C T-Shirt, S, Blue** is a variant. Sizes and color are
-**attributes**.
+Футболка **Футболка B&C** является шаблоном продукта, а сочетания размера и цвета **Футболка B&C, S, Blue** -
+вариант продукта. Размеры и цвет являются **атрибутами**.
 
-The above example has a total of 20 different products (5 sizes x 4
-colors). Each one of these products has its own inventory, sales, etc.
+В приведенном выше примере имеется в общей сложности 20 различных продуктов (5 размеров х 4
+цвета). Каждый из этих продуктов имеет свои собственные запасы, продажи и т.д.
 
-Impact of variants
+Значение вариантов
 ==================
 
-- **Barcode**: the code and barcode is associated to a variant, not the
-  template. Every variant may have its own barcode / SKU.
+- **Штрихкод**: код и штрихкод относятся к варианту, а не к
+  шаблону. Каждый вариант может иметь свой собственный штрихкод / SKU.
 
-- **Price**: every product variant has its own public price that is
-  computed based on the template price ($20) with an optional extra
-  for every variant (+$3 for color red). However, you can define
-  pricelist rules that apply on the template or the variant.
+- **Цена**: каждый вариант продукта имеет свою стоимость, которая
+  рассчитывается на основе цены шаблона ($20) с дополнительной ценой
+  для каждого варианта (+$3 для красного цвета). Вы также можете определить
+  правила прайс-листа, которые применяются к шаблону или к варианту.
 
-- **Inventory**: the inventory is managed by product variant. You don't
-  own t-shirts, you only own "T-shirts, S, Red", or "T-Shirts, M,
-  Blue". For information purpose, on the product template form, you
-  get the inventory that is the sum of every variant. (but the
-  actual inventory is computed by variant)
+- **Склад**: управление запасами происходит на основе вариантов продукта. У вас нет
+  футболок, у вас есть только "Футболки, S, красные" или "Футболки, M,
+  синие". На форме шаблона продукта
+  содержится информация о количестве запасов на складе, которые является суммой всех вариантов (но
+  фактические запасы вычисляются на основе вариантов).
 
-- **Picture**: the picture is related to the variant, every variation
-  of a product may have its own primary picture.
+- **Картинка**: картинка относится к варианту продукта, каждая версия
+  продукта может иметь свою собственную главную картинку.
 
-- **Other fields**: most of the other fields belongs to the product
-  template. If you update them, it updates automatically all the
-  variants. (example: Income Account, Taxes)
+- **Другие поля**: большинство других полей относятся к шаблону продукта.
+  Если вы обновляете их, то автоматически обновляются все
+  варианты. (Например: Счет поступлений, Налоги).
 
-Should you use variants?
-========================
+Следует ли использовать варианты?
+================================
 
-When should you use variants?
------------------------------
+Когда следует использовать варианты?
+-----------------------------------
 
-Using variants has the following impacts:
+Использование вариантов имеет следующие особенности:
 
-- **eCommerce**: in your online shop, the customer will only see
-  product templates in the catalog page. Once the visitor click on
-  such a product, he will have options to choose amongst the
-  variants (colors, sizes, …)
+- **eCommerce**: в вашем интернет-магазине покупатель будет видеть только
+  шаблоны продуктов на странице каталога. Как только посетитель нажмет на
+  на продукт, у него будет возможность выбрать один из
+  вариантов (цвета, размеры, ...)
 
-- **Manufacturing**: Using variants allows to define only one bill of
-  material for a product template and slight variations for some of
-  the variants. Example: instead of creating a Bill of Material for
-  "T-shirt, Red, S", you create a bill of material for "T-shirt"
-  and add some lines that are specific to the dimension S, and
-  other lines specific to the color Red.
+- **Производство**: одна спецификация для шаблона продукта
+  включает несколько вариантов продукта. Например: вместо создания спецификации для продукта
+  "Футболка, красная, S", вы создаете спецификацию для шаблона продукта "Футболки"
+  и добавляете несколько строк, с указанием размера S, и
+  другие строки для красного цвета.
 
-- **Pricing**: The default price of a product is computed using the
-  price of the product template and add the optional extra price on
-  each dimension of the variant. This way, variant prices are
-  easier to maintain since you don't have to set the price for
-  every variant. However, it's possible to create pricelist rules
-  to fix price per variants too.
+- **Ценообразование**: Цена продукта по умолчанию складывается из
+  стоимости шаблона продукта и дополнительной цены для каждого варианта.
+  Таким образом, стоимость вариантов
+  легче поддерживать, поскольку вам не нужно устанавливать цену для
+  каждого варианта. Тем не менее вы можете создать правила прайс-листа,
+  чтобы зафиксировать цену для каждого варианта.
 
-When should you avoid using variants?
--------------------------------------
 
-Using variants may add a level of complexity on the way you use Odoo.
-You should consider using variants only if you need it to reduce the
-complexity of managing lots of products that are similars.
+Когда следует избегать использование вариантов?
+-----------------------------------------------
 
-As an example, importing your initial product catalog is more complex if
-you use variants. You can't just import a list of products, you must
-import product templates and all their related variations.
+Использование вариантов может немного усложнить работу с Odoo.
+Следует рассматривать использование вариантов только в том случае, если вы управляете
+большим количеством однотипных продуктов.
 
-In addition to that, you should also carefully select the dimensions
-that you manage as separate product templates and those as variants. As
-an example, a company having these products:
+Например, импортировать исходной каталог продуктов будет сложнее, если
+вы используете варианты. В таком случае вы должны будете импортировать шаблоны
+продуктов и все связанные с ними варианты, а не просто список продуктов.
 
-- Quality: T-Shirts, Polos, Shirts
+Кроме того, необходимо тщательно выбрать значения,
+которые составляют отдельные шаблоны продуктов и значения, которые относятся к вариантам. В качестве
+примера может служить компания, имеющая следующие продукты:
 
-- Color: Red, Blue
+- Тип: Футболки, Поло
 
-- Size: S, M, L, XL
+- Цвет: красный, синий
 
-In such a use case, you could create 1 template with three dimensions of
-variants (Layout, T-Shirts, Polos). But, it's recommended to create two
-different product templates as T-shirts may highly differ from polos or
-shirts and customer expect to see these as two different products in the
-e-Commerce:
+- Размер: S, M, L, XL
 
-- Product Template: T-shirt
+В таком случае вы могли бы создать 1 шаблон с тремя значениями для
+вариантов (футболки, поло). Но рекомендуется создать два
+отдельных шаблона продуктов, так как футболки могут сильно отличаться от поло или
+рубашек, и покупатель рассматривает их как два разных продукта в
+электронной коммерции (e-Commerce):
 
-  - Color: Red, Blue
-  - Size: S, M, L, XL
+- Шаблон продукта: Футболка
 
-- Product Template: Polos
+  - Цвет: красный, синий
+  - Размер: S, M, L, XL
 
-  - Color: Red, Blue
-  - Size: S, M, L, XL
+- Шаблон продукта: Поло
 
-Configuration
-=============
+  - Цвет: красный, синий
+  - Размер: S, M, L, XL
 
-Activate the variant feature
-----------------------------
 
-Before you can use product variants, you must first activate the product
-variants in the settings. To do so, you must go to the Sales app. In the
-menu :menuselection:`Configuration --> Settings`, locate the **Products Variants** line,
-and tick the option **Products can have several attributes**, then click
-on **Apply**.
+Настройки
+=========
 
-.. image:: media/variant01.png
-   :align: center
+Активируйте функцию вариантов продукта
+--------------------------------------
 
-Creating products with variants
+Прежде чем вы сможете использовать варианты продукта, необходимо сначала активировать эту функцию
+в настройках. Для этого перейдите в приложение *Продажи*. В
+меню: :menuselection:`Настройки --> Настройки`, отметьте галочкой функцию **Варианты**.
+
+Создание продуктов с вариантами
 -------------------------------
 
-Once you have activated the variant option, you can add variants to your
-products. To do so, go to the Sales module, :menuselection:`Sales --> Products`.
-It is also accessible from the Purchase and inventory modules.
+После активации функции вариантов вы можете добавлять варианты к своим
+продуктам. Для этого перейдите в модуль Продажи, меню: :menuselection:`Продажи --> Продукты`.
+Эта функция также доступна в модулях Закупки и Склад.
 
-Now, click on the product you wish to add variants to.
+Далее нажмите на продукт, к которому вы хотите добавить варианты.
 
-In the product page, a new tab called Variants has appeared. The number
-in purple written on top is the number of variants this product
-currently has. To add new variants, click on the tile. In the new
-window, click on **Create**.
+На странице описания продукта появится новая вкладка "Атрибуты и варианты".
 
-In **Attributes**, click on the rolldown menu and select the type of
-variance you wish to add. If the variant does not yet exist, you can
-create it on the fly by clicking on Create and edit…
+Столбец **Атрибут** представляет собой
+тип варианта, например цвет, материал или память. Столбец **Значения** представляет собой описание атрибута,
+например "Зеленый", "Пластик" или "32 ГБ".
 
-.. image:: media/variant02.png
-   :align: center
+Число, указанное сверху на кнопке *Варианты продукта*, это количество вариантов,
+которое имеет данный продукт
+в настоящее время. Нажмите на эту кнопку, чтобы просмотреть варианты.
 
-In the Attributes window, the **Value** field is the description of the
-attribute such as Green, Plastic or 32GB. The **Attribute** field is the
-type of variant such as Color, Material or Memory.
+На странице *Варианты продукта* выберите вариант, если необходимо внести изменения и добавить дополнительные параметры.
+Вы можете установить цену варианта или добавить другой штрихкод и внутреннюю ссылку.
 
-.. image:: media/variant03.png
-   :align: center
+Когда вы введете все характеристики варианта, нажмите на кнопку
+**Сохранить**.
 
-You can add a cost for the variant on the fly by adding it in the
-**Attribute Price Extra** field, or choose to modify it later. Click on
-**Save**.
+Управление вариантами
+=====================
 
-You can also add a different barcode and internal reference to the
-variant.
+Введение
+--------
 
-When you have entered all the specifications of the variant, click on
-**Save**.
+Все приведенные ниже примеры основаны на шаблоне продукта, который имеет два
+атрибута варианта:
 
-Managing Product Variants
-=========================
+- Футболка B&C
 
-Introduction
-------------
+   - Цвет: красный, синий, белый
 
-The examples below are all based on this product template that has two
-variant attributes :
+   - Размер: S, M, L, XL, XXL
 
--  T-Shirt B&C
 
-   -  Color: Red, Blue, White
-
-   -  Size: S, M, L, XL, XXL
-
-Managing combination possibilities
+Управление возможными комбинациями
 ----------------------------------
 
-By default, with the above product template, you get 15 different
-products (3 colors, 5 sizes). If the XXL size only exists for red and
-blue t-shirts, you can deactivate the white product variant.
+По умолчанию, при использовании приведенного выше шаблона продукта, вы получаете 15 различных
+продуктов (3 цвета, 5 размеров). Если размер XXL существует только для красных и
+синих футболок, вы можете деактивировать вариант белого цвета.
 
-To do this, click on the **Variants** button, select the XXL, White
-T-shirt. From the product form, uncheck the **Active** box of the T-shirt
-White, XXL.
-
-.. image:: media/variant04.png
-   :align: center
+Для этого на вкладке "Атрибуты и варианты", в строке атрибута, нажмите на кнопку **Настроить**,
+выберите *XXL, Белая Футболка* и снимите флажок **Активно**.
 
 .. tip::
 
-  That deactivating a product is different than having an inventory of 0.
+  Деактивация товара это не одно и тоже, когда количество запаса продукта равняется 0.
 
-Setting a price per variant
----------------------------
+Установка цены для каждого варианта
+-----------------------------------
 
-You can add a cost over the main price for some of the variants of a
-product.
+Вы можете добавить стоимость к основной цене для некоторых вариантов продукта.
 
-Once you have activated the variant option, you can add variants to your
-products. To do so, go to the Sales module, open :menuselection:`Sales --> Products`
-and click on the product you want to modify. Click on the **Variant Prices**
-button to access the list of variant values.
+После активации функции вариантов вы можете добавлять варианты к своим
+продуктам. Для этого перейдите в модуль Продажи, откройте :menuselection:`Продажи --> Продукты`
+и нажмите на продукт, который вы хотите изменить. Нажмите на кнопку **Варианты цен**
+чтобы получить доступ к списку значений вариантов.
 
-.. image:: media/variant05.png
+... изображение:: media/variant05.png
    :align: center
 
-Click on the variant name you wish to add a value to, to make the 3
-fields editable. In the **Attribute Price Extra** field, add the cost of
-the variant that will be added to the original price.
+Нажмите на название варианта, к которому вы хотите добавить значение.
+В поле **Дополнительная цена атрибута** добавьте стоимость
+варианта, которая будет добавлена к первоначальной цене.
 
-.. image:: media/variant06.png
+... image:: media/variant06.png
    :align: center
 
-When you have entered all the extra values, click on **Save**.
+Когда вы введете все дополнительные значения, нажмите **Сохранить**.
 
 .. seealso::
    - `Accounting Memento: Details of Journal Entries

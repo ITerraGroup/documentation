@@ -1,60 +1,54 @@
-=============================
-Manage semi-finished products
-=============================
+=========================
+Управление полупродуктами
+=========================
 
-With Odoo MRP, you can use semi-finished products to simplify a complex *Bill
-of Materials* or to represent your manufacturing flow more accurately.
-A *semi-finished product* is a manufactured product that is used as a
-component in a Bill of Material.
+С помощью функции Odoo MRP (англ. Material Requirements Planning —
+планирование потребности в материалах),
+вы можете управлять полупродуктами. Это позволяет упростить сложную спецификацию или более точно
+представить производственный процесс. Полупродукт - это производственный продукт, который используется
+в качестве компонента в спецификации.
 
-A *BoM* that employs *semi-finished products* is referred to as 
-a multi-level BoM, where we distinguish between the *top level Product*
-and the *sub-assemblies*. 
+Спецификация, в котой указаны полупродукты является многоуровневой, где проводится
+различие между продуктами верхнего уровня (основными продуктами) и полупродуктами (компонентами).
 
-Configure a Multi Level BoM
-============================
+Настройка многоуровневой спецификации
+=====================================
 
-To configure a *multi-level BoM*, you will need the top-level product
-and its sub-assemblies. Therefore, you must first create the sub-assembly
-products and their respective Bill of Materials. Please refer to 
-:doc:`bill_configuration` for more details on how to create a BOM. 
+Чтобы настроить *многоуровневую спецификацию* вам понадобится продукт верхнего уровня
+и его полупродукты. Поэтому сначала необходимо создать полупродукты и спецификации к ним.
+Ознакомьтесь с темой
+:doc:`bill_configuration` для получения более подробной информации о том, как создавать спецификацию.
 
-.. image:: media/sf_1.png
-    :align: center
+Настройка основной спецификации
+===============================
 
-Configure the Main BoM
-======================
+В форме конечного продукта добавьте полупродукты как компоненты в спецификации.
 
-Then on the final product form, simply add your semi-finished 
-products to the Bill of Material. 
 
-.. image:: media/sf_2.png
-    :align: center
+Управление планированием производства
+=====================================
 
-Manage your production planning 
-=================================
+Существует несколько методов управления заказами на производство.
 
-There are several methods to manage the triggering of the various manufacturing orders. 
+Если каждый раз, когда утверждается заявка на производство основного продукта,
+вы хотите, чтобы она была утверждена и для
+полупродуктов, у вас есть два варианта:
 
-If every time a manufacturing order is confirmed for the main product, you'd like one for 
-the semi-finished products as well, you have two options: 
-
-Option 1 : Create re-ordering rules for the semi-finished products, with both the minimum 
-and maximum desired stock quantities at 0. 
+Вариант 1 : Создайте правила повторной заявки для полупродуктов, чтобы минимальное и
+максимальное количество на складе равнялось 0.
 
 .. image:: media/sf_3.png
     :align: center
 
-Option 2 : Use the Replenish on Order (MTO) route on the semi-finished product, as well as 
-the manufacturing one. 
+Вариант 2 : Используйте маршрут *Пополнение запасов* для полупродуктов.
 
-Note that Option 1 is usually recommended over Option 2 as it is more flexible. The MTO route 
-creates a unique link between the semi-finished and the top level product, whereas the 
-re-ordering rule allows you to simply unreserve that production from the top level product
-production and redirect it to another, more pressing demand, for example. 
+Обратите внимание, что обычно рекомендуется использовать первый вариант, поскольку он более гибкий.
+Маршрут *Пополнение запасов* создает уникальную связь между полупродуктом и продуктом верхнего уровня,
+в то время как правило повторной заявки позволяет снять с резерва производство продукта верхнего уровня
+и перенаправить полупродукт, например, на другой, более срочный заказ.
 
-In any case, as soon as the semi-finished product is produced, it will become
-available in the manufacturing order of the final product, as shown below.
+В любом случае, как только полупродукт будет произведен, он станет
+доступным в заявке на производство конечного продукта, как показано ниже.
 
 .. image:: media/sf_4.png
     :align: center

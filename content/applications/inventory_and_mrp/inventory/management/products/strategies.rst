@@ -1,76 +1,67 @@
-==============================================
-How to select the right replenishment strategy
-==============================================
+===================================================
+Как выбрать правильную стратегию пополнения запасов
+===================================================
 
-Minimum Stock rules and Make to Order have similar consequences but
-different rules. They should be used depending on your manufacturing and
-delivery strategies.
+Правила минимального запаса и "сделать под заказ" работают одинаково эффективно, но
+по разному принципу.
+Какому правилу необходимо следовать, зависит от стратегии производства и
+системы доставки.
 
-Terminology
-===========
+Терминология
+============
 
-Minimum stock rule 
--------------------
+Минимальный запас
+-----------------
 
-Minimum Stock rules are used to ensure that you always have the minimum
-amount of a product in stock in order to manufacture your products
-and/or answer to your customer needs. When the stock level of a product
-reaches its minimum the system will automatically generate a procurement
-order with the quantity needed to reach the maximum stock level.
+Минимальный товарный запас должен всегда обеспечивать минимальное
+количество продуктов на складе, необходимых для производства
+и/или удовлетворения потребностей клиентов. Когда уровень товарных запасов
+достигает своего минимума, система автоматически формирует заказ на закупку
+для достижения максимального уровня запасов.
 
-Make to Order
--------------
+Сделать под заказ
+-----------------
 
-The Make to Order function will trigger a Purchase Order of the amount
-of the Sales Order related to the product. The system will **not** check
-the current stock. This means that a draft purchase order will be
-generated regardless of the quantity on hand of the product.
+Согласно правилу "Сделать под заказ", закупка товара зависит от
+суммы продажи этого товара. Система **не** проверяет
+текущий запас. Это означает, что черновой вариант заказа на закупку не зависит
+от количества продукта на складе.
 
-Configuration
-=============
 
-Minimum stock rules
--------------------
+Настройка
+=========
 
-The Minimum Stock Rules configuration is available through your
-Inventory module. In the Inventory Control menu select "Reordering Rule"
-in the drop down menu. There, click on "Create" to set minimum and
-maximum stock values for a given product.
+Минимальный запас
+-----------------
 
-.. image:: media/strategies01.png
-    :align: center
+Настройка правил минимального запаса доступна через приложение *Склад*.
+В меню **Настройки** выберите **Правила дозаказа**.
+Нажмите на кнопку "Создать", чтобы установить минимальное и
+максимальное количество запаса для данного товара.
 
 .. note::
-    Show tooltips for "minimum quantity", "maximum quantity" and "quantity multiple"
-    fields
 
-Then, click on your product to access the related product form and, on
-the "Inventory submenu", do not forget to select a supplier.
+    Отобразите всплывающие подсказки для полей *Мин. количество*, *Макс. количество* и *Множитель на количество*.
 
-.. image:: media/strategies02.png
-    :align: center
+Выберите нужный продукт и откройте карту товара. В меню **Закупки** не забудьте указать поставщика.
 
 .. tip::
-    Don't forget to select the right product type. A consumable
-    can not be stocked and will thus not be accounted for in the stock valuation.
 
-Make to Order 
---------------
+     Не забудьте выбрать правильный *Тип продукта*. Расходный материал не может быть складирован и поэтому не учитывается при оценке запасов.
 
-The Make to Order configuration is available on your product form
-through your :menuselection:`Inventory --> Inventory control --> Products` (or any
-other module where products are available).
+Сделать под заказ
+-----------------
 
-On the product form, under Inventory, click on "Make To Order".
+Чтобы настроить правила закупки с учетом продаж, в карте товара откройте вкладку *Склад*.
+В разделе *Маршруты* поставьте галочку в поле *Покупка*.
 
-.. image:: media/strategies03.png
-    :align: center
 
-Choice between the two options
-------------------------------
+Выбор между двумя вариантами
+----------------------------
 
-The choice between the two options is thus dependent of your inventory
-strategy. If you prefer to have a buffer and always have at least a
-minimum amount, the minimum stock rule should be used. If you want to
-reorder your stocks only if your sale is confirmed it is better to use
-the Make to Order.
+Таким образом, выбор между двумя вариантами зависит от стратегии инвентаризации.
+Если вы предпочитаете иметь резерв и наличие
+минимального количества товара на складе, то вам следует использовать правило минимального запаса.
+Если вы хотите пополнять запасы только в случае подтверждения продажи, то лучше использовать правило
+"Сделать под заказ".
+

@@ -1,35 +1,25 @@
-=======================
-Variants BOM Management
-=======================
+=================
+Варианты продукта
+=================
 
-Odoo allows you to use one bill of materials for multiple variants of
-the same product. To activate variants, simply go to :menuselection:`Configuration --> Settings
---> Variants`.
+Odoo позволяет использовать одну спецификацию для нескольких вариантов
+одного и того же продукта. Чтобы активировать варианты, в приложении *Склад*
+перейдите в меню: :menuselection:``Настройки --> Настройки
+--> Продукты` и поставьте галочку в поле *Варианты*.
 
-.. image:: media/bom-variants1.png
-    :align: center
+Укажите какие компоненты спецификации должны быть использованы в
+производстве каждого варианта продукта. Вы можете указать несколько
+вариантов для каждого компонента. Если для компонента не указан вариант,
+то этот компонент будет использоваться в спецификации всех вариантов.
 
-You will then be able to specify which BOM component lines are to be used in
-the manufacture of each product variant. You may specify multiple
-variants for each line. If no variant is specified on a component line,
-then this component will be used in the BOM of all variants. 
-
-When defining variant BoMs on a line-item-basis, the **Product
-Variant** field in the main section of the BoM should be left blank as shown 
-below. This field is used when creating a BoM for one specific variant
-of a product only.
+При определении спецификаций вариантов для каждой строки, поле **Вариант продукта**
+в основном разделе спецификации следует оставить пустым, как показано ниже.
+Это поле используется при создании спецификации для одного конкретного варианта
+продукта.
 
 
 .. image:: media/kit-bom1.png
     :align: center
 
-Note that the same principle applies for the configuration 
-of operations.
-
-.. image:: media/kit-bom2.png
-    :align: center
-
-And for the production of by-products. 
-
-.. image:: media/kit-bom3.png
-    :align: center
+Обратите внимание, что тот же принцип применяется при настройки
+операций и для производства побочных продуктов.

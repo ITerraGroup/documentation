@@ -1,78 +1,80 @@
-=============================
-Assign leads based on scoring
-=============================
+===========
+Лид-скоринг
+===========
 
-With *Leads Scoring* you can automatically rank your leads based on
-selected criteria.
+Функция *Скоринг лидов* позволяет по определенным признакам дать оценку клиента
+на готовность сделки.
 
-For example you could score customers from your country higher or the
-ones that visited specific pages on your website.
+Например, из какой он страны, сколько раз он заходил на сайт, оставил ли контакты и т.д.
+За каждое действие дается балл, из этих баллов считают итоговую оценку.
+Чем выше оценка — тем «теплее» клиент и выше вероятность, что он готов купить.
 
-Configuration
-=============
+Настройки
+=========
 
-To use scoring, install the free module *Lead Scoring* under your
-*Apps* page (only available in Odoo Enterprise).
+Чтобы использовать эту функцию, установите бесплатный модуль *Лид Скоринг*
+(доступен только в Odoo Enterprise).
 
 .. image:: media/lead_scoring01.png
    :align: center
 
-Create scoring rules
-====================
+Создание правил скоринга
+========================
 
-You now have a new tab in your *CRM* app called *Leads Management*
-where you can manage your scoring rules.
+После установки модуля, в приложении *Учет покупателей* появится новая
+вкладка *Управление лидами*, где вы можете создать правила скоринга.
 
-Here's an example for a Canadian lead, you can modify for whatever
-criteria you wish to score your leads on. You can add as many criteria
-as you wish.
+Ниже приведен пример скоринга канадского клиента. Вы можете изменить/добавить
+любые параметры для оценки лидов.
 
 .. image:: media/lead_scoring02.png
    :align: center
 
-Every hour every lead without a score will be automatically scanned and
-assigned their right score according to your scoring rules.
+Каждый час все лиды без оценки автоматически сканируются и
+им присваивается нужный балл в соответствии с установленными правилами скоринга.
 
 .. image:: media/lead_scoring03.png
    :align: center
 
-Assign leads
-============
+Назначение лидов
+================
 
-Once the scores computed, leads can be assigned to specific teams using
-the same domain mechanism. To do so go to :menuselection:`CRM --> Leads Management --> Team Assignation`
-and apply a specific domain on each team. This domain can include scores.
+После подсчета баллов, лиды могут быть назначены определенным командам на основе
+домена. Для этого перейдите в меню:
+:menuselection:`Учет покупателей --> Управление лидами --> Team Assignation`
+и установите параметры домена для каждой команды. Этот домен может включать
+правила скоринга.
 
 .. image:: media/lead_scoring04.png
    :align: center
 
-Further on, you can assign to a specific vendor in the team with an even
-more refined domain.
+В дальнейшем вы можете установить домен с более
+уточненными параметрами скоринга для конкретного продавца в команде.
 
-To do so go to :menuselection:`CRM --> Leads Management --> Leads Assignation`.
+Чтобы сделать это, перейдите в меню:
+:menuselection:`Учет покупателей --> Управление лидами --> Назначение лидов`.
 
 .. image:: media/lead_scoring05.png
    :align: center
 
 .. note::
-   The team & leads assignation will assign the unassigned leads
-   once a day.
+   Назначение лидов без оценки происходит один раз в день.
 
-Evaluate & use the unassigned leads
-===================================
+Оценка и использование неназначенных лидов
+==========================================
 
-Once your scoring rules are in place you will most likely still have
-some unassigned leads. Some of them could still lead to an opportunity
-so it is useful to do something with them.
+После введения правил скоринга, скорее всего, останутся неназначенные лиды.
+Некоторые из них все еще могут быть преобразованы в сделку,
+поэтому полезно произвести с ними какие-либо действия.
 
-In your leads page you can place a filter to find your unassigned leads.
+Для поиска неназначенных лидов используйте фильтр *Неназначенный* на странице лидов.
 
 .. image:: media/lead_scoring06.png
    :align: center
 
-Why not using :menuselection:`Email Marketing` or
-:menuselection:`Marketing Automation` apps to send a mass email to
-them? You can also easily find such unassigned leads from there.
+Вы также можете использовать приложения :menuselection:`Email Marketing` или
+:menuselection:`Автоматизация маркетинга` для создания почтовых рассылок
+или для поиска неназначенных лидов.
 
 .. image:: media/lead_scoring07.png
    :align: center

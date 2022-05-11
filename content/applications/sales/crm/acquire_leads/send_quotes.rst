@@ -1,34 +1,32 @@
-===============
-Send quotations
-===============
+=================================
+Отправка коммерческих предложений
+=================================
 
-When you qualify a lead into an opportunity you will most likely need to
-send them a quotation. You can directly do this in the CRM App with Odoo.
+Когда вы преобразуете лиды в сделку, скорее всего, потребуется
+отправка коммерческого предложения.
+Вы можете сделать это непосредственно в приложении *Учет покупателей*.
 
-.. image:: media/send_quotes01.png
-    :align: center
 
-Create a new quotation
-======================
+Создание нового коммерческого предложения
+=========================================
 
-By clicking on any opportunity or lead, you will see a *New Quotation*
-button, it will bring you into a new menu where you can manage your
-quote.
+В форме лида или сделки нажмите на кнопку *Новое коммерческое предложение*.
+Откроется новое окно, где вы сможете настроить ваше предложение.
 
 .. image:: media/send_quotes02.png
     :align: center
 
-You will find all your quotes to that specific opportunity under the
-*Quotations* menu on that page.
+Все предложения для этой сделки находятся в меню
+*Коммерческие предложения* на странице формы.
 
 .. image:: media/send_quotes03.png
     :align: center
 
-Mark them won/lost
-==================
+Сделка закрыта/проиграна
+========================
 
-Now you will need to mark your opportunity as won or lost to move the
-process along.
+Теперь необходимо преобразовать коммерческое предложение в сделку или указать
+*Проиграно*, чтобы продвинуть процесс.
 
-If you mark them as won, they will move to your *Won* column in your
-Kanban view. If you however mark them as *Lost* they will be archived.
+Если вы нажмете *Сделка закрыта*, предложение переместится в колонку *Сделка закрыта*
+на канбан-доске. Если же вы пометите его как *Проиграно*, оно будет помещено в архив.

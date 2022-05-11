@@ -1,79 +1,58 @@
 .. _developer-mode:
 
-===========================
-Developer Mode (debug mode)
-===========================
+==================================
+Режим разработчика (режим отладки)
+==================================
 
-The developer mode (or debug mode) gives you access to extra and advanced tools.
+Режим разработчика (или режим отладки) дает вам доступ к дополнительным и продвинутым функциям.
 
-Activate through the Settings
-=============================
+Активация через Настройки
+=========================
 
-Go to :menuselection:`Settings --> Activate the developer mode`.
-
-.. image:: developer_mode/settings.png
-   :align: center
-   :alt: Overview of the debug options under settings in Odoo
+Перейдите в меню: :menuselection:`Настройки --> Инструменты разработчика --> Включить режим разработчика`.
 
 .. note::
-   *Activate the developer mode (with assets)* is used by developers; *Activate the developer mode
-   (with tests assets)* is used by developers and testers.
+   *Включить режим разработчика (with assets)* используется разработчиками; *Включить режим разработчика
+   (with test assets)* используется разработчиками и тестировщиками.
 
-Once activated, the *Deactivate the developer mode* option becomes available.
+После активации становится доступной опция *Отключить режим разработчика*.
 
-Activate through a browser extension
-====================================
+Активация через расширение браузера
+===================================
 
-| Go to the settings and extensions of your web browser, and search for *Odoo Debug*. Once the
-  extension is installed, a new icon will be shown on your toolbar.
-| For the *Odoo Debug* extension, a single click enables a normal version of the mode, while a
-  double click enables it with assets. To deactivate it, use a single click.
+| Зайдите в настройки и расширения вашего браузера и найдите *Включение средства отладки*. Как только
+  расширение будет установлено, на панели инструментов появится новый значок.
+| Для расширения *Включение средства отладки* одинарный клик включает обычную версию режима, а двойной клик включает режим с активами. Чтобы выключить, кликните один раз мышью.
 
-.. image:: developer_mode/monkey.png
-   :align: center
-   :alt: View of odoo’s debug icon in a chrome’s toolbar
+Активация с помощью палитры команд
+==================================
 
-Activate through the command palette
-====================================
+В палитре команд есть команда для включения режима отладки: откройте палитру команд с помощью сочетания клавиш `ctrl+k`, затем введите `debug`: появится команда для
+активации режима отладки.
 
-The command palette tool has a command to activate the debug mode: open it with
-the keyboard shortcut `ctrl+k`, then type `debug`: a command will show up to
-activate the debug mode. 
 
-.. image:: developer_mode/command_palette.png
-   :align: center
-   :alt: Command palette with debug command
-
-Activate through the URL
+Активация с помощью URL
 ========================
 
-In the URL, add ``?debug=1`` or ``?debug=true`` after *web*. To deactivate the
-debug mode, add `?debug=0` instead.
+В URL введите ``?debug=1`` или ``?debug=true`` после *web*. Чтобы выключить
+режим отладки, вместо этого введите `?debug=0`.
 
-.. image:: developer_mode/url.png
-   :align: center
-   :alt: Overview of an url with the debug mode command added in Odoo
 
 .. tip::
-   Additional modes are available for developers: `?debug=assets` enables the
-   :ref:`assets mode <frontend/framework/assets_debug_mode>`, and `?debug=tests` enables
-   the :ref:`tests mode <frontend/framework/tests_debug_mode>`.
+   Для разработчиков доступны дополнительные режимы: `?debug=assets` включает режим
+   :ref:`assets режим <frontend/framework/assets_debug_mode>`, а `?debug=tests` включает
+   режим :ref:`тестов <frontend/framework/tests_debug_mode>`.
 
-Locate the mode tools
-=====================
+Инструменты режима разработчика
+===============================
 
-The Developer mode tools can be accessed from the *Open Developer Tools* button,
-located on the header of your pages. This menu contains additional tools that
-are useful to understand or edit technical data, such as the views or the actions.
-It contains some useful menu items such as:
+Инструменты режима разработчика доступны с помощью кнопки *Открыть инструменты разработчика*,
+расположенной вверху страницы. Это меню содержит дополнительные инструменты, которые
+полезны для работы с техническими данными, такими как *просмотр* или *действие*.
+Оно содержит несколько полезных пунктов меню, таких как:
 
-- edit action
-- manage filters
-- edit the current view
-- see the `fields view get`
-- and much more.
-
-.. image:: developer_mode/button_location.png
-   :align: center
-   :alt: Overview of a console page and the debug icon being shown in Odoo
-
+- изменить действие
+- управление фильтрами
+- технический перевод
+- просмотр полей
+- и многое другое.

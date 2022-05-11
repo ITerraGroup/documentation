@@ -1,74 +1,72 @@
-===========================================================
-Generate leads/opportunities from your website contact page
-===========================================================
+=============================================================
+Генерируйте лиды/сделки со страницы вашего сайта с контактами
+=============================================================
 
-Automating the lead/opportunity generation will considerably improve
-your efficiency. Any visitor using the contact form on your website will
-create a lead/opportunity in the pipeline.
+Автоматизация генерации потенциальных лидов/сделок значительно повысит
+вашу эффективность. Любой посетитель, воспользовавшийся контактной формой на вашем сайте, создаст
+лид/потенциальную сделку в конвейере продаж.
 
-Use the contact us on your website
-==================================
+Используйте контактную форму на вашем сайте
+===========================================
 
-You should first go to your website app.
+Зайдите в приложение вашего сайта.
 
 |image0|\ |image1|
 
-With the CRM app installed, you benefit from a ready-to-use contact form
-on your Odoo website that will generate leads/opportunities
-automatically.
+Установив приложение CRM, вы получаете преимущество в виде готовой к использованию контактной формы
+на вашем сайте Odoo, которая будет генерировать лиды/сделки
+автоматически.
 
 .. image:: media/generate_from_website03.png
    :align: center
 
-To change to a specific sales channel, go to :menuselection:`Website
---> Configuration --> Settings` under *Communication* you will find the
-Contact Form info and where to change the *Sales Channel* or
-*Salesperson*.
+Чтобы переключиться на определенный канал продаж, перейдите в меню: :menuselection:`Вебсайт
+--> Настройки --> Настройки`. В разделе *Общение* вы найдете
+*Контактную форму*, где можно изменить *Команду продаж* или
+*Продавца*.
+
 
 .. image:: media/generate_from_website04.png
    :align: center
 
-Create a custom contact form
-============================
+Создание пользовательской формы контакта
+========================================
 
-You may want to know more from your visitor when they use the contact form to
-you will need to build a custom contact form on your
-website. These contact forms can generate multiple types of records in
-the system (emails, leads/opportunities, project tasks, helpdesk
-tickets, etc.)
 
-Configuration
-=============
+Для создания котакта в Odoo вам может понадобиться узнать больше информации о пользователе с вашего сайта.
+Формы контакта на сайте могут генерировать несколько типов записей в
+системе (электронные письма, потенциальные лиды/сделки, проектные задачи, вопросы к службе поддержки и т.д.)
 
-You will need to install the free *Form Builder* module, only
-available in Odoo Enterprise.
+Настройки
+=========
+
+Вам необходимо установить бесплатный модуль *Form Builder*, доступный только в Odoo Enterprise.
 
 .. image:: media/generate_from_website05.png
    :align: center
 
-Create a custom contact form
-----------------------------
+Создание контактной формы пользователя
+--------------------------------------
 
-First, go to the page where you want to put your contact form. In edit mode, drag
-the form builder onto the page, and you will be able to add all the fields
-you wish.
+Сначала перейдите на страницу сайта, куда вы хотите разместить контактную форму. В режиме редактирования *перетащите*
+конструктор форм на страницу. Теперь вы можете добавлять все необходимые поля.
 
 .. image:: media/generate_from_website06.png
    :align: center
 
-By default, any new contact form will send an email. You can switch to
-lead/opportunity generation in *Change Form Parameters*.
+По умолчанию любая новая контактная форма будет отправлять письмо по электронной почте. Но вы можете
+переключиться на генерацию лидов/сделок, выбрав *Изменить параметры формы*.
 
 .. note::
-   If the same visitor uses the contact form twice, the second
-   entry will be added to the first lead/opportunity in the chatter.
+   Если один и тот же посетитель использует контактную форму дважды, то вторая запись будет добавлена к первой
+   в чаттере.
 
-Generate leads instead of opportunities
-=======================================
+Конвертация лида в сделку
+=========================
 
-When using a contact form, you should use a qualification step
-before assigning the form to the right sales people. To do so, activate *Leads*
-in CRM settings and refer to :doc:`convert`.
+При использовании контактной формы следует пройти этап отбора -
+назначение формы нужным сотрудникам отдела продаж. Для этого активируйте *Лиды*
+в настройках CRM. Для получения более подробной информации, обратитесь к теме :doc:`convert`.
 
 .. |image0| image:: ./media/generate_from_website01.png
    :width: 1.04401in

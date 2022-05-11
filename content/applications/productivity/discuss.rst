@@ -4,7 +4,7 @@
 :show-toc:
 
 =======
-Discuss
+Общение
 =======
 
 .. toctree::

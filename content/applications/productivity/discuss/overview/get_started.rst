@@ -1,45 +1,45 @@
-========================
-Get Started with Discuss
-========================
+===============================
+Начало работы с модулем Общение
+===============================
 
-Discuss allows you to bring all of your company’s communication together through messages, notes,
-and chat. Share information, projects, files, prioritize tasks, and stay connected with colleagues
-and partners throughout applications. Forge better relationships, increase productivity and
-transparency by promoting a convenient way of communicating.
+Приложение *Общение* позволяет объединить все коммуникации вашей компании с помощью сообщений,
+заметок и чата. Делитесь информацией, проектами, файлами, определяйте приоритеты задач и
+оставайтесь на связи с коллегами и партнерами во всех приложениях.
+Укрепляйте отношения, повышайте производительность и
+прозрачность, предлагая удобный способ общения.
 
 .. _discuss_app/notification_preferences:
 
-Choose your notifications preference
-====================================
+Выберите подходящий способ уведомлений
+======================================
 
-Access your *Preferences* and choose how you would like your notifications to be handled.
+Зайдите в свои *Параметры* и выберите подходящий способ уведомлений.
 
 .. image:: media/change_preferences.png
    :align: center
    :alt: View of the preferences page for Odoo Discuss
 
-| By default, the field is set as *Handle by Emails* making messages, notes, and notifications where
-  you were mentioned or that you follow, to be sent through email. By choosing *Handle in Odoo*,
-  they are shown in the *Inbox*.
-| Messages can then be *Marked as Todo*, *Replied*, or *Marked as Read*.
+| По умолчанию выбрана опция *По почте*, поэтому все сообщения, заметки и уведомления, в которых вы были упомянуты или за которыми вы следите,
+  будут приходить по электронной почте. При выборе *Внутри Odoo* они отображаются в папке *Входящие*.
+| Затем сообщения могут быть отмечены звездочкой, *отмечены как отвеченные* или *отмечены как прочтенные*.
 
 .. image:: media/inbox_actions.png
    :align: center
    :alt: View of an inbox message and its action options in Odoo Discuss
 
-The messages tagged as *Mark as Todo* are also shown in *Starred*, while the ones *Marked as Read*
-are moved to *History*.
+Сообщения помеченные звездочкой перемещаются в папку *Отмеченные*, а сообщения помеченные как *Прочтенные*
+перемещаются в папку *История*.
 
 .. image:: media/starred_messages.png
    :align: center
    :alt: View of messages marked as todo in Odoo Discuss
 
-Start Chatting
-==============
+Начните общение
+===============
 
-The first time you log in to your account, OdooBot sends you a message asking for permission to
-receive desktop notifications to chats. If accepted, you receive push notifications to the messages
-sent to you despite of where you are in Odoo.
+При первом входе в учетную запись, OdooBot отправляет вам запрос на разрешение
+получать уведомления о чатах на рабочем столе. Если запрос на разрешение принят, то
+вы будете получать push-уведомления в меню *Беседы* во всех приложениях Odoo.
 
 .. image:: media/odoobot_push.png
    :align: center
@@ -47,46 +47,40 @@ sent to you despite of where you are in Odoo.
          notifications for Odoo Discuss
 
 .. tip::
-   To stop receiving desktop notifications, reset the notifications settings of your browser.
+   Чтобы перестать получать уведомления на рабочем столе, сбросьте настройки уведомлений в браузере.
 
-To start a chat, click on *New Message* on the *Messaging Menu*, or go to *Discuss* and send a
-*Direct Message*.
+Чтобы начать чат, нажмите на *Новое сообщение* в меню *Беседы*, или перейдите в раздел *Каналы* и отправьте
+*Прямое сообщение*.
 
 .. image:: media/channels_direct_messages.png
    :align: center
    :height: 400
    :alt: View of discuss’s panel emphasizing the titles channels and direct messages in Odoo Discuss
 
-You can also create :doc:`public and private channels <team_communication>`.
+Вы также можете создавать :doc:`публичные и приватные каналы <team_communication>`.
 
-Mentions in the chat and on the Chatter
----------------------------------------
+Упоминания в чате
+-----------------
 
-| To mention a user within a chat or the chatter type *@user-name*; to refer to a channel, type
-  *#channel-name*.
-| A notification is sent to the user mentioned either to his *Inbox* or through email, depending
-  on his settings.
+| Чтобы упомянуть пользователя в чате, введите имя пользователя *@user-name*; чтобы сослаться на канал, введите
+  название канала *#channel-name*.
+| Упомянутому пользователю будет отправлено уведомление в папку *Входящие* или по почте, в зависимости от настроек.
 
-.. image:: media/chat_windows.png
-   :align: center
-   :alt: View of a couple of chat window messages for Odoo Discuss
 
 .. tip::
-   When a user is mentioned, the search list (list of names) suggests values first based on the
-   task’s followers, and secondly on *Employees*. If the record being searched does not match with
-   either a follower or employee, the scope of the search becomes all partners.
+   Когда упоминается пользователь, поиск пользователя предлагает значения, основываясь на данные подписчиков и
+   *Сотрудников*. Если введенное имя не совпадает с именем подписчика или сотрудника, то область поиска переходит ко всем партнерам.
 
-Chat status
+Статус чата
 -----------
 
-It is helpful to see what colleagues are up to and how quickly they can respond to messages by
-checking their *Status*. The status is shown on the left side of a contact’s names on Discuss’
-sidebar and on the *Messaging menu*.
+Полезно узнать, чем заняты коллеги и как быстро они могут отвечать на сообщения, проверив их *Статус*.
+Статус отображается слева от имени контакта на боковой панели *Общение*.
 
-- Green = online
-- Orange = away
-- White = offline
-- Airplane = out of the office
+- Зеленый = онлайн
+- Оранжевый = в сети
+- Белый = не в сети
+- Самолет = вне офиса
 
 .. image:: media/status.png
    :align: center

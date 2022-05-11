@@ -1,66 +1,46 @@
-================================
-Alternative Work Centers
-================================
+=============================
+Альтернативные рабочие центры
+=============================
 
-Manufacturing several different products simultaneously at the same work center
-is a common issue for manufacturing companies. Although in practice, employees can 
-manufacture the goods at another work center instead of waiting for one to be available, 
-it's not always simple to have visibility on which work center is busy and plan resources 
-accordingly in real-time.
-
-With Odoo, you can configure alternative work centers to solve this issue. This automatically
-checks which work center is busy and which equivalent ones are free, and schedules orders and
-maintenance accordingly.
-
-This way, your process becomes more efficient, as work center utilisation is optimised. 
+Производство нескольких различных продуктов одновременно в одном рабочем центре
+является распространенной проблемой многих предприятий. Несмотря на то, что сотрудники могут
+использовать другой рабочий центр вместо того, чтобы ждать, пока освободится первый, на практике
+не всегда просто понять, какой рабочий центр занят. Поэтому правильное планирование ресурсов
+в режиме реального времени иногда вызывает затруднения.
 
 
-Configure your Work Centers
-===========================
+В Odoo вы можете настроить альтернативные рабочие центры для решения этой проблемы. Программа автоматически
+проверяет, какой рабочий центр занят, а какие аналогичные центры свободны и планирует производственные работы
+с учетом анализа этих данных.
 
-First, go to the :menuselection:`Manufacturing app --> Configuration --> Settings`. Then, enable
-the Work Orders feature and hit save.
-
-.. image:: media/bom_3.png
-    :align: center
-    :alt: work order settings ticked
-
-
-Now, go to :menuselection:`Configuration --> Work Centers` and create
-two new work centers. Add the second work center as an alternative to
-the first one and vice versa.
-
-
-.. image:: media/wc_alternate1.png
-    :align: center
-
-
-Next, go to :menuselection:`Products --> Bills of Materials`, choose your product, 
-and add these work centers to the operations of your BOM.
-
-
-.. image:: media/wc_alternate2.png
-    :align: center
+Таким образом, процесс производства становится более эффективным, так как оптимизируется использование рабочих центров.
 
 
 
-Create your Work Orders
-=======================
+Настройка рабочих центров
+=========================
 
-Now that everything is configured, you can create your *Work Orders*.
-Go to :menuselection:`Operations --> Manufacturing Orders`, and hit **Create**. There, add
-your product to your manufacturing order and plan it. You can then retrieve them 
-from the Work Orders list view, under Operations > Work Orders.
+Перейдите в меню: :menuselection:`Производство --> Настройки --> Настройки`. Активируйте функцию *Рабочие
+центры*, поставив галочку в соответсвующем поле и нажмите *Сохрать*.
 
-Each new *Work Order*, which will be created before the end of the
-first one, will be scheduled at the alternative work center you
-configured, as shown below. 
+Затем, перейдите в меню: :menuselection:`Настройки --> Рабочие центры` и создайте два новых
+рабочих центра. Добавьте второй рабочий центр в качестве альтернативы к первому
+и наоборот.
 
-.. image:: media/wc_alternate3.png
-    :align: center
+Далее, перейдите в меню: :menuselection:`Продукты --> Спецификации`, выберите необходимый продукт,
+и добавьте эти рабочие центры к операциям вашей спецификации.
 
+
+Создание заказов
+================
+
+Теперь, когда все настроено, вы можете создать *Рабочие заказы*.
+Перейдите в меню: :menuselection:`Операции --> Производственные заказы`, и нажмите **Создать**. Добавьте
+продукт в производственный заказ и составьте календарный план. Рабочие заказы будут доступны
+в списке "Заказы на производство" в разделе "Операции > Заказы на производство".
+
+Каждый новый *Рабочий заказ*, созданный до завершения
+первого, будет запланирован в альтернативном рабочем центре.
 
 .. note::
-         Keep in mind that, if you add time after production to your work center,
-         you may have work orders scheduled for your alternative work center even
-         if the usual one is free. 
+         Обратите внимание, что если вы добавите время после производства в рабочий центр, у вас могут быть запланированы заказы на работу в альтернативном рабочем центре даже в том случает, если обычный центр свободен.

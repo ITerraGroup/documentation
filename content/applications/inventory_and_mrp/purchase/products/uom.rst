@@ -1,115 +1,108 @@
-=================================================
-Purchase in different units of measure than sales
-=================================================
+=============================================
+Закупка и продажи в разных единицах измерения
+=============================================
 
-When you purchase a product, it may happen that your vendor uses a different unit of measure than
-you do when you sell it. This can cause confusion between sales and purchase representatives. It is
-also time-consuming to convert measures manually every time. With Odoo, you can configure your
-product once and let Odoo handle the conversion.
+При закупке товара, есть вероятность того, что продавец использует иные
+единицы измерения, чем вы при продаже. Это может привести к путанице между
+представителями отдела продаж и отдела закупок. Каждый раз вручную переводить
+единицы измерения также отнимает много времени.
+С Odoo вы можете настроить продукт всего один раз и конвертация будет выполняться
+автоматически.
 
-Consider the following examples:
+Рассмотрим следующие примеры:
 
-#. You purchase orange juice from an American vendor, and they use **gallons**. However, your
-   customers are European and use **liters**.
+#. Вы покупаете апельсиновый сок у американского поставщика, и он используют **галлоны** в качестве единицы измерения.
+   Однако ваши клиенты - европейцы используют **литры**.
 
-#. You buy curtains from a vendor in the form of **rolls** and you sell pieces of the rolls to your
-   customers using **square meters**.
+#. Вы покупаете шторы у поставщика в виде **рулонов**, а своим клиентам продаете только части рулонов, используя **квадратные метры**.
 
-Enable units of measure
-=======================
+Включите единицы измерения
+==========================
 
-Open your Sales app and go to :menuselection:`Configuration --> Settings`. Under Product Catalog,
-enable *Units of Measure*.
+Откройте приложение *Продажи* и перейдите в меню: :menuselection:`Настройки --> Настройки`. В разделе *Каталог товаров*,
+выберите опцию *Единицы измерения*.
 
-.. image:: media/uom-enable-option.png
-   :align: center
-   :alt: Enable the units of measure option in Odoo Sales
 
-Specify sales and purchase units of measure
-===========================================
+Укажите единицы измерения продаж и закупок
+==========================================
 
-Standard units of measure
--------------------------
+Стандартные единицы измерения
+-----------------------------
 
-A variety of units of measure are available by default in your database. Each belongs to one of the
-five pre-configured units of measure categories: *Length / Distance*, *Unit*, *Volume*, *Weight* and
-*Working Time*.
+По умолчанию в вашей базе данных доступны различные единицы измерения.
+Каждая из них относится к одной из пяти предварительно настроенных
+категорий единиц измерения: *Длина / расстояние*, *Единица*, *Объем*, *Вес* и *Рабочее время*.
 
 .. tip::
-   You can create your new units of measure and units of measure categories (see next section).
+    Вы можете создавать новые единицы измерения и категории единиц измерения (см. следующий раздел).
 
-To specify different units of measures for sales and purchases, open the Purchase app and go to
-:menuselection:`Products --> Products`. Create a product or select an existing one. Under the
-product's *General Information* tab, first select the *Unit of Measure* to be used for sales (as
-well as for other apps such as inventory). Then, select the *Purchase Unit of Measure* to be used
-for purchases.
+Чтобы настроить разные единицы измерения для продаж и закупок, откройте приложение "Закупки"
+и перейдите в раздел :menuselection:`Продукты --> Продукты`.
+Создайте новый продукт или выберите из уже существующих.
+В форме продукта, на вкладке *Общая информация*, выберите *Единицу измерения*,
+которая будет использоваться для продаж (а также в других приложениях, таких как *Склад*).
+Затем выберите *Единицу измерения покупки*, которая будет использоваться
+в закупках.
 
-Back to the first example, if you purchase orange juice from your vendor in **gallons** and sell it
-to your customers in **liters**, first select *L* (liters) as the *Unit of Measure*, and *gal (US)*
-(gallons) as the *Purchase Unit of Measure*, then click on *Save*.
+Вернемся к первому примеру. Если вы покупаете апельсиновый сок у поставщика в **галлонах**,
+а продаете его в **литрах**, выберите *L* (литры) в поле
+*Единица измерения*, и *gal (US)* (галлоны) для *Единицы измерения покупки*.
 
-.. image:: media/uom-product-configuration.png
-   :align: center
-   :alt: Configure a product's units of measure in Odoo
+Создание новых единиц измерения и категорий
+-------------------------------------------
 
-Create new units of measure and units of measure categories
------------------------------------------------------------
+Вам может потребоваться создать свои собственные единицы измерения и категории,
+если единицы измерения предварительно не настроены в Odoo, или не соотносятся друг с другом
+(например, килограммы и сантиметры).
 
-Sometimes you need to create your own units and categories, either because the measure is not
-pre-configured in Odoo or because the units do not relate with each other (e.g. kilos and
-centimeters).
+Рассмотрим второй пример, где вы покупаете шторы у продавца в виде **рулонов**, а
+продаете части рулонов, используя **квадратные метры**. В таком случае вам нужно создать
+новую категорию единиц измерения, чтобы связать обе единицы измерения.
 
-If you take the second example where you buy curtains from a vendor in the form of **rolls** and you
-sell pieces of the rolls using **square meters**, you need to create a new *Units of Measure
-Category* in order to relate both units of measure.
+Для этого перейдите в меню: :menuselection:`Настройки --> Категории единиц измерения`.
+Нажмите на кнопку *Создать* и введите название категории в соответствующем поле.
 
-To do so, go to :menuselection:`Configuration --> Units of Measure Categories`. Click on *Create*
-and name the category.
+Следующим шагом будет создание двух единиц измерения. Для этого перейдите в меню: :menuselection:`Настройки
+--> Единицы измерения`.
 
-.. image:: media/uom-new-category.png
-   :align: center
-   :alt: Create a new units of measure category in Odoo Purchase
+Сначала создайте единицу измерения, используемую в качестве контрольной единицы для конвертации в другие
+единицы измерения внутри категории, нажав на кнопку *Создать*.
+Назовите единицу измерения и выберите единицы измерения категории, которую вы только что создали.
+В поле *Тип* выберите *Используемая единица измерения для этой категории*.
+Введите значение в поле *Rounding Precision*.
+Количество, вычисленное Odoo, всегда будет кратно этому значению.
 
-The next step is to create the two units of measures. To do so, go to :menuselection:`Configuration
---> Units of Measure`.
-
-First, create the unit of measure used as the reference point for converting to other units of
-measure inside the category by clicking on *Create*. Name the unit and select the units of measure
-category you just created. For the *Type*, select *Reference Unit of Measure for this category
-type*. Enter the *Rounding Precision* you would like to use. The quantity computed by Odoo is always
-a multiple of this value.
-
-In the example, as you cannot purchase less than 1 roll and won't use fractions of a roll as a unit
-of measure, you can enter 1.
+Так как вы не можете приобрести менее 1 рулона
+и не будете использовать дробные части рулона в качестве единицы измерения, вы можете ввести значение *1*.
 
 .. image:: media/uom-new-reference-unit.png
    :align: center
    :alt: Create a new reference unit of measure in Odoo Purchase
 
-.. note:: If you use a *Rounding Precision* inferior to 0.01, a warning message might appear stating
-   that it is higher than the *Decimal Accuracy* and that it might cause inconsistencies. If you
-   wish to use a *Rounding Precision* lower than 0.01, first activate the :ref:`developer mode
-   <developer-mode>`, then go to :menuselection:`Settings --> Technical --> Database Structure -->
-   Decimal Accuracy`, select *Product Unit of Measure* and edit *Digits* accordingly. For example,
-   if you want to use a rounding precision of 0.00001, set *Digits* to 5.
+.. note:: Если округление для единиц измерения ниже 0.01, может появиться предупреждение о том,
+   что это значение выше, чем *Точность десятичной системы*, и это может привести к несоответствиям. Если вы
+   хотите использовать округление ниже значения 0.01, сначала активируйте режим разработчика :ref:`developer mode
+   <developer-mode>`, затем перейдите в меню: :menuselection:`Настройки --> Technical --> Database Structure -->
+   Decimal Accuracy`, выберите *Единица измерения продукта` и отредактируйте *Цифры` соответствующим образом. Например,
+   если вы хотите использовать округление 0,00001, установите в поле *Цифры* значение 5.
 
-Next, create a second unit of measure, name it, and select the same units of measure category as
-your reference unit. As *Type*, select *Smaller* or *Bigger than the reference Unit of Measure*,
-depending on your situation.
+Далее, создайте вторую единицу измерения, назовите ее и выберите ту же категорию единиц измерения как
+для контрольной единицы. В поле *Тип* выберите *Меньше* или *Больше, чем контрольная единица измерения*,
+в зависимости от ситуации.
 
-As the curtain roll equals to 100 square meters, you should select *Smaller*.
+Поскольку рулон штор равен 100 квадратным метрам, следует выбрать *Меньше*.
 
-Next, you need to enter the *Ratio* between your reference unit and the second one. If the second
-unit is smaller, the *Ratio* should be greater than 1. If the second unit is larger, the ratio
-should be smaller than 1.
+Затем, необходимо ввести *Соотношение* между контрольной и второй единицей измерения. Если вторая единица
+единица меньше, *соотношение* должно быть больше значения 1. Если вторая единица больше, соотношение
+должно быть меньше значения 1.
 
-For your curtain roll, the ratio should be set to 100.
+Для вашего рулона штор соотношение должно быть в значении 100.
 
 .. image:: media/uom-second-unit.png
    :align: center
    :alt: Create a second unit of measure in Odoo Purchase
 
-You can now configure your product just as you would using Odoo's standard units of measure.
+Теперь вы можете настроить свой продукт так же, как и при использовании стандартных единиц измерения Odoo.
 
 .. image:: media/uom-product-configuration-new-units.png
    :align: center

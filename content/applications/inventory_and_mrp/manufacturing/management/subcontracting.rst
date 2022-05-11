@@ -1,214 +1,164 @@
-==============================
-Subcontract your Manufacturing
-==============================
-
-Outsourcing a portion or all of your company’s manufacturing needs
-is not easy. To make it work correctly, you have to:
-
-- Manage the inventory of raw materials at your subcontractor
-- Ship raw material to your subcontractors, at the right time 
-- Control incoming goods quality
-- Control subcontractors bills
-
-Here is an example of subcontracting the manufacturing of “C”, which is
-produced out of raw materials “A” and “B”.
-
-.. image:: media/subcontracting_01.png
-    :align: center
-    :alt: 
-
-With its MRP subcontracting feature, Odoo helps you handle this flow easily.
-
-Configuration
-=============
-
-To use the subcontracting feature, go to :menuselection:`Manufacturing
---> Configuration --> Settings` and tick the box *Subcontracting*.
-
-.. image:: media/sbc_1.png
-    :align: center
-    :alt: 
-
-To define if a product must be subcontracted, use a *Bill of Materials
-(BoM)* of type *Subcontracting*.
-
-To create a new *BoM*, go to :menuselection:`Manufacturing --> Products --> 
-Bill of Materials` and hit create. Then, list the components
-your subcontractor needs to manufacture the product. For costing
-purposes, you might want to register all the components, even the ones
-that are sourced directly from the subcontractor.
-
-Once you have set the *BoM Type* to *Subcontracting*, specify one or
-several subcontractors.
-
-.. image:: media/sbc_2.png
-    :align: center
-    :alt: 
-
-Basic Subcontracting Flow
+=========================
+Субподрядное производство
 =========================
 
-To let your subcontractor know how many products you need, create and
-send them purchase orders (PO). To do so, go to the *Purchase* app and
-create a new purchase order. Be sure to send the PO to a vendor that is
-defined as a subcontractor on the *BoM* of these products.
+Передать на аутсорсинг производственные нужды компании
+не так-то просто. Для правильной организации этого процесса, вам необходимо:
 
-.. image:: media/subcontracting_04.png
-    :align: center
-    :alt: 
+- управлять запасами сырья субподрядчика
+- отгружать сырье субподрядчикам в нужное время
+- контролировать качество поступающих товаров
+- контролировать счета субподрядчиков
 
-Once the *PO* is validated (1), a pending receipt is created. When the
-products are received, validate the receipt (2), with the actual
-quantity received. As a result, Odoo does the following things for you:
+Функция субподрядчика MRP (англ. Material Requirements Planning —
+планирование потребности в материалах), позволяет легко управлять этими процессами.
 
-- Consumes the respective components at the subcontractor’s location, based on the *BoM* and your input (3);
+Настройки
+=========
 
-- Produces the finished goods at the subcontractor’s location (4);
+Функция субподряда доступна в меню: :menuselection:`Производство
+--> Настройки --> Настройки`. Поставьте галочку в поле *Субподряд*.
 
-- Moves products from that subcontractor’s location to YourCompany
-  via the validated receipt (5).
+Чтобы определить, должен ли продукт быть субподрядным, используйте *Тип спецификации* *Субподряд*.
 
+Для создания новой *спецификации*, перейдите в меню: :menuselection:`Производство --> Продукты -->
+Спецификации` и нажмите на кнопку *Создать*. Перечислите компоненты,
+необходимые субподрядчику для производства продукта. Чтобы рассчитать все затраты,
+необходимо указать все компоненты и даже те,
+которые получены непосредственно от субподрядчика.
 
-.. note::
-      The *PO* is optional. If you create a receipt manually, with the right
-      subcontractor, Odoo still performs all the moves. This can be useful if 
-      the subcontractor does not bill a fixed price per item, but rather the time
-      and materials used.
+Установив в поле *Тип спецификации* значение *Субподряд*, укажите одного или
+несколько субподрядчиков.
 
-Inventory Valuation
-===================
+Порядок действий
+================
 
-The cost of the manufactured product “C” is defined as:
+Чтобы сообщить субподрядчику, сколько продукции вам необходимо, создайте и
+отправьте ему заказы на поставку. Для этого перейдите в приложение *Закупки* и
+создайте новый заказ на поставку. Обязательно отправьте заказ на поставку поставщику, который
+указан как субподрядчик в *спецификации* этих продуктов.
 
-**C = A + B + s**
+Как только заказ на поставку подтвержден (1), создается отложенный чек. Когда
+продукция будет получена, подтвердите чек (2), указав фактическое
+количество. Таким образом, Oddo выполняет следующие операции:
 
-With:
+- Расходует соответствующие компоненты в месте нахождения субподрядчика, основываясь на *спецификацию* и ваши данные (3);
 
--  **A**: Cost of raw materials coming from YourCompany;
+- Производит готовую продукцию в месте расположения субподрядчика (4);
 
--  **B**: Cost of raw materials sourced directly from the
-       subcontractor;
+- Перемещает продукцию с места расположения субподрядчика в вашу компанию
+  в соответствии с подтвержденной накладной (5).
 
--  **s**: Cost of the subcontracted service.
-
-Sending raw materials to your subcontractors (**A**) does not impact
-the inventory valuation, as the components are still valued as part of
-your stock. This is managed by making the *Subcontracting Location* an 
-*Internal Location*. 
-
-Then, the vendor price set on the product C form has to be what has to
-be paid to the subcontractor for his parts and service time: **B +
-s**. The product cost has to be: **A + B + s**, how much the
-product is valued in the accounting.
-
-Finally, the subcontractor bill then matches the purchase order, with 
-the proposed price coming from the finished products C.
 
 .. note::
-      If managing the replenishment of raw materials **B** at your
-      subcontractor’s location is not needed, simply include the cost of
-      **B** in the subcontractor’s price **s** and remove the products
-      *B* from the *BoM*.
+      Заказ по поставку не необязателен. Если вы создадите накладную вручную, с указанием
+      субподрядчика, Odoo все равно выполнит все перемещения. Это может быть полезно в том случае, если
+      субподрядчик не выставляет счет по фиксированной цене за товар, так как время
+      и использованные материалы могут варьироваться.
 
-Traceability
+Оценка запасов
+==============
+
+Стоимость изготовленного продукта "C" определяется как:
+
+**C = A + B + s**.
+
+С:
+
+- **A**: Стоимость сырья, поступающего из вашей компании;
+
+- **B**: Стоимость сырья, полученного непосредственно от
+       субподрядчика;
+
+- **s**: Стоимость услуг субподрядчика.
+
+Отправка сырья субподрядчикам (**A**) не влияет на оценку запасов,
+так как компоненты спецификации по-прежнему оцениваются как часть
+ваших запасов. Это управляется путем определения *Места хранения субподряда* как
+*Внутреннее место хранения*.
+
+Цена поставщика, установленная в форме продукта C, должна быть той, которую нужно
+оплатить субподрядчику за его материалы и услуги: **B +
+s**. Себестоимость продукта должна быть: **A + B + s**, это стоимость продукта в бухгалтерском учете.
+
+В конечном итоге, счет субподрядчика совпадает с заказом на поставку, в котором предложенная стоимость зависит
+от цены готовой продукции C.
+
+.. note::
+      Если управление пополнением запасов сырья **B** в месте хранения
+      субподрядчика не требуется, просто включите расходы
+      **В** в стоимость услуг субподрядчика **s** и удалите продукты
+      *В* из *спецификации*.
+
+Отслеживание
 ============
 
-In case the received products from the subcontractor contain tracked
-components, their serial or lot numbers need to be specified during the
-receipt. 
+В случае, если полученная от субподрядчика продукция содержит отслеживаемые
+компоненты, их серийные номера или номера партий должны быть указаны во время
+приемки товара.
 
-In that case, on the receipt of the subcontracted product, a *Record Components*
-button appears. Click on it to open a dialog box and record the serial/lot numbers of 
-the components. If the finished product is also tracked, its serial/lot number can
-be registered here too.
+В этом случае при приемки продукции нажмите на кнопку *Записать компоненты* и в новом окне
+укажите серийные номера/номера партий компонентов.
+Если готовый продукт также отслеживается, его серийный номер/номер партии может быть указан в этом окне.
 
-.. image:: media/sbc_3.png
-    :align: center
-    :alt: 
+В целях аудита можно проверить номера партий, указанных в накладной,
+нажав соответствующую иконку справа в строке готовой продукции.
 
-For audit purposes, it is possible to check the lot numbers recorded on
-a receipt by using the icon on the right of the finished products:
-
-.. image:: media/sbc_4.png
-    :align: center
-    :alt: 
-
-Also note that in case flexible consumption has been selected on the subcontracted 
-BOM for a non-tracked product, the record components option will also appear 
-optionally on each move line, if you want to register more or less component consumption 
-at your subcontracting location, when receiving your final product. 
+Обратите внимание, что если спецификация субподрядчика создана для продукта, который не отслеживается,
+вы все равно можете опционально зарегистрировать компоненты в каждой строке перемещения
+при получении конечного продукта.
+Это позволит увидеть приблизительный расход компонентов
+на месте субподрядчика.
 
 .. image:: media/sbc_5.png
     :align: center
     :alt: 
 
-As you can see, the reception of both of these non-tracked products can either be executed 
-by selecting the 'Set Quantities' Option or via the move line hamburger menus.  
+Таким образом, приемка неотслеживаемых продуктов возможна с помощью меню *Установите количество*
+или в строке каждого компонента.
 
-Automate Replenishment of Subcontractors
-========================================
+Автоматизация пополнения запасов субподрядчиков
+===============================================
 
-There are two ways to automate the supply of raw materials to your 
-subcontractors when purchasing the final product. The chosen method
-depends on whether or not you want the materials to transit through your
-warehouse. Both of these methods are described as pull style mechanisms as 
-their trigger is the inital PO to the subcontractor, which creates a need 
-at the subcontracting location, for raw material.  
+Существует два способа автоматизации снабжения сырьем
+субподрядчиков при закупке конечного продукта. Выбор способа
+зависит от того, хотите ли вы, чтобы материалы проходили транзитом через ваш
+склад или нет. Оба этих метода подразумевают первоначальный заказ субподрядчику,
+который создает потребность в сырье для субподрядчика.
 
-If you are supplying your subcontractor with raw material from your own warehouse,
-you must activate the 'Resupply Subcontractor on Order' route as shown 
-below. If this is a component that you buy from a vendor, the buy route
-should also be activated. 
+Если вы снабжаете субподрядчика сырьем со своего склада,
+вам необходимо активировать маршрут 'Пополнение запасов субподрядчика по заказу' в форме продукта.
+Если это компонент, который вы покупаете у поставщика, маршрут покупки
+также должен быть активирован.
 
+Если вы хотите, чтобы ваш поставщик поставлял субподрядчику продукцию напрямую, вам необходимо
+выбрать опцию 'Отгрузка субподрядчику по заказу'. Для того чтобы
+эта опция была активна в форме продукта, вы должны сначала активировать опцию дропшиппинга в меню: :menuselection:`Закупки --> Настройки --> Настройки -->
+Дроп-шиппинг`.
+После утверждения заказа субподрядчику, этот маршрут создаст запрос на поставку товара от поставщика к
+субподрядчику. Обратите внимание, что в данном случае не нужно выбирать маршрут покупки, так как
+сам по себе маршрут дропшиппинга уже является покупкой.
 
-.. image:: media/sbc_6.png
-    :align: center
-    :alt: 
+Наконец, если вы хотите отслеживать эти запасы в месте хранения субподрядчика,
+необходимо активировать опцию *Мульти-локации* в меню :menuselection:`Склад -->
+Настройки --> Настройки --> Места хранения`.
 
-
-Now, if you want your vendor to resupply your subcontractor directly, you 
-must choose the 'Dropship Subcontractor on Order' option instead. In order 
-for this option to be active on the product form, you must first activate the 
-dropship option from :menuselection:`Purchase --> Configuration --> Settings -->
-Dropshipping`.
-Once the PO to the subcontractor is validated, this route will create a dropship 
-RFQ from your vendor to that subcontractor. You then just need to review and validate it. 
-
-
-.. image:: media/sbc_7.png
-    :align: center
-    :alt: 
-
-Note that the buy route is not selected in this case, as the dropship route is 
-a buy route already. 
-
-Finally, if you want to track the stock of these raw materials at your subcontracting
-location(s), then you must activate *Multi-locations* in :menuselection:`Inventory -->
-Configuration --> Settings --> Storage locations`. 
-
-From the location form, you are then able to access the Current Stock. 
+Из формы местоположения вы сможете получить доступ к текущему запасу.
 
 .. image:: media/sbc_8.png
     :align: center
     :alt: 
 
 
+Пополнение запасов вручную
+--------------------------
 
-Manual Replenishment
---------------------------------
+Вы также можете пополнять запасы своих субподрядчиков вручную.
 
-You can also choose to replenish your subcontractors manually. 
+Если вы хотите отправлять компоненты субподрядчику в удобное для вас время,
+выберите тип операции 'Пополнение субподрядчика' в модуле *Склад*,
+и создайте комплектацию, указав, какому субподрядчику вы осуществляете поставку.
 
-If you want to send components to your subcontractor at your own convenience, 
-select the 'Resupply Subcontractor' Operation Type from the *Inventory* Module, 
-and create a picking, specifying to which subcontractor you are delivering to. 
-
-.. image:: media/sbc_9.png
-    :align: center
-    :alt: 
-
-Alternatively, you can also manually ask your vendor to resupply your subcontractor 
-by creating a dropship type PO, with your subcontractor set as the delivery address.
-
-.. image:: media/sbc_10.png
-    :align: center
+Кроме того, вы можете попросить поставщика пополнить запасы для вашего субподрядчика вручную,
+создав заказ на поставку с указанем типа дропшиппинга, где в качестве адреса доставки является местоположение
+субподрядчика.

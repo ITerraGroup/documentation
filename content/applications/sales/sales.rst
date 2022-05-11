@@ -3,12 +3,12 @@
 :hide-page-toc:
 :show-toc:
 
-=====
-Sales
-=====
+=======
+Продажи
+=======
 
-**Odoo Sales** is the application to run your sales process (from quotation to sales order) and
-deliver and invoice what has been sold.
+**Odoo Продажи** это приложение, которое позволяет управлять процессом продаж (от коммерческого
+предложения до заказа на продажу), а также организовывать доставку и выставление счетов покупателям.
 
 .. seealso::
    - `Odoo Tutorials: Sales Tutorials <https://www.odoo.com/slides/sales-17>`_

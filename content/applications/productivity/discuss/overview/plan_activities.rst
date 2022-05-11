@@ -1,59 +1,50 @@
-====================================
-Get Organized by Planning Activities
-====================================
+=====================
+Планирование Действий
+=====================
 
-When you plan activities you minimize the risk of uncertainties, as you provide clear directions
-for the course of your next action. In addition to that, you do not leave space for wasteful
-activities and reduce the chance of having overlapping actions between team members.
+Когда вы планируете деятельность организации, вы минимизируете риск неэффективного управления,
+поскольку даете четкие указания
+на ход дальнейших действий. Планирование исключает бесполезную активность и
+вероятность дублирования действий между членами команды.
 
-Where do I see my schedule activities?
-======================================
+Где я могу увидеть календарное планирование?
+============================================
 
-Access and manage your activities wherever you are in Odoo by the *Activities* menu.
+Доступ и управление вашей активностью осуществляется с помощью меню *Действия* на рабочем столе.
 
 .. image:: media/activities_menu.png
    :align: center
    :height: 300
    :alt: View of crm leads page emphasizing the activities menu for Odoo Discuss
 
-Plan activities
-===============
+Планирование действий
+=====================
 
-Activities can be planned and managed from the chatter by clicking on *Schedule activity*,
-or through Kanban views.
+Вы можете планированить и управлять своей активностью, нажав на *Планировать действия* в чаттере,
+или с помощью рабочей доски.
 
 .. image:: media/schedule_activity.png
    :align: center
    :height: 300
    :alt: View of crm leads and the option to schedule an activity for Odoo Discuss
 
-Set your activity types
------------------------
+Настройка видов активности
+--------------------------
 
-A number of activities types are available by default in Odoo (call, email, meeting, etc.). However,
-you can set new ones going to :menuselection:`Settings --> Activity types`.
-
-.. image:: media/settings_activities_types.png
-   :align: center
-   :height: 300
-   :alt: View of the settings page emphasizing the menu activity types for Odoo Discuss
+По умолчанию в Odoo доступно несколько типов действий (звонок, Email, встреча и т.д.). Однако,
+вы можете установить новые, перейдя в меню: :menuselection:`Настройки --> Типы действий`.
 
 .. tip::
-   If you need to create an activity type with an available calendar, make sure to create
-   it with an *Action to Perform* set as *Meeting*.
+   Если вам нужно создать тип действия, используя календарный план, убедитесь, что в поле *Действия* выбрана опция
+   *Встреча*.
 
-Recommend next activities
--------------------------
+Как порекомендовать дальнейшие действия
+---------------------------------------
 
-Odoo helps you to plan a flow of activities by allowing you to set *Recommended Next Activities*.
+Чтобы определить ход действий, установите необходимые параметры в разделе
+*Следующее действие*.
 
-.. image:: media/recommended_activities.png
-   :align: center
-   :alt: View of an activity type form emphasizing the field recommended next activities for Odoo
-         Discuss
-
-Once the respective activity is completed, select *Done & Schedule Next* and next steps are
-suggested to you.
+После выполнения следующих действий, выберите *Done & Schedule Next*, и вам будут предложены следующие шаги.
 
 .. image:: media/schedule_recommended_activity.png
    :align: center

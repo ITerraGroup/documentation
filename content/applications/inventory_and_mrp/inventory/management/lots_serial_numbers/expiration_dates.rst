@@ -1,65 +1,51 @@
-================
-Expiration Dates
-================
-
-In many companies, products have expiration dates and they should be managed based on those dates.
-In the food industry, for example, tracking and managing product stock based on expiration dates is
-mandatory to avoid selling expired products to customers.
-
-With Odoo, you can track and manage your products based on their expiration dates, even if they are
-already tracked by lots or serial numbers.
-
-Configuration
+=============
+Срок годности
 =============
 
-Application configuration
--------------------------
+Во многих компаниях продукты имеют срок годности,
+и управление ими должно осуществляться с учетом этого срока.
+Например, в пищевой промышленности отслеживание и управление запасами
+продукции на основе срока годности является
+обязательным во избежание продажи просроченных продуктов клиентам.
 
-To use expiration date tracking, open the *Inventory* application and go to
-:menuselection:`Configuration --> Settings` and activate the *Lots & Serial Numbers* and *Expiration
-Dates* features.
+С Odoo вы можете отслеживать и управлять продуктами на основе их срока годности,
+даже если они уже имеют партии или серийные номера в системе.
 
-.. image:: media/expiration_dates_01.png
-   :align: center
+Настройка
+=========
 
-Product configuration
----------------------
+Настройка приложения
+--------------------
 
-Now, you can define different dates in the *inventory tab* of the product form:
+Чтобы отследить сроки годности, откройте приложение *Склад*, перейдите в раздел
+:menuselection:``Настройки --> Настройки`` и активируйте функции
+*Партии/Серийные номера* и *Срок годности*.
 
-- Product Use Time: the number of days before the goods start deteriorating, without being
-  dangerous. This is used to calculate the Best before date on each lot/serial number received.
-- Product Life Time: the number of days before the goods may become dangerous and must not be
-  consumed. This is used to calculate the Expiration date on each lot/serial number received.
-- Product Removal Time: shows the number of days before the goods should be removed from the stock.
-  This is used to calculate the Removal date on each lot/serial number received.
-- Product Alert Time: refers to the number of days before an alert should be raised on the
-  lot/serial number. This is used to calculate the Alert date on each lot/serial number received.
-  Once the Alert date is reached, an Activity is assigned on the relevant lot/serial number to the
-  Responsible user defined on the Product.
+Настройка продукта
+------------------
 
-.. image:: media/expiration_dates_02.png
-   :align: center
+Теперь вы можете устанавливать различные сроки на вкладке *Склад* карточки товара:
 
-Expiration Date on Lots/Serial Numbers
-======================================
+- Срок использования товара: количество дней до того, как товар начнет портиться, не являясь при этом
+  опасным. Необходим для расчета даты "Лучше до" по каждой полученной партии/серийному номеру.
+- Срок службы продукта: количество дней до того, как товар может стать опасным и не пригодным в потребление. Этот показатель используется для расчета срока годности каждой полученной партии/серийного номера.
+- Время удаления товара: показывает количество дней до того, как товар должен быть снят со склада.
+  Используется для расчета даты изъятия каждой полученной партии/серийного номера.
+- Время уведомления: показывает количество дней до того, как будет включено уведомление по
+  партии/серийному номеру. Этот показатель используется для расчета даты уведомления по каждой полученной партии/серийному номеру.
+  Как только наступит время уведомления, ответственному за эту партию/серийный номер лицу будет предписано выполнение определенного действия.
 
-When receiving a product into inventory, the dates will automatically be updated on the
-corresponding lot/serial number. These updates will be based on the receipt date of the product and
-the days set on the product form.
+Дата окончания срока годности на партиях/серийных номерах
+=========================================================
 
-.. image:: media/expiration_dates_03.png
-   :align: center
+При поступлении товара на склад, даты автоматически обновляются на
+соответствующих партиях/серийных номерах. Эти обновления основаны на дате получения продукта и
+дней, установленных в карте товара.
 
-.. image:: media/expiration_dates_04.png
-   :align: center
+Уведомления об истечении срока годности
+=======================================
 
-Expiration Alerts
-=================
-
-You can access expiration alerts from the *inventory* app. To do so, go to :menuselection:`Master
-Data --> Lots/Serial Numbers`. There, you can use the pre-existing filter to show all the
-lots/serial numbers that have exceeded their respective alert dates.
-
-.. image:: media/expiration_dates_05.png
-   :align: center
+Вы можете получить доступ к уведомлениям об истечении срока годности в приложении
+*Склад*. Для этого перейдите в меню: **Продукты --> Партии/Серийные номера**.
+Используйте фильтр *Уведомление*, чтобы отобразить все
+партии/серийные номера, которые имеют уведомление об истекшем сроке годности.

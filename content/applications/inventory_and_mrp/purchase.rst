@@ -3,12 +3,14 @@
 :hide-page-toc:
 :show-toc:
 
-========
-Purchase
-========
+=======
+Закупки
+=======
 
-**Odoo Purchase** helps you keep track of purchase agreements, quotations, and purchase orders.
-Learn how to keep track of purchase tender, automate replenishments and follow up on your orders.
+**Odoo Закупки** позволяет эффектвино управлять поставщиками, контрактами,
+отслеживать ценовые предложения и делать закупки.
+Узнайте, как вести учет тендеров на закупку,
+автоматизировать пополнение запасов и конролировать выполнение заказов.
 
 .. seealso::
    - `Odoo Tutorials: Purchase <https://www.odoo.com/slides/purchase-23>`_

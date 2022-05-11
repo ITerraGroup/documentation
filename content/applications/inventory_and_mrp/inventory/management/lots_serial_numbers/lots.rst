@@ -1,137 +1,94 @@
-=================================
-Manage lots of identical products
-=================================
+=============================
+Управление партиями продуктов
+=============================
 
-Lots are useful for products you receive in great quantity and for which
-a lot number can help in reporting, quality controls, or any other info.
-Lots will help identify a number of pieces having, for instance, a
-production fault. It can be useful for a batch production of clothes or
-food.
+Партии используются для продуктов, получаемых в большом количестве, и для которых
+номер партии необходим в отчетности, контроле качества или получения любой другой информации.
+Партии позволяют определить количество изделий, имеющих, например, производственный брак.
+Это удобно при серийном производстве одежды или продуктов питания.
 
-Odoo has the capacity to manage lots, ensuring compliance with the
-traceability requirements imposed by the majority of industries.
+Odoo дает возможность управлять партиями в соответствии с требованиями по отслеживанию товара,
+установленными во многих отраслях промышленности.
 
-The double-entry management in Odoo enables you to run very advanced
-traceability.
+Функция двойной записи позволяет осуществлять продвинутую систему отслеживания.
 
-Setting Up
-==========
+Установка
+=========
 
-Application Configuration
--------------------------
+Настройки приложения
+--------------------
 
-First, you need to activate the tracking of lot numbers. To do so, go to
-:menuselection:`Inventory --> Configuration --> Settings` and tick *Lots & Serial
-Numbers*. Then, click on save.
+Первым делом необходимо активировать отслеживание номеров партий. Для этого перейдите в раздел
+:menuselection:``Настройки --> Настройки`` в приложении *Склад*. Затем,
+включите функцию *Партии/Серийные номера* и нажмите сохранить.
 
-.. image:: media/lots_01.png
-    :align: center
 
-Product Configuration
----------------------
+Настройка продукта
+------------------
 
-Now, you have to configure which products you want to track by serial
-numbers.
+Теперь вам нужно настроить продукты, которые вы хотите отслеживать партиями.
+Для этого перейдите в меню: **Продукты --> Продукты**,
+из списка выберите необходимый продукт.
+В карте товара откройте вкладку *Склад*. В разделе *Отслеживание* поставьте галочку рядом с полем
+*По партиям*. Сохраните изменения.
 
-Go to :menuselection:`Master Data --> Products` and open the product of your choice.
-There, click on *Edit* and select *Tracking by Lots* in the
-inventory tab.
+Управление партиями
+===================
 
-.. image:: media/lots_02.png
-    :align: center
+Приемка
+-------
 
-.. image:: media/lots_03.png
-    :align: center
+Чтобы получить продукт, который отслеживается по партиям, необходимо
+указать его номер партии. Это можно сделать несколькими способами:
 
-Manage Lots
-===========
+1. Ручное присвоение номеров партии
 
-Receipts
---------
+2. Копирование/вставка из файла Excel
 
-In order to receive a product tracked by lots, you have to specify its
-lot numbers. You have several ways of doing so:
+Прежде всего необходимо открыть детальные операции по продукту в меню **Операции**.
 
-1. Manually assign the different lot numbers
+Ручное присвоение номеров партий
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-2. Copy/paste lot numbers from an Excel file
+Откройте **Детальные операции** и нажмите *Добавить строку*.
+Теперь вы можете ввести номер партии. После этого
+снова нажмите *Добавить строку*, чтобы зарегистрировать новый номер партии.
 
-First, you need to open the detailed operations of your picking.
+Копирование/вставка из файла Excel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/lots_04.png
-    :align: center
+Чтобы использовать функцию копирования/вставки, откройте электронную таблицу
+с номерами партий, которую вы получили от поставщика, и скопируйте список.
+Вставьте номера в столбец *Название партии/серийного номера* в приложении Odoo.
+Программа автоматически создаст нужные вам строки. После этого вам нужно будет
+вручную ввести количество продуктов, которые содержатся в каждой партии.
 
-Manually assign the different lot numbers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Типы операций
+-------------
 
-When opening the detailed operations, you can click on *Add a line*.
-Then, you will be able to fill the lot number in. Once done, you can
-click on *Add a line* again to register a new lot number.
+Вы также можете определить, как вы будете управлять партиями для
+каждого типа операций.
+Перейдите в меню: :menuselection:`Настройки --> Типы операций` в приложении
+*Склад*.
 
-.. image:: media/lots_05.png
-    :align: center
+Для каждого типа операций установите, разрешить ли вам создание новых партий или использовать
+существующие номера. По умолчанию, создание новых партий разрешено только при приемке товара.
+Если у вас есть межскладские перемещения и вы отслеживаете продукцию по партиям,
+то имеет смысл разрешить использование существующих номеров и во время приемки.
 
-Copy/paste lot number from an Excel file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once the spreadsheet containing the lot numbers you received from your
-supplier and copy the list. Then, you can paste them in the *Lot/Serial
-Number Name* column for Odoo to automatically create the necessary
-lines. After that, you will have to manually enter the number of
-products that are contained in each one of the lots.
+Отслеживание партий товара
+==========================
 
-.. image:: media/lots_06.png
-    :align: center
+Использование номеров партий позволяет отследить весь цикл товара: где продукция была
+принята и помещена на склад, кому была продана и куда отправлена.
 
-.. image:: media/lots_05.png
-    :align: center
+Чтобы отследить товар, откройте приложение *Склад*, перейдите в меню:
+**Продукты --> Партии/Серийные номера** и нажмите на номер партии,
+который вы ищете.
+В разделе *Отслеживание* будет представлена информация в
+каких документах был использован данный номер партии.
 
-.. image:: media/lots_07.png
-    :align: center
+Вы также можете найти номер партии, нажав на кнопку
+*Местоположение* на форме номера партии продукта.
 
-Operation Types
----------------
-
-Of course, you also have the possibility to define how you will manage
-lots for each operation type. To do so, open the *Inventory* app and
-go to :menuselection:`Configuration --> Operation Types`.
-
-For each type (receipts, internal transfers, deliveries, …), you can
-decide if you allow to create new lot numbers or only use existing ones.
-By default, the creation of new lots is only allowed at product
-reception, and using existing lot numbers isn’t allowed in this
-operation. If you have inter-warehouse transfers and track products by
-lots, it can be useful to allow using existing lot numbers in receipts
-too.
-
-.. image:: media/lots_08.png
-    :align: center
-
-Lots traceability
-=================
-
-The lot number given to the products allows you to keep track of where
-they were received, put in stock, to whom they were sold and where they
-were shipped to.
-
-To track an item, open the *Inventory* module and, in :menuselection:`Master Data -->
-Lots/Serial Numbers`, click on the lot number corresponding to your
-search.
-
-.. image:: media/lots_09.png
-    :align: center
-
-When you open the *Traceability* information, you see in which
-documents the lot number has been used.
-
-.. image:: media/lots_10.png
-    :align: center
-
-Now, if you want to locate the lot number, you can do so by clicking on
-the *Location* stat button.
-
-.. image:: media/lots_11.png
-    :align: center
-
-.. image:: media/lots_12.png
-    :align: center

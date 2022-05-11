@@ -1,76 +1,63 @@
-================
-Apps and modules
-================
+===================
+Приложения и модули
+===================
 
-You can :ref:`install <general/install>`, :ref:`upgrade <general/upgrade>` and :ref:`uninstall
-<general/uninstall>` all apps and modules from the :menuselection:`Apps` dashboard.
+Вы можете устанавливать, обновлять и удалять все приложения и модули в меню *Приложения*.
 
-By default, an *Apps* filter is applied. If you want to search for modules, click on
-*Filters* and select *Extra*.
-
-.. image:: apps_modules/apps-search-filter.png
-   :align: center
-   :alt: Add "Extra" filter in Odoo Apps
+По умолчанию, применяется фильтр *Приложения*. Если вы хотите использовать расширенный поиск, нажмите на кнопку
+*Фильтры* и выберите *Расширения*. В поисковой строке введите название приложения.
 
 .. warning::
-   Odoo is *not a smartphone*, and its apps shouldn't be installed or uninstalled carelessly. Apply
-   caution when adding or removing apps and modules on your database since this may impact your
-   subscription costs.
+   Odoo - это *не смартфон*, и его приложения не следует устанавливать или удалять по неосторожности. Будьте внимательны при добавлении или удалении приложений и модулей в вашей базе данных, поскольку это может повлиять на
+   стоимость подписки.
 
-   - | **Installing or uninstalling apps and managing users is up to you.**
-     | As the administrator of your database, you are responsible for its usage, as you know best
-       how your organization works.
-   - | **Odoo apps have dependencies.**
-     | Installing some apps and features with dependencies may also install additional apps and
-       modules that are technically required, even if you won't actively use them.
-   - | **Test app installation/removal on a duplicate of your database.**
-     | This way, you can know what app dependencies may be required or what data may be erased.
+   - | **Установка или удаление приложений и управление пользователями зависит от вас.**
+     | Как администратор вашей базы данных, вы несете ответственность за ее использование, поскольку вы лучше всех знаете, как работает ваша организация.
+   - | **Приложения Odoo имеют привязки.**
+     | Установка некоторых приложений и функций с *привязками* может также установить дополнительные приложения и
+       модули, которые технически необходимы, даже если вы не будете активно их использовать.
+   - | **Тестируйте установку/удаление приложений на резервной копии базы данных.**
+     | Таким образом, вы сможете узнать, какие *привязки* могут потребоваться или какие данные могут быть удалены.
 
 .. _general/install:
 
-Install apps and modules
-========================
+Установка приложений и модулей
+==============================
 
-Go to :menuselection:`Apps`, and click on the *Install* button of the app you want to install.
+Перейдите в меню: :menuselection:`Приложения`, выберите приложение и нажмите кнопку *Установить*.
 
 .. note::
-   If the module you are looking for is not listed, you can **update the app list**.
+   Если нужного модуля нет в списке, вы можете **обновить список приложений**.
 
-   To do so, activate the :ref:`developer mode <developer-mode>`, then go to :menuselection:`Apps
-   --> Update Apps List` and click on *Update*.
+   Для этого активируйте :ref:`режим разработчика <developer-mode>` и перейдите в меню: :menuselection:`Приложения
+   --> Обновить список приложений`. Нажмите *Обновить*.
 
 .. _general/upgrade:
 
-Upgrade apps and modules
-========================
+Обновление приложений и модулей
+===============================
 
-On some occasions, new improvements or app features are added to :doc:`supported versions of Odoo
-</administration/maintain/supported_versions>`. To be able to use them, you must **upgrade** your app.
+В ряде случаев новые улучшения или функции приложений добавляются в :doc:`поддерживаемые версии Odoo
+</administration/maintain/supported_versions>`. Чтобы иметь возможность использовать их, необходимо **обновить** ваше приложение.
 
-Go to :menuselection:`Apps`, click on the *dropdown menu* of the app you want to upgrade, then on
-*Upgrade*.
+Перейдите в меню: :menuselection:`Приложения`, нажмите на *выпадающее меню* приложения, которое вы хотите обновить, затем нажмите
+*Обновить*.
 
 .. _general/uninstall:
 
-Uninstall apps and modules
-==========================
+Удаление приложений и модулей
+=============================
 
-Go to :menuselection:`Apps`, click on the *dropdown menu* of the app you want to uninstall, then on
-*Uninstall*.
+Перейдите в меню :menuselection:`Приложения`, из *выпадающего меню* приложения, выберите
+*Удалить*.
 
-.. image:: apps_modules/uninstall.png
-   :align: center
+Некоторые приложения имеют *привязки*, то есть одно приложение требует наличие другого. Поэтому удаление одного приложения
+может привести к деинсталляции нескольких приложений и модулей. Odoo предупреждает, какие приложения и модули могут быть
+затронуты.
 
-Some apps have dependencies, meaning that one app requires another. Therefore, uninstalling one app
-may uninstall multiple apps and modules. Odoo warns you which dependant apps and modules are
-affected by it.
-
-.. image:: apps_modules/uninstall_deps.png
-   :align: center
-
-To complete the uninstallation, click on *Confirm*.
+Для завершения деинсталляции нажмите *Подтвердить*.
 
 .. danger::
-   Uninstalling an app also uninstalls all its dependencies and permanently erases their data.
+   При удалении приложения также удаляются все его зависимые приложения и навсегда стираются их данные.
 
 

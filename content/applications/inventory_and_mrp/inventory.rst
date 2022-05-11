@@ -3,13 +3,13 @@
 :hide-page-toc:
 :show-toc:
 
-=========
-Inventory
-=========
+=====
+Склад
+=====
 
-**Odoo Inventory** is both an inventory application and a warehouse management system, with an
-advanced barcode scanner app. Learn how to manage lead times, automate replenishments, and configure
-advanced routes like drop-shipping, cross-docks, etc.
+**Odoo Склад** - это одновременно и приложение для инвентаризации, и система управления складом, и
+продвинутое приложение для сканирования штрих-кодов. Узнайте, как управлять сроками, автоматизировать пополнение запасов и настраивать
+расширенные формы поставки, такие как: дропшиппинг, кросс-докинг и т.д.
 
 .. seealso::
    - `Odoo Tutorials: Inventory <https://www.odoo.com/slides/inventory-24>`_

@@ -1,26 +1,16 @@
-=========================
-Check your Win/Loss Ratio
-=========================
+=====================
+Анализ воронки продаж
+=====================
 
-To see how well you are doing with your pipeline, take a look at
-the Win/Loss ratio.
+Чтобы узнать, насколько хорошо вы справляетесь с продажами, посмотрите на
+анализ воронки в отчетности.
 
-To access this report, go to your *Pipeline* view under the
-*Reporting* tab.
+Для этого перейдите в меню: **Отчетность --> Стадии**.
 
-From there you can filter to which opportunities you wish to see, yours,
-the ones from your sales channel, your whole company, etc. You can then
-click on filter and check Won/Lost.
+На странице *Анализ воронки*, вы можете отфильтровать сделки, которые
+вы хотите увидеть: ваши сделки, сделки команды продаж, сделки всей компании и т.д.
+Нажав на соответствующий фильтр, можно закрыть сделку или отметить как *Проиграно*.
 
-.. image:: media/win_loss01.png
-    :align: center
+Вы также можете поменять параметр *Измерения* на *Ожидаемую выручку*.
 
-You can also change the *Measures* to *Total Revenue*.
-
-.. image:: media/win_loss02.png
-    :align: center
-
-You also have the ability to switch to a pie chart view.
-
-.. image:: media/win_loss03.png
-    :align: center
+Используйте наиболее удобный для вас способ просмотра воронки продаж в виде графиков или диаграмм.
