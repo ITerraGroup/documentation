@@ -70,8 +70,6 @@
 - :doc:`Taxes <../../finance/accounting/taxation/taxes/default_taxes>`
 - :doc:`Fiscal Positions <../../finance/accounting/taxation/taxes/fiscal_positions>`
 - :doc:`Journals <../../finance/accounting/bank/setup/bank_accounts>`
-- :doc:`Fiscal Localizations
-  <../../finance/accounting/fiscal_localizations/overview/fiscal_localization_packages>`
 - :doc:`Pricelists <../../sales/sales/products_prices/prices/pricing>`
 
 Далее, активируйте опцию *Внутрифирменные транзакции* в меню *Настройки*. Выберите способ синхронизации
@@ -99,5 +97,4 @@
    Не забудьте протестировать все процессы как пользователь, а не администратор.
 
 .. seealso::
-   - :doc:`Multi-company Guidelines </developer/howtos/company>`
    - :doc:`../../finance/accounting/others/multicurrencies/how_it_works`

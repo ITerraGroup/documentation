@@ -89,4 +89,3 @@
 
 .. seealso::
    - :doc:`team_communication`
-   - :doc:`/applications/general/email_communication/email_servers`

@@ -12,8 +12,6 @@
 Узнайте, как вести учет тендеров на закупку,
 автоматизировать пополнение запасов и конролировать выполнение заказов.
 
-.. seealso::
-   - `Odoo Tutorials: Purchase <https://www.odoo.com/slides/purchase-23>`_
 
 .. toctree::
    :titlesonly:

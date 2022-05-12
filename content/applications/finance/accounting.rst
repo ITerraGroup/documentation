@@ -14,11 +14,6 @@
 зависит от наличия таких функций, как распознавание счетов на основе искусственного
 интеллекта, синхронизация с вашими банковскими счетами, умные подсказки и т.д.
 
-.. seealso::
-   - `Odoo Tutorials: Invoicing <https://www.odoo.com/slides/invoicing-18>`_
-   - `Odoo Tutorials: Accounting <https://www.odoo.com/slides/accounting-19>`_
-   - :doc:`Accounting Cheat Sheet <accounting/getting_started/memento>`
-
 
 .. toctree::
    :titlesonly:

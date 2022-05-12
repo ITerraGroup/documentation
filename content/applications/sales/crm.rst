@@ -12,9 +12,6 @@
 клиентов, планирование переговоров, закрытие сделок, получение точных прогнозов и многое другое.
 
 
-.. seealso::
-   - `Odoo Tutorials: CRM <https://www.odoo.com/slides/crm-16>`_
-
 .. toctree::
    :titlesonly:
 

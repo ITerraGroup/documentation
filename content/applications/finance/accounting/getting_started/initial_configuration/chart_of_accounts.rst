@@ -155,9 +155,3 @@
 их непригодными для использования с помощью функции **Устарело**.
 
 Для этого установите флажок в поле **Устарело**.
-
-.. seealso::
-   * :doc:`../../payables/supplier_bills/assets`
-   * :doc:`../../payables/supplier_bills/deferred_expenses`
-   * :doc:`../../receivables/customer_invoices/deferred_revenues`
-   * :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`

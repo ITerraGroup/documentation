@@ -146,4 +146,3 @@
 .. seealso::
 
     * :doc:`currencies`
-    * :doc:`/applications/websites/ecommerce/maximizing_revenue/pricing`

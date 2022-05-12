@@ -138,6 +138,3 @@ Odoo
         на 24 часа. После этого загрузка будет возобновлена с того места,
         где ранее была приостановлена.
 
-.. seealso::
-   - `Create, modify, or close your Google Cloud Billing account
-     <https://cloud.google.com/billing/docs/how-to/manage-billing-account>`_

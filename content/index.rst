@@ -4,11 +4,11 @@
 :show-toc:
 
 
-=========
-User Docs
-=========
+=========================
+Документация пользователя
+=========================
 
-Discover our user guides and configuration tutorials per application.
+Прочитайте документацию для различных модулей системы.
 
 
 .. toctree::
@@ -16,9 +16,6 @@ Discover our user guides and configuration tutorials per application.
 
     applications/finance
     applications/sales
-    applications/websites
     applications/inventory_and_mrp
-    applications/marketing
-    applications/services
     applications/productivity
     applications/general

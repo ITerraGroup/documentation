@@ -196,7 +196,3 @@
 
 Когда вы введете все дополнительные значения, нажмите **Сохранить**.
 
-.. seealso::
-   - `Accounting Memento: Details of Journal Entries
-     </applications/finance/accounting/overview/main_concepts/memento.html#journal-entries>`_
-   - :doc:`/applications/finance/accounting/getting_started/process_overview/supplier_bill`

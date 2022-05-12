@@ -4,7 +4,6 @@
 
 .. toctree::
 
-    general/users
     general/auth
     general/apps_modules
     general/export_import_data
