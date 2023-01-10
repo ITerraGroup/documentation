@@ -24,7 +24,6 @@
 
 .. image:: media/activities_menu.png
    :align: center
-   :height: 300
    :alt: View of crm leads page emphasizing the activities menu for Odoo Discuss
 
 Планирование действий
@@ -35,7 +34,6 @@
 
 .. image:: media/schedule_activity.png
    :align: center
-   :height: 300
    :alt: View of crm leads and the option to schedule an activity for Odoo Discuss
 
 Эта функция также доступна в любом чаттере.
@@ -43,7 +41,6 @@
 
 .. image:: media/schedule_activity_chatter.png
    :align: center
-   :height: 300
    :alt: The option to schedule an activity available in the chatter
 
 Как запланировать действие

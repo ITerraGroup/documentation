@@ -27,7 +27,6 @@
 
 .. image:: media/start_communication.png
    :align: center
-   :height: 430
    :alt: View of the Discuss’ sidebar
 
 

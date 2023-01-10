@@ -10,4 +10,4 @@
 .. toctree::
    :titlesonly:
 
-   plan_activities/management
+   management/planning

@@ -1,28 +1,29 @@
 =================
-Quality Control
+Контроль качества
 =================
 
-Whether you want to control the quality of your production, or the production
-of your subcontractor, before registering the products into your stock, you can
-rely on Odoo's Quality module.
+Модуль **Качество** необходим для эффективного управления контролем качества продукции на вашем предприятии.
+Эта функциональность позволяет зафиксировать выявленные несоответствия
+качеству еще до приемки продукции на слад. Таким образом, система
+минимизирует риск поставки или производства бракованных изделий, способствуя повышению качества и
+совершенствованию элементов производственной цепочки.
 
 
-To control the quality of your production, you need to set a *Quality Control Point*
-on the Manufacturing Operation Type, as shown below. To create it, Go to :menuselection:`Quality
---> Quality Control --> Control Points`, and click **Create**.
-If the check only applies to specific products, or product categories, you can specify these during
-the setup as well.
+Чтобы использовать функцию контроля качества, необходимо определить *Точки контроля качества*.
+Для этого перейдите в меню: :menuselection:`Качество
+--> Контроль качества --> Точки контроля качества` и нажмите на кнопку **Создать**.
+Если проверка качества распространяется только на определенные продукты или категории продуктов,
+вы можете также указать их во время настройки.
 
-.. image:: quality_control/qc_1.png
+
+.. image:: media/qc_1.png
     :align: center
 
-Regarding the reception of subcontracted products, instead of the Manufacturing Operation Type,
-you need to select the 'Receipts' Operation type. For the rest, the same principles apply.
+При приемке продукции от субподрядчика, в поле **Операции** необходимо установить значение **Приемка**.
+Для всех остальных параметров действуют те же принципы.
 
-.. image:: quality_control/qc_2.png
-    :align: center
+Таким образом, система автоматически создает проверку качества каждый раз при приемке или производстве готовой
+продукции.
+Обратите внимание, что в поле **Раздел** могут быть выбраны разные виды контроля качества, а также несколько
+точек контроля качества могут быть установлены для одного и того же типа операции.
 
-By doing so, a quality check is automatically created each time a
-finished product is made and/or received. Note that several Quality Check
-*Types* can be chosen from the dropdown. Note also that several Quality
-Check Points can be set up for the same Operation Type.
