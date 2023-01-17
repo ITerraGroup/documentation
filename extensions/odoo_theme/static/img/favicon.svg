@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="58.76" height="59.21">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.76 59.21">
+        <defs>
+            <style>
+                .cls-1{fill:#004f51;}.cls-2{fill:#00ae94;}
+                @media (prefers-color-scheme: dark) { .cls-1{fill:#fff;} }
+            </style>
+        </defs>
+        <path class="cls-1" d="M13.5,27V13.5H27A13.5,13.5,0,1,0,13.5,27Z"></path>
+        <path class="cls-1" d="M45.26,0a13.5,13.5,0,0,0-13.5,13.5h13.5V27a13.5,13.5,0,0,0,0-27Z"></path>
+        <path class="cls-1" d="M13.5,45.71V32.21A13.5,13.5,0,1,0,27,45.71Z"></path>
+        <circle class="cls-2" cx="45.26" cy="45.71" r="13.5"></circle>
+    </svg>
+</svg>

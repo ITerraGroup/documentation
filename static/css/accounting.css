@@ -128,12 +128,12 @@ label:hover,
     }
     .accounts-table .related, .doc-aside .highlighter-target .related {
         /*background-color: #eee !important;*/
-        color: #7A436B !important;
+        color: #004f52 !important;
 
     }
     .accounts-table .secondary, .doc-aside .highlighter-target .secondary {
         background-color: #eee !important;
-        color: #7A436B !important;
+        color: #004f52 !important;
     }
 
     .chart-of-accounts .highlight-op,
