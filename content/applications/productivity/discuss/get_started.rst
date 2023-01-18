@@ -25,3 +25,7 @@
 .. tip::
    Чтобы перестать получать уведомления на рабочем столе, сбросьте настройки уведомлений в браузере.
 
+.. seealso::
+   - :doc:`direct_messages`
+   - :doc:`team_communication`
+   - :doc:`chat_features`

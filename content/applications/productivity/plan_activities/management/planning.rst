@@ -101,9 +101,4 @@
    *Встреча*.
 
 
-.. seealso::
-   - :doc:`get_started`
-   - :doc:`direct_messages`
-   - :doc:`team_communication`
-   - :doc:`chat_features`
 

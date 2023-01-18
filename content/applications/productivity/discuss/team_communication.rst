@@ -45,4 +45,5 @@
 
 .. seealso::
    - :doc:`get_started`
-   - :doc:`plan_activities`
+   - :doc:`direct_messages`
+   - :doc:`chat_features`

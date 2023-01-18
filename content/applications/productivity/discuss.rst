@@ -14,7 +14,11 @@
 делитесь информацией, проектами, файлами, определяйте приоритеты задач, всегда оставайтесь на связи
 и многое другое с помощью удобного и легкодоступного интерфейса.
 
+
 .. toctree::
    :titlesonly:
 
-   discuss/overview
+   overview/get_started
+   overview/direct_messages
+   overview/team_communication
+   overview/chat_features
