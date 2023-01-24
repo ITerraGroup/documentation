@@ -12,7 +12,7 @@
 =========
 
 Чтобы добавить эту функцию, установите бесплатный модуль *Лид Скоринг*
-(доступен только в Odoo Enterprise).
+(доступен только в версии Enterprise).
 
 .. image:: media/prospect_visits01.png
    :align: center
