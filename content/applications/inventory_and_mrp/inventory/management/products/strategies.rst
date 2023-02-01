@@ -56,7 +56,7 @@
 система считает, что **Минимальное количество** и **Максимальное количество** на складе
 равно 0.00.
 
-.. image:: strategies01.png
+.. image:: media/strategies01.png
    :align: center
    :alt: The replenishment report shows products that need to be reordered manually.
 
