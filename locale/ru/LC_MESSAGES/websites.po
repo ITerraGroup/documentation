@@ -649,7 +649,11 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/maximizing_revenue/reviews.rst:56
 msgid "..tip::"
-msgstr "..tip::"
+msgstr "..Совет::"
+
+#: ../..content/applications/productivity/discuss/chat_features.rst:86
+msgid "..tip::"
+msgstr "..Совет::"
 
 #: ../../content/applications/websites/ecommerce/maximizing_revenue/reviews.rst:55
 msgid ""
