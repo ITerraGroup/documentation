@@ -1,4 +1,4 @@
-# Odoo documentation
+# Modooli documentation
 
 ## Build the documentation locally
 
@@ -23,7 +23,7 @@
 
 2. Open the file `documentation/_build/html/index.html` in your web browser to display the render.
 
-3. See [this guide](https://www.odoo.com/documentation/15.0/contributing/documentation.html#preview-your-changes)
+3. See [this guide](https://iterra-it.ru/modooli/documentation/)
    for more detailed instructions.
 
 Optional: to fully build the developer documentation with inline docstrings for documented Python
