@@ -33,7 +33,7 @@
 продукта.
 
 
-.. image:: media/kit-bom1.png
+.. image:: media/bom_2.png
     :align: center
 
 Обратите внимание, что тот же принцип применяется при настройки
