@@ -17,7 +17,7 @@
 получать уведомления о чатах на рабочем столе. Если запрос на разрешение принят, то
 вы будете получать push-уведомления в меню *Беседы* во всех модулях системы.
 
-.. image:: media/odoobot_push.png
+.. image:: media/modoolibot_push.png
    :align: center
    :alt: View of the messages under the messaging menu emphasizing the request for push
          notifications for Odoo Discuss
