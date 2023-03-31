@@ -238,13 +238,13 @@ header.o_main_header {
         li {
             &.o_active_toc_entry {
                 &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
-                    color: $o-violet-dark;
+                    color: #017e84;
                 }
             }
 
             a {
                 &.current {
-                    color: $o-violet-dark;
+                    color: #017e84;
                 }
             }
         }
